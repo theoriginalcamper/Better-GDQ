@@ -15,6 +15,8 @@ var current_number_calendar_items = 4;
 
 var runnerJSON = null;
 var scheduleJSON = null;
+var fuzzySet = null;
+var fuzzySearchArray = null;
 
 var portForMessage = null;
 
@@ -23,6 +25,9 @@ $.getJSON('/json/sgdq_runners.json').done(function (resp) {
 });
 $.getJSON('/json/sgdq_schedule.json').done(function (resp) {
     scheduleJSON = resp;
+    fuzzySearchArray = _.keys(scheduleJSON);
+    fuzzySet = FuzzySet(fuzzySearchArray);
+    console.log(fuzzySet);
 });
 
 chrome.runtime.onConnect.addListener(function (port) {
@@ -56,8 +61,26 @@ chrome.runtime.onConnect.addListener(function (port) {
 function getSpeedrunData(game, port) {
     var gameData = scheduleJSON[game];
 
+    if (typeof gameData == 'undefined') {
+        console.log("Current game cannot be found in the parsed schedule.");
+        console.log("Returned a value of undefined.");
+        console.log("Trying fuzzy text search...");
+        var possibleGameTitle = fuzzySet.get(game);
+        console.log(possibleGameTitle);
+
+        if (possibleGameTitle[0][0] > 0.5) {
+            gameData = scheduleJSON[possibleGameTitle[0][1]];
+            console.log(gameData);
+        }
+    }
+
     if (typeof gameData != 'undefined') {
-        current_game = game;
+        if (typeof possibleGameTitle == 'undefined') {
+            current_game = possibleGameTitle[0][1];
+        } else {
+            current_game = game;
+        }
+
         current_game_title = gameData.title;
         current_runners = getRunnerData(gameData.runner);
         current_estimate = gameData.estimate;
@@ -112,8 +135,7 @@ function getSpeedrunData(game, port) {
 
         console.log("Game Data sent!");
     } else {
-        console.log("Current game cannot be found in the parsed schedule.");
-        console.log("Returned a value of undefined.");
+        console.log("Fuzzy text search failed to find a game title above the required threshold.");
     }
 }
 
