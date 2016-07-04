@@ -1,0 +1,53 @@
+{
+  "name": "__MSG_appName__",
+  "version": "1.0.0",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/jquery-2.2.0.min.js",
+      "scripts/underscore-min.js",
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*",
+    "http://api.twitch.tv/channels/gamesdonequick"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://gamesdonequick.com/*",
+        "https://gamesdonequick.com/*",
+        "http://www.gamesdonequick.com/*",
+        "https://www.gamesdonequick.com/*"
+      ],
+      "css": [
+        "styles/fontawesome-min.css",
+        "styles/bootstrap-switch.min.css",
+        "styles/main.css"
+      ],
+      "js": [
+        "scripts/jquery-2.2.0.min.js",
+        "scripts/bootstrap-notify.min.js",
+        "scripts/bootstrap-switch.min.js",
+        "scripts/contentscript.js",
+        "scripts/underscore-min.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "html/gdq-footer.html",
+    "html/quakenet-chat.html",
+    "html/settings-menu.html"
+  ]
+}

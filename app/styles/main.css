@@ -1,0 +1,98 @@
+body {
+	margin-bottom: 70px;
+}
+
+#footer {
+	position: fixed;
+	left: 0px;
+	bottom: 0px;
+	min-height: 70px;
+	width: 100%;
+	background: #101010;
+	height: auto;
+}
+
+.extension-container {
+	width: 80%;
+	margin: 0 auto;
+	padding-top: 20px;
+	font-size: 20px;
+	color: #FFF;
+}
+
+.game-information a, #collapseCalendar a {
+	color: #FFF;
+}
+
+.speedrun-link {
+	float: left;
+	margin-right: 10px;
+}
+
+.speedrun-link:hover, .speedrun-link:active, .speedrun-link:visited {
+	color: #888;
+	/* color: #00aeef */
+	text-decoration: none;
+}
+
+#gdq-speedrun-link {
+	margin-top: 1px;
+}
+
+.runners-links {
+	float: left;
+}
+
+#gdq-runners-information {
+}
+
+#gdq-runners-information a:hover {
+	color: #888;
+	/* color: #00aeef */
+	text-decoration: none;
+}
+
+.runner-logo {
+	width: 32px;
+	margin-right: 6px;
+}
+
+#options {
+	float: right;
+}
+
+.settings-menu {
+	width: 300px;
+	height: auto;
+	z-index: 1000;
+}
+
+#settings-link {
+	color: #FFF;
+}
+
+.settings-icon {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+#refresh-timer-update label, #schedule-items-update label, #quakenet-chat-switch {
+	font-size: 20px;
+	color: #000;
+}
+
+#refresh-timer-select, #schedule-items-select {
+	width: 80%;
+	float: left;
+	margin-bottom: 20px;
+}
+
+#refresh-timer-submit, #schedule-items-submit {
+	float: right;
+}
+
+#schedule-table a:hover {
+	color: #888;
+	/* color: #00aeef */
+	text-decoration: none;
+}
