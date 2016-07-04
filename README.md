@@ -9,3 +9,5 @@ You can also enable an embed to place the #SDAMarathon channel chat on Quakenet-
 ![Alt text](/screenshot.png?raw=true "Extension Screenshot")
 
 The schedule on the website also updates to display Video On Demand Twitch.tv links for completed runs.
+
+![Alt text](/schedule-screenshot.png?raw=true "Extension Schedule Screenshot")
