@@ -17,8 +17,9 @@ Other Functionality:
 
 # To Install
 While the new features and bug fixes are being worked on, you can download the project and install Better-GDQ by:
+
 1. Enabling developer mode on the Chrome Extensions page
-2. Load the unpacked extension and open the **dist** folder
-3. Enjoy!
+2. Loading the unpacked extension and opening the **dist** folder
+3. Visiting [GamesDoneQuick.com](https://gamesdonequick.com) and verifying the UI has changed
 
 All comments/feedback/criticisms, feature requests or ideas and bug reports are welcome.
