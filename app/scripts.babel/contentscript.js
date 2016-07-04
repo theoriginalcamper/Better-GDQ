@@ -41,8 +41,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         var updateRefreshTimerValue = $('#refresh-timer-update').serializeArray()[0]["value"];
-
-        console.log(updateRefreshTimerValue);
+        
         updateRefreshRate(updateRefreshTimerValue);
 
         return false;

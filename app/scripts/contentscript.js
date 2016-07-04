@@ -40,7 +40,6 @@ $(document).ready(function () {
 
         var updateRefreshTimerValue = $('#refresh-timer-update').serializeArray()[0]["value"];
 
-        console.log(updateRefreshTimerValue);
         updateRefreshRate(updateRefreshTimerValue);
 
         return false;
