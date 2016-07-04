@@ -34,6 +34,8 @@ $(page_elem).on('click', 'ul.dropdown-menu', function (e) {
 
 $(document).ready(function() {
     $(page_elem).css('margin-bottom', '70px');
+    $('#stream').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
+    $('#stream').css('margin-top', '24px');
     $('.game-information').append(game_link_a);
     $('.game-information').append(runners_paragraph);
 
