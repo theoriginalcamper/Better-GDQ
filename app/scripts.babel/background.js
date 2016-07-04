@@ -78,12 +78,12 @@ function getSpeedrunData(game, port) {
     }
 
     if (typeof gameData != 'undefined') {
-        if (typeof possibleGameTitle == 'undefined') {
+        if (typeof possibleGameTitle != 'undefined') {
             current_game = possibleGameTitle[0][1];
         } else {
             current_game = game;
         }
-        
+
         current_game_title = gameData.title;
         current_runners = getRunnerData(gameData.runner);
         current_estimate = gameData.estimate;
