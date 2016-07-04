@@ -233,8 +233,8 @@ function generateFormattedRunnerString(runners) {
         runner_string += 'and ';
         runner_string += generateRunnerElement(runners, last_runner);
     } else if (runners_keys.length == 2) {
-        var last_runner = runner_keys.pop();
-        var second_runner = runner_keys.pop();
+        var last_runner = runners_keys.pop();
+        var second_runner = runners_keys.pop();
 
         runner_string += generateRunnerElement(runners, second_runner);
         runner_string += ' and ';
@@ -246,7 +246,6 @@ function generateFormattedRunnerString(runners) {
         console.log("Error no runners.");
         runner_string = "";
     }
-
     return runner_string;
 }
 
