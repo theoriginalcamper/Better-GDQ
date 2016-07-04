@@ -76,7 +76,7 @@ body {
 	cursor: pointer;
 }
 
-#refresh-timer-update label, #schedule-items-update label, #quakenet-chat-switch {
+#refresh-timer-update label, #schedule-items-update label, #quakenet-chat-switch, #twitch-chat-switch {
 	font-size: 20px;
 	color: #000;
 }

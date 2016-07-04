@@ -78,24 +78,84 @@ $(document).ready(function() {
     });
 
     $("[name='quakenet-chat-switch']").bootstrapSwitch();
+    $("[name='twitch-chat-switch']").bootstrapSwitch();
 
     $('input[name="quakenet-chat-switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
         console.log('Clicked QUAKENET Switch.');
+        console.log(this);
+        console.log("Twitch State:");
+        console.log($('input[name="twitch-chat-switch"]').bootstrapSwitch('state'));
+        console.log("Quake State:");
+        console.log($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state'));
 
-        if ($(".bootstrap-switch").hasClass('bootstrap-switch-on')) {
+        if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
+            updateTwitchChat('remove');
+            $('input[name="twitch-chat-switch"]').bootstrapSwitch('state', false, true);
+            if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
+                updateQuakeChat('add');
+            } else {
+                updateQuakeChat('remove');
+            }
+        } else {
+            console.log()
+            if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
+                updateQuakeChat('add');
+            } else {
+                updateQuakeChat('remove');
+            }
+        }
+    });
+
+    $('input[name="twitch-chat-switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
+        console.log('Clicked Twitch Switch.');
+        if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
+            updateQuakeChat('remove');
+            $('input[name="quakenet-chat-switch"]').bootstrapSwitch('state', false, true);
+            if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
+                updateTwitchChat('add');
+            } else {
+                updateTwitchChat('remove');
+            }
+        } else {
+            if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
+                updateTwitchChat('add');
+            } else {
+                updateTwitchChat('remove');
+            }
+        }
+    });
+
+    function updateQuakeChat(msg) {
+        if(msg == 'add') {
             console.log('Switch is on. Adding Chat iframe and modifying UI.');
             $('#stream').removeClass('center-block').addClass('pull-left');
             $.get(chrome.extension.getURL('/html/quakenet-chat.html'), function(data) {
                 var twitchStream = $("#stream");
                 $(twitchStream).after($.parseHTML(data));
             });
-        } else {
+        } else if (msg == 'remove') {
             console.log('Switch is off. Removing UI.');
             $('#stream').addClass('center-block').removeClass('pull-left');
             $('#quakenet-chat').remove();
             $('#quakenet-clear').remove();
         }
-    });
+    }
+
+    function updateTwitchChat(msg) {
+        if(msg == 'add') {
+            console.log('Switch is on. Adding Chat iframe and modifying UI.');
+            $('#stream').removeClass('center-block').addClass('pull-left');
+            $.get(chrome.extension.getURL('/html/twitch-chat.html'), function(data) {
+                var twitchStream = $("#stream");
+                $(twitchStream).after($.parseHTML(data));
+            });
+        } else if (msg == 'remove') {
+            console.log('Switch is off. Removing UI.');
+            $('#stream').addClass('center-block').removeClass('pull-left');
+            $('#twitch-chat').remove();
+            $('#twitch-clear').remove();
+        }
+    }
 });
 
 //Port Listeners

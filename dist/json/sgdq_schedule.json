@@ -90,8 +90,22 @@
     "category": "Championship Hypersonic",
     "link": "http://www.speedrun.com/frn"
   },
+  "FAST Racing Neo": {
+    "title": "FAST Racing NEO",
+    "runner": "TonesBalones",
+    "estimate": "0:35:00",
+    "category": "Championship Hypersonic",
+    "link": "http://www.speedrun.com/frn"
+  },
   "1080Â° Avalanche": {
     "title": "1080 Avalanche",
+    "runner": "Thursday",
+    "estimate": "0:34:00",
+    "category": "All Match Races",
+    "link": "http://www.speedrun.com/1080avalanche#All_Match_Races1"
+  },
+  "1080° Avalanche": {
+    "title": "1080° Avalanche",
     "runner": "Thursday",
     "estimate": "0:34:00",
     "category": "All Match Races",

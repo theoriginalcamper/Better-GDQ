@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "1.1.2",
+  "version": "1.2.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -61,6 +61,7 @@
   "web_accessible_resources": [
     "html/gdq-footer.html",
     "html/quakenet-chat.html",
-    "html/settings-menu.html"
+    "html/settings-menu.html",
+    "html/twitch-chat.html"
   ]
 }

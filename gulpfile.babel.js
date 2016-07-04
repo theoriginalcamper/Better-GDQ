@@ -16,6 +16,7 @@ gulp.task('extras', () => {
     'app/html/gdq-footer.html',
     'app/html/quakenet-chat.html',
     'app/html/settings-menu.html',
+    'app/html/twitch-chat.html',
     'app/scripts/jquery-2.2.0.min.js',
     'app/scripts/underscore-min.js',
     'app/scripts/bootstrap-notify.min.js',
