@@ -41,7 +41,7 @@ $(document).ready(function() {
         e.preventDefault();
 
         var updateRefreshTimerValue = $('#refresh-timer-update').serializeArray()[0]["value"];
-        
+
         updateRefreshRate(updateRefreshTimerValue);
 
         return false;
@@ -209,7 +209,7 @@ function generateScheduleItemString(scheduleItemObject, index) {
     var scheduleItemString = `<tr>
                                 <th scope="row">${index}</th>
                                 <td>
-                                    <a class="speedrun-link" id="next-game-title" href="${scheduleItemObject.link}"> ${titleString}</a>
+                                    <a class="speedrun-link" id="next-game-title" href="${scheduleItemObject.link}" onclick="window.open(this.href); return false;"> ${titleString}</a>
                                     <p class="runners-links" id="next-runners-information">${runnerString}</p>
                                 </td>
                                 <td style="width: 114px;">

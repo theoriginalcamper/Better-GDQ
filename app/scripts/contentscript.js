@@ -204,7 +204,7 @@ function generateScheduleItemString(scheduleItemObject, index) {
         var titleString = scheduleItemObject.title;
     }
 
-    var scheduleItemString = '<tr>\n                                <th scope="row">' + index + '</th>\n                                <td>\n                                    <a class="speedrun-link" id="next-game-title" href="' + scheduleItemObject.link + '"> ' + titleString + '</a>\n                                    <p class="runners-links" id="next-runners-information">' + runnerString + '</p>\n                                </td>\n                                <td style="width: 114px;">\n                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + scheduleItemObject.estimate + '</p>\n                                </td>\n                              </tr>';
+    var scheduleItemString = '<tr>\n                                <th scope="row">' + index + '</th>\n                                <td>\n                                    <a class="speedrun-link" id="next-game-title" href="' + scheduleItemObject.link + '" onclick="window.open(this.href); return false;"> ' + titleString + '</a>\n                                    <p class="runners-links" id="next-runners-information">' + runnerString + '</p>\n                                </td>\n                                <td style="width: 114px;">\n                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + scheduleItemObject.estimate + '</p>\n                                </td>\n                              </tr>';
 
     return scheduleItemString;
 }
