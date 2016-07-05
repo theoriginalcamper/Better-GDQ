@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "1.6.0",
+  "version": "1.6.2",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -18,17 +18,28 @@
   },
   "permissions": [
     "tabs",
-    "http://*/*",
-    "https://*/*",
-    "http://api.twitch.tv/channels/gamesdonequick"
+    "http://gamesdonequick.com/*",
+    "http://www.gamesdonequick.com/*",
+    "https://gamesdonequick.com/*",
+    "https://www.gamesdonequick.com/*",
+    "http://www.discordapp.com/*",
+    "https://www.discordapp.com/*",
+    "http://discordapp.com/*",
+    "https://discordapp.com/*",
+    "http://api.twitch.tv/channels/gamesdonequick",
+    "https://api.twitch.tv/channels/gamesdonequick"
   ],
   "content_scripts": [
     {
       "matches": [
-        "http://gamesdonequick.com/*",
-        "https://gamesdonequick.com/*",
-        "http://www.gamesdonequick.com/*",
-        "https://www.gamesdonequick.com/*"
+        "http://gamesdonequick.com/",
+        "https://gamesdonequick.com/",
+        "http://www.gamesdonequick.com/",
+        "https://www.gamesdonequick.com/",
+        "http://gamesdonequick.com/schedule",
+        "https://gamesdonequick.com/schedule",
+        "http://www.gamesdonequick.com/schedule",
+        "https://www.gamesdonequick.com/schedule"
       ],
       "css": [
         "styles/fontawesome-min.css",
@@ -61,7 +72,8 @@
     {
       "matches": [
         "https://discordapp.com/channels/140605087511740416/140605087511740416",
-        "https://discordapp.com/channels/140605087511740416/*"
+        "https://discordapp.com/channels/140605087511740416/*",
+        "https://discordapp.com/channels/*"
       ],
       "css": [
         "styles/fontawesome-min.css",

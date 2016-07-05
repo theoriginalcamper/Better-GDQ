@@ -187,6 +187,7 @@ port.postMessage({message: "request"});
 port.onMessage.addListener(function(msg) {
     if (msg.status == "changed") {
         console.log(msg);
+        console.log("The Current Game is: " + msg.game);
         updateUI(msg);
         updateCalendarUI(msg.calendar);
     } else if (msg.status == "unchanged") {
@@ -194,6 +195,7 @@ port.onMessage.addListener(function(msg) {
     } else if (msg.status == "reload") {
         console.log("Reload has occurred");
         console.log(msg);
+        console.log("The Current Game is: " + msg.game);
         updateUI(msg);
         updateCalendarUI(msg.calendar);
     }
