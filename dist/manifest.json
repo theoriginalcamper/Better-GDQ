@@ -57,6 +57,23 @@
       ],
       "run_at": "document_end",
       "all_frames": false
+    },
+    {
+      "matches": [
+        "https://discordapp.com/channels/140605087511740416/140605087511740416"
+      ],
+      "css": [
+        "styles/fontawesome-min.css",
+        "styles/bootstrap-switch.min.css",
+        "styles/discord.css"
+      ],
+      "js": [
+        "scripts/jquery-2.2.0.min.js",
+        "scripts/bootstrap-switch.min.js",
+        "scripts/discord-contentscript.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
     }
   ],
   "web_accessible_resources": [
