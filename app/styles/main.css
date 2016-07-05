@@ -10,6 +10,7 @@ body {
 	width: 100%;
 	background: #101010;
 	height: auto;
+	z-index: 1000000;
 }
 
 .extension-container {
@@ -76,7 +77,7 @@ body {
 	cursor: pointer;
 }
 
-#refresh-timer-update label, #schedule-items-update label, #quakenet-chat-switch, #twitch-chat-switch {
+#refresh-timer-update label, #schedule-items-update label, #quakenet-chat-switch, #twitch-chat-switch, #theater-mode {
 	font-size: 20px;
 	color: #000;
 }
