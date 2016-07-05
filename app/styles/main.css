@@ -6,11 +6,18 @@ body {
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
-	min-height: 70px;
 	width: 100%;
 	background: #101010;
 	height: auto;
 	z-index: 1000000;
+}
+
+.standard-footer {
+	min-height: 70px;
+}
+
+.theater-footer {
+	min-height: 10%;
 }
 
 .extension-container {

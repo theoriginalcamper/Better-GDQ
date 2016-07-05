@@ -83,6 +83,10 @@ $(document).ready(function() {
     $("[name='twitch-chat-switch']").bootstrapSwitch();
     $("[name='theater-mode']").bootstrapSwitch();
 
+    /*
+        QUAKENET IRC THEATER MODE BUTTON
+    */
+
     $('input[name="theater-mode"]').on('switchChange.bootstrapSwitch', function (event, state) {
         if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
             updateQuakeChat('remove');
@@ -96,9 +100,11 @@ $(document).ready(function() {
                 console.log($.parseHTML(data));
                 $('#battlescene').before($.parseHTML(data));
             });
+            $('#footer').addClass('theater-footer').removeClass('standard-footer');
         } else {
             $('#theater-mode-div').remove();
             $('#stream').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
+            $('#footer').addClass('standard-footer').removeClass('theater-footer');
         }
     });
 
