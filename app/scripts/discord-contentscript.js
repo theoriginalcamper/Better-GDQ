@@ -42,7 +42,7 @@ $(document).ready(function () {
 			console.log('Switch is on. Adding Twitch iframe and modifying UI.');
 			$('.messages-wrapper').before('<iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" style="margin: auto;" width="560" height="315" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
 		} else if (msg == 'remove') {
-			console.log('Switch is off. Removing UI.');
+			console.log('Switch is off. Removing Twitch iframe and UI changes.');
 			$('#twitch-embed').remove();
 		}
 	}
