@@ -321,6 +321,7 @@ function updateRefreshRate(newRate) {
             allow_dismiss: true,
             newest_on_top: true,
             showProgressbar: false,
+            z_index: 10001,
             placement: {
                 from: "top",
                 align: "right"
@@ -346,6 +347,7 @@ function updateRefreshRate(newRate) {
             allow_dismiss: true,
             newest_on_top: true,
             showProgressbar: false,
+            z_index: 10001,
             placement: {
                 from: "top",
                 align: "right"
@@ -370,6 +372,7 @@ function sendUpdateCalendarItemsNumber(newCalendarItemsNumber) {
             allow_dismiss: true,
             newest_on_top: true,
             showProgressbar: false,
+            z_index: 10001,
             placement: {
                 from: "top",
                 align: "right"
@@ -392,6 +395,7 @@ function sendUpdateCalendarItemsNumber(newCalendarItemsNumber) {
             allow_dismiss: true,
             newest_on_top: true,
             showProgressbar: false,
+            z_index: 10001,
             placement: {
                 from: "top",
                 align: "right"
