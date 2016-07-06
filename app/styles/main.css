@@ -104,3 +104,21 @@ body {
 	/* color: #00aeef */
 	text-decoration: none;
 }
+input[type=checkbox].highlight-run {
+	display: none;
+}
+
+input[type=checkbox].highlight-run + label:before { 
+	font-family: FontAwesome;
+	content: "\f006"; 
+} /* unchecked icon */
+input[type=checkbox].highlight-run + label:before { 
+	letter-spacing: 10px; 
+} /* space between checkbox and label */
+
+input[type=checkbox].highlight-run:checked + label:before { 
+	content: "\f005"; 
+} /* checked icon */
+input[type=checkbox].highlight-run:checked + label:before { 
+	letter-spacing: 10px; 
+} /* allow space for check mark */
