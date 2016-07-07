@@ -790,6 +790,13 @@
     "category": "100%",
     "link": "http://www.speedrun.com/jak1#100"
   },
+  "Jak and Daxter": {
+    "title": "Jak and Daxter: The Precursor Legacy",
+    "runner": "Bonesaw577",
+    "estimate": "2:15:00",
+    "category": "100%",
+    "link": "http://www.speedrun.com/jak1#100"
+  },
   "Klonoa: Door to Phantomile": {
     "title": "Klonoa: Door to Phantomile",
     "runner": "CavemanDCJ",
@@ -798,6 +805,13 @@
     "link": "http://www.speedrun.com/klonoa1#Any1"
   },
   "Max Payne 2: The Fall of Max Payne": {
+    "title": "Max Payne 2",
+    "runner": "saintmillion",
+    "estimate": "0:40:00",
+    "category": "Any% Dead on Arrival",
+    "link": "http://www.speedrun.com/mp2#Any%25_Dead_on_arrival"
+  },
+  "Max Payne 2": {
     "title": "Max Payne 2",
     "runner": "saintmillion",
     "estimate": "0:40:00",
@@ -882,6 +896,13 @@
     "link": "http://www.speedrun.com/Demon_Sword#Any_USA1"
   },
   "Gargoyle's Quest II: The Demon Darkness": {
+    "title": "Gargoyle's Quest 2",
+    "runner": "RogueLink",
+    "estimate": "0:33:00",
+    "category": "Any%",
+    "link": "http://www.speedrun.com/Gargoyles_Quest_2#any"
+  },
+  "Gargoyle's Quest 2": {
     "title": "Gargoyle's Quest 2",
     "runner": "RogueLink",
     "estimate": "0:33:00",

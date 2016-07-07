@@ -91,7 +91,7 @@ $(document).ready(function() {
             					updateDiscordUI('add');
             					clearInterval(uiUpdate);
             				}
-            			});
+            			}, 1000);
     				} else {
     					$('#twitch-container').css('display', 'none');
             			updateDiscordUI('remove');
