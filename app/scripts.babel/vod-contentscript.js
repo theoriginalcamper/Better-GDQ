@@ -6,6 +6,7 @@ $(document).ready(function() {
 	loadHighlightStorage();
 	addHighlights();
 	addVodLinks();
+	addBidWars();
 });
 
 
@@ -29,7 +30,7 @@ function loadHighlightStorage() {
 }
 
 function addHighlights() {
-	$('.text-gdq-black.well').after('<h4 class="text-gdq-black well ">Clicking the <i class="fa fa-star-o"></i> beside the run will highlight it!<br >Use this to keep track of runs you want to watch.</h4>');
+	$('.text-gdq-black.well').after('<h4 class="text-gdq-black well" id="star-highlight-notice">Clicking the <i class="fa fa-star-o"></i> beside the run will highlight it!<br >Use this to keep track of runs you want to watch.</h4>');
 	
 	$('tr:not(.day-split):not(.second-row) td:nth-child(1)').each(function(index) {
 		$(this).html(`<input type="checkbox" class="highlight-run" name="checkbox" id="theater-mode${index}"> <label for="theater-mode${index}">${$(this).text()}</label>`)
@@ -62,6 +63,11 @@ function addHighlights() {
     		$(`#theater-mode${index}`).prop("checked", true).change();
     	}
     });
+}
+
+function addBidWars() {
+	console.log("Starting to add bid war indications");
+	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/sgdq2016">Donation Incentives Bid War Tracker</a></h4>');	
 }
 
 function addVodLinks() {
