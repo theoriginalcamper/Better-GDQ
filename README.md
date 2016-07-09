@@ -20,6 +20,12 @@ Other Functionality:
 
 
 ##GDQ Discord
+Adds a fixed footer to the GamesDoneQuick.com website that displays:
+* Current run with links to the WR list on Speedrun.com and other leaderboards
+* Links to the current runner or runners' Twitch.tv page
+* Schedule of the next 1 to 5 speedruns at the click of a button
+* 
+Other Functionality:
 * Added a Twitch like Theater Mode with embedded Twitch Player and Discord Chat
 
 ![Alt text](/discord-screenshot.png?raw=true "Extension Discord Screenshot")
