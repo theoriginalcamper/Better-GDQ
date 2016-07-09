@@ -150,7 +150,7 @@ function generateRunnerElement(runnerObject, runner_key, location) {
 function addVodLinks() {
 	console.log("Starting to add links");
 	$('td:contains(' + "Super Mario World" + '):first').text('Super Mario World Race');
-	$('td:contains(' + "The Legend of Zelda: Ocarina of Time" + '):eq(2)').text('The Legend of Zelda: Ocarina of Time Glitch Exhibition');
+	$('td:contains(' + "The Legend of Zelda: Ocarina of Time" + ')').eq(1).text('The Legend of Zelda: Ocarina of Time Glitch Exhibition');
 
 	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/30bddc447895b64988412671cfc12898/raw/sgdq2016-vod.json").done(function (data) {
 		console.log(data);
