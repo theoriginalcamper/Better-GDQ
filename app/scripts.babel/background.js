@@ -134,14 +134,14 @@ function getSpeedrunData(game, port) {
         current_calendar = {};
         var schedule_object = {};
 
-        if ((_.keys(scheduleJSON).length - game_index) >= current_number_calendar_items) {
+        if ((_.keys(scheduleJSON).length - (game_index + 1)) >= current_number_calendar_items) {
             _(current_number_calendar_items).times(function(index) {
                 next_game = _.keys(scheduleJSON)[game_index + index + 1];
 
                 next_games.push(next_game);
             });
         } else {
-            _(_.keys(scheduleJSON).length - game_index).times(function(index) {
+            _(_.keys(scheduleJSON).length - (game_index + 1)).times(function(index) {
                 next_game = _.keys(scheduleJSON)[game_index + index + 1];
 
                 next_games.push(next_game);
@@ -181,6 +181,7 @@ function getSpeedrunData(game, port) {
 
 
 function getRunnerData(runners) {
+    console.log(runners);
     var runnersArray = runners.split(", ");
 
     var runnersObject = _.reduce(runnersArray, function(object, runner) {

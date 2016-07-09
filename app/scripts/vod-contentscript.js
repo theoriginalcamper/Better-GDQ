@@ -103,7 +103,10 @@ function addRunnerLinks() {
 
 function generateFormattedRunnerString(runners, location) {
 	var runners_keys = _.keys(runners);
-	var runner_string = "";
+	var runner_string = "by ";
+	if (location == 'table') {
+		runner_string = "";
+	}
 	if (runners_keys.length > 2) {
 		var last_runner = runners_keys.pop();
 		var second_runner = runners_keys.pop();
