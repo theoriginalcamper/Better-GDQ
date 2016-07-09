@@ -107,6 +107,10 @@
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/dangerless-profile_image-8ad9765f9fb472ca-300x300.jpeg",
     "link": "http://twitch.tv/Dangerless"
   },
+  "Darkman78": {
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/thadarkman78-profile_image-b16731636ddef881-300x300.jpeg",
+    "link": "http://twitch.tv/thadarkman78"
+  },
   "DarkTerrex": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/darkterrex-profile_image-5d7c6fc0f1116023-300x300.jpeg",
     "link": "http://twitch.tv/DarkTerrex"
@@ -187,6 +191,10 @@
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/ghoul02-profile_image-d65fa6f2a5b238aa-300x300.png",
     "link": "http://twitch.tv/Ghoul02"
   },
+  "Golden": {
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/go1den-profile_image-baa198d45c6c944a-300x300.jpeg",
+    "link": "https://www.twitch.tv/go1den"
+  },
   "GravelCrusher": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/gravelcrusher-profile_image-da8e0700b55f91cb-300x300.png",
     "link": "http://twitch.tv/GravelCrusher"
@@ -228,6 +236,10 @@
     "link": "http://twitch.tv/Iateyourpie"
   },
   "Iceless": {
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/calebhart42-profile_image-7b4b7f6f663bf4a6-300x300.jpeg",
+    "link": "http://twitch.tv/calebhart42"
+  },
+  "calebhart42": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/calebhart42-profile_image-7b4b7f6f663bf4a6-300x300.jpeg",
     "link": "http://twitch.tv/calebhart42"
   },
@@ -290,6 +302,10 @@
   "LivelyRaccoon": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/livelyraccoon-profile_image-46ed59ffef29619f-300x300.png",
     "link": "http://twitch.tv/LivelyRaccoon"
+  },
+  "Masterjun": {
+    "logo": null,
+    "link": "https://www.youtube.com/user/Masterjun3"
   },
   "MattyIce3131": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/mattyice3131-profile_image-96f82af3bc7a39eb-300x300.png",
@@ -479,6 +495,10 @@
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/thedrifter18-profile_image-fa1cd4d329e42601-300x300.png",
     "link": "http://twitch.tv/TheDrifter18"
   },
+  "TheFuncannon": {
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/thefuncannon-profile_image-526136625e0f7828-300x300.png",
+    "link": "http://twitch.tv/TheFuncannon"
+  },
   "Thursday": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/thursday__-profile_image-6aead594f7815520-300x300.jpeg",
     "link": "http://twitch.tv/thursday__"
@@ -538,6 +558,10 @@
   "_VB": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/vb_srl-profile_image-f419efdabc3f7880-300x300.png",
     "link": "http://twitch.tv/vb_srl"
+  },
+  "agwawaf": {
+    "logo": null,
+    "link": "https://www.youtube.com/user/agwawaf"
   },
   "almondcity": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/almondcity-profile_image-37b61efc33a422c7-300x300.jpeg",
@@ -635,6 +659,10 @@
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lildingus-profile_image-90ad811425b52fe4-300x300.jpeg",
     "link": "http://twitch.tv/lildingus"
   },
+  "link_7777": {
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/link_7777-profile_image-5d0f4857b945ecf8-300x300.jpeg",
+    "link": "http://twitch.tv/link_7777"
+  },
   "michael_goldfish": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/michael_goldfish-profile_image-bae7205bcb8bab75-300x300.png",
     "link": "http://twitch.tv/michael_goldfish"
@@ -679,6 +707,14 @@
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/psychoripper-profile_image-c2042bcdacde432d-300x300.jpeg",
     "link": "http://twitch.tv/psychoripper"
   },
+  "puwexil": {
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/puwexil-profile_image-0a3da9a0ee3b69b9-300x300.jpeg",
+    "link": "http://twitch.tv/puwexil"
+  },
+  "rezephos": {
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/rezephos-profile_image-5952f50f69510d20-300x300.png",
+    "link": "http://twitch.tv/rezephos"
+  },
   "romscout": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/romscout-profile_image-98f95793237264b9-300x300.jpeg",
     "link": "http://twitch.tv/romscout"
@@ -690,6 +726,10 @@
   "soothingplumtea": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/plumtea_-profile_image-7f8afd19f25d5900-300x300.png",
     "link": "http://twitch.tv/plumtea_"
+  },
+  "SpikeVegeta": {
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/spikevegeta-profile_image-4ccba409d6b18a3f-300x300.jpeg",
+    "link": "http://twitch.tv/spikevegeta"
   },
   "spikevegeta": {
     "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/spikevegeta-profile_image-4ccba409d6b18a3f-300x300.jpeg",

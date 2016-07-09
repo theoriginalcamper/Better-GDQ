@@ -1203,19 +1203,19 @@
     "category": "Any%",
     "link": "http://www.speedrun.com/Pepsiman#Any"
   },
-  "Setup Block 6": {
-    "title": "Setup Block 6",
-    "runner": "Tech Crew",
-    "estimate": "0:50:00",
-    "category": null,
-    "link": null
-  },
   "The Legend of Zelda: Ocarina of Time": {
     "title": "The Legend of Zelda: Ocarina of Time",
     "runner": "dannyb21892",
     "estimate": "3:45:00",
     "category": "Glitchless Any%",
     "link": "http://www.speedrun.com/oot#Glitchless1"
+  },
+  "Setup Block 6": {
+    "title": "Setup Block 6",
+    "runner": "Tech Crew",
+    "estimate": "0:50:00",
+    "category": null,
+    "link": null
   },
   "Pikmin": {
     "title": "Pikmin",

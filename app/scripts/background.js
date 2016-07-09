@@ -2,6 +2,24 @@
 
 // chrome.runtime.onInstalled.addListener(details => {
 //   console.log('previousVersion', details.previousVersion);
+//   if(details.reason == "install"){
+//         console.log("This is a first install!");
+//         chrome.storage.local.set({'currentVersion': chrome.runtime.getManifest().version});
+//     }else if(details.reason == "update"){
+//         var thisVersion = chrome.runtime.getManifest().version;
+//         var previousVersion = null;
+//         chrome.storage.local.get('previousVersion', function(data) {
+//             previousVersion = data;
+//         })
+
+//         if (Object.keys(previousVersion).length == 0) {
+//             chrome.storage.local.set({'previousVersion': })
+//         } else {
+
+//         }
+//         console.log("Updated from " + details.previousVersion + " to " + thisVersion + "!");
+//         chrome.storage.local.set({'previousVersion': })
+//     }
 // });
 
 var current_game = null;
@@ -53,6 +71,20 @@ chrome.runtime.onConnect.addListener(function (port) {
                 console.log(msg.calendarItemsNumber);
                 current_number_calendar_items = msg.calendarItemsNumber;
                 getSpeedrunData(current_game, port);
+            } else if (msg.message == "refresh") {
+                $.getJSON("https://api.twitch.tv/channels/gamesdonequick").done(function (resp) {
+                    console.log("Completed request to Twitch");
+                    if (current_game != resp.game) {
+                        console.log("The Current Game being run is: " + resp.game);
+
+                        current_game = resp.game;
+                        getSpeedrunData(current_game, port);
+                        console.log(current_link);
+                    } else {
+                        console.log("Still the same");
+                        getSpeedrunData(current_game, port);
+                    }
+                });
             };
         });
     }
@@ -96,14 +128,14 @@ function getSpeedrunData(game, port) {
         current_calendar = {};
         var schedule_object = {};
 
-        if (171 - game_index >= current_number_calendar_items) {
+        if (_.keys(scheduleJSON).length - game_index >= current_number_calendar_items) {
             _(current_number_calendar_items).times(function (index) {
                 next_game = _.keys(scheduleJSON)[game_index + index + 1];
 
                 next_games.push(next_game);
             });
         } else {
-            _(171 - game_index).times(function (index) {
+            _(_.keys(scheduleJSON).length - game_index).times(function (index) {
                 next_game = _.keys(scheduleJSON)[game_index + index + 1];
 
                 next_games.push(next_game);
@@ -173,4 +205,31 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
             link: current_link,
             calendar: current_calendar });
     }
+});
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+    if (tab.url.indexOf("https://discordapp.com/channels/140605087511740416/140605087511740416") > -1 && changeInfo.url === undefined) {
+        portForMessage.postMessage({ status: "reload",
+            game: current_game_title,
+            runner: current_runners,
+            estimate: current_estimate,
+            category: current_category,
+            link: current_link,
+            calendar: current_calendar });
+    }
+});
+
+chrome.storage.onChanged.addListener(function (changes, namespace) {
+    // for (key in changes) {
+    //     if ()
+    //     var storageChange = changes[key];
+    //     console.log('Storage key "%s" in namespace "%s" changed. ' +
+    //                   'Old value was "%s", new value is "%s".',
+    //                   key,
+    //                   namespace,
+    //                   storageChange.oldValue,
+    //                   storageChange.newValue);
+    // }
+    console.log(changes);
+    portForMessage.postMessage({ status: "version", changes: changes });
 });

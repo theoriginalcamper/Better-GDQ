@@ -1,23 +1,26 @@
 'use strict';
 
 var gameArray = [];
-var timeArray = [];
+var runnerArray = [];
 var storageObj = null;
 $(document).ready(function () {
 	retrieveGameTitleList();
 	loadHighlightStorage();
 	addHighlights();
+	addRunnerLinks();
 	addVodLinks();
 	addBidWars();
+	addMarioMakerLink();
 });
 
 function retrieveGameTitleList() {
+
 	$('tr:not(.day-split):not(.second-row) td:nth-child(2)').each(function () {
 		gameArray.push($(this).text());
 	});
 
-	$('tr:not(.day-split):not(.second-row) td:nth-child(1)').each(function () {
-		timeArray.push($(this).text());
+	$('tr:not(.day-split):not(.second-row) td:nth-child(3)').each(function () {
+		runnerArray.push($(this).text());
 	});
 }
 
@@ -71,17 +74,94 @@ function addBidWars() {
 	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/sgdq2016">Donation Incentives Bid War Tracker</a></h4>');
 }
 
+function addMarioMakerLink() {
+	console.log("Adding Super Mario Maker Link");
+	$('#star-highlight-notice').before('<h4 class="text-gdq-black well" id="gdq-mario-maker-levels"><a href="https://makersofmario.com/worlds/view/547">SGDQ Super Mario Maker Levels!</a></h4>');
+}
+
+function addRunnerLinks() {
+	console.log("Adding Runners");
+
+	$.getJSON(chrome.extension.getURL('/json/sgdq_runners.json')).done(function (resp) {
+		console.log(resp);
+		var runnerJSON = resp;
+
+		$.each(runnerArray, function (index, runnerString) {
+			$('tr:not(.day-split):not(.second-row) td:nth-child(3):contains(' + runnerString + ')').each(function (index, element) {
+				var runners = runnerString.split(', ');
+				var runnerObjects = {};
+
+				console.log(runnerString);
+				$.each(runners, function (index, runner) {
+					runnerObjects[runner] = runnerJSON[runner];
+				});
+				$(this).html(generateFormattedRunnerString(runnerObjects, 'table'));
+			});
+		});
+	});
+}
+
+function generateFormattedRunnerString(runners, location) {
+	var runners_keys = _.keys(runners);
+	var runner_string = "";
+	if (runners_keys.length > 2) {
+		var last_runner = runners_keys.pop();
+		var second_runner = runners_keys.pop();
+		$.each(runners_keys, function (index, runner_key) {
+			runner_string += generateRunnerElement(runners, runner_key, location) + ', ';
+		});
+
+		runner_string += generateRunnerElement(runners, second_runner, location) + ' ';
+		runner_string += 'and ';
+		runner_string += generateRunnerElement(runners, last_runner, location);
+	} else if (runners_keys.length == 2) {
+		var last_runner = runners_keys.pop();
+		var second_runner = runners_keys.pop();
+
+		runner_string += generateRunnerElement(runners, second_runner, location);
+		runner_string += ' and ';
+		runner_string += generateRunnerElement(runners, last_runner, location);
+	} else if (runners_keys.length == 1) {
+		var runner_key = runners_keys[0];
+		runner_string += generateRunnerElement(runners, runners_keys[0], location);
+	} else {
+		console.log("Error no runners.");
+		runner_string = "";
+	}
+	return runner_string;
+}
+
+function generateRunnerElement(runnerObject, runner_key, location) {
+	if (location == 'table') {
+		if (runnerObject[runner_key]["logo"] == null) {
+			return '<a href="' + runnerObject[runner_key]["link"] + '" onclick="window.open(this.href); return false;">' + runner_key + '</a>';
+		} else {
+			return '<a href="' + runnerObject[runner_key]["link"] + '" onclick="window.open(this.href); return false;">' + runner_key + '</a>';
+		}
+	} else {
+		if (runnerObject[runner_key]["logo"] == null) {
+			return '<a href="' + runnerObject[runner_key]["link"] + '" onclick="window.open(this.href); return false;">' + runner_key + '</a>';
+		} else {
+			return '<a href="' + runnerObject[runner_key]["link"] + '" onclick="window.open(this.href); return false;"><img class="runner-logo" src="' + runnerObject[runner_key]["logo"] + '" />' + runner_key + '</a>';
+		}
+	}
+}
+
 function addVodLinks() {
 	console.log("Starting to add links");
+	$('td:contains(' + "Super Mario World" + '):first').text('Super Mario World Race');
+
 	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/30bddc447895b64988412671cfc12898/raw/sgdq2016-vod.json").done(function (data) {
 		console.log(data);
 		var titles = _.keys(data);
 		console.log(titles);
 
 		$.each(titles, function (index, title) {
-			console.log(title);
+			// console.log(title);
 			var templateString = generateVodString(title, data);
-			$('td:contains(' + title + '):first').html(templateString);
+			$('tr:not(.day-split):not(.second-row) td:nth-child(2)').filter(function (index) {
+				return $(this).text() == title;
+			}).html(templateString);
 		});
 
 		console.log("Done");

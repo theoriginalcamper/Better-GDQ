@@ -194,8 +194,10 @@ port.onMessage.addListener(function(msg) {
     if (msg.status == "changed") {
         console.log(msg);
         console.log("The Current Game is: " + msg.game);
-        updateUI(msg);
-        updateCalendarUI(msg.calendar);
+        if ($()) {
+            updateUI(msg);
+            updateCalendarUI(msg.calendar);   
+        }
     } else if (msg.status == "unchanged") {
         console.log("Current game has not changed since last request");
     } else if (msg.status == "reload") {
