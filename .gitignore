@@ -5,4 +5,4 @@ temp
 app/bower_components
 test/bower_components
 package
-
+dist/images/Thumbs.db
