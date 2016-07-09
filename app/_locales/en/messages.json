@@ -4,7 +4,7 @@
     "description": "The name of the application"
   },
   "appDescription": {
-    "message": "This extension adds a footer to the GamesDoneQuick.com website that displays the current run with links to the WR list on Speedrun.com, links to the current runner(s) Twitch.tv page and the ability to see a schedule of the next 1 to 5 speedruns at the click of a button. You can also enable an embed to place the #SDAMarathon channel chat on Quakenet-IRC next to the Twitch.tv player like during past marathons.",
-    "description": "This extension adds a footer to the GamesDoneQuick.com website that displays the current run with links to the WR list on Speedrun.com, links to the current runner(s) Twitch.tv page and the ability to see a schedule of the next 1 to 5 speedruns at the click of a button. You can also enable an embed to place the #SDAMarathon channel chat on Quakenet-IRC next to the Twitch.tv player like during past marathons."
+    "message": "Adds functionality and UI changes to improve the GDQ viewing experience on GamesDoneQuick.com and the GDQ Discord Web Client",
+    "description": ""
   }
 }
