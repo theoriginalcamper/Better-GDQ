@@ -1293,6 +1293,24 @@
     "estimate": "1:00:00",
     "category": "various"
   },
+  "Super Mario Land 2": {
+    "title": "TASBot plays Super Mario Land 2",
+    "runner": "dwangoAC, link_7777",
+    "estimate": "0:10:00",
+    "category": "Memory Tour/Glitchfest"
+  },
+  "VVVVVV": {
+    "title": "TASBot plays VVVVVV",
+    "runner": "dwangoAC, Masterjun",
+    "estimate": "0:17:33",
+    "category": "20 Trinkets, No Death"
+  },
+  "Super Mario Bros.": {
+    "title": "TASBot plays Super Mario Bros. 1, 2 + 3",
+    "runner": "dwangoAC, agwawaf",
+    "estimate": "0:08:49",
+    "category": "One Controller Three Games"
+  },
   "Final Fantasy VI": {
     "title": "Final Fantasy VI",
     "runner": "bichphuongballz",
