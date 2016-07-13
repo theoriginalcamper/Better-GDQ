@@ -179,7 +179,7 @@ $(document).ready(function() {
 	        
 	        var scheduleString = "";
 	        _.each(msg.order, function(gameTitle, index) {
-	            scheduleString += generateScheduleItemString(msg.schedule[gameTitle], index + 1);
+	            scheduleString += generateScheduleItemString(msg.schedule[gameTitle], msg.highlights, index + 1);
 	        });
 
 	        $('#schedule-table tbody').html(scheduleString);
@@ -236,15 +236,22 @@ $(document).ready(function() {
     	}
 	}
 
-	function generateScheduleItemString(scheduleItemObject, index) {
+	function generateScheduleItemString(scheduleItemObject, highlightsObject, index) {
 	    var runnerString = generateFormattedRunnerString(scheduleItemObject.runner, 'table');
 	    if (scheduleItemObject.category != null) {
 	        var titleString = scheduleItemObject.title + ' (' + scheduleItemObject.category +')';
 	    } else {
 	        var titleString = scheduleItemObject.title;
 	    }
+
+	    if (typeof highlightsObject[scheduleItemObject.title] == 'undefined' || highlightsObject[scheduleItemObject.title] == false) {
+	        var highlightStyle = '';
+	    } else {
+	        var highlightStyle = 'background-color:#555555;';
+	        titleString = '<i class="fa fa-star"></i> ' + titleString;
+	    }
 	    
-	    var scheduleItemString = `<tr>
+	    var scheduleItemString = `<tr style=${highlightStyle}>
 	                                <th scope="row">${index}</th>
 	                                <td>
 	                                    <a class="speedrun-link" id="next-game-title" href="${scheduleItemObject.link}" onclick="window.open(this.href); return false;"> ${titleString}</a>

@@ -155,25 +155,28 @@ function getSpeedrunData(game, port) {
             return object;
         }, {});
 
+        chrome.storage.sync.get('scheduleHighlights', function(data) {
+            current_calendar["order"] = next_games;
+            current_calendar["schedule"] = schedule_object;
+            current_calendar["highlights"] = data["scheduleHighlights"];
 
-        current_calendar["order"] = next_games;
-        current_calendar["schedule"] = schedule_object;
+            console.log(current_calendar);
 
-        console.log(current_calendar);
-
-        console.log("Game Data for " + current_game_title + " has been retrieved.")
+            console.log("Game Data for " + current_game_title + " has been retrieved.")
 
 
-        port.postMessage({status: "changed", 
-                          game: current_game_title,
-                          runner: current_runners,
-                          estimate: current_estimate,
-                          category: current_category,
-                          link: current_link,
-                          calendar: current_calendar
-                        });
+            port.postMessage({status: "changed", 
+                              game: current_game_title,
+                              runner: current_runners,
+                              estimate: current_estimate,
+                              category: current_category,
+                              link: current_link,
+                              calendar: current_calendar
+                            });
 
-        console.log("Game Data sent!");
+            console.log("Game Data sent!");
+        })
+        
     } else {
         console.log("Fuzzy text search failed to find a game title above the required threshold.")
     }

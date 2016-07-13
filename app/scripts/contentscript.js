@@ -239,7 +239,7 @@ function updateCalendarUI(msg) {
 
         var scheduleString = "";
         _.each(msg.order, function (gameTitle, index) {
-            scheduleString += generateScheduleItemString(msg.schedule[gameTitle], index + 1);
+            scheduleString += generateScheduleItemString(msg.schedule[gameTitle], msg.highlights, index + 1);
         });
 
         $('#schedule-table tbody').html(scheduleString);
@@ -287,7 +287,7 @@ function generateRunnerElement(runnerObject, runner_key) {
     }
 }
 
-function generateScheduleItemString(scheduleItemObject, index) {
+function generateScheduleItemString(scheduleItemObject, highlightsObject, index) {
     var runnerString = generateFormattedRunnerString(scheduleItemObject.runner);
     if (scheduleItemObject.category != null) {
         var titleString = scheduleItemObject.title + ' (' + scheduleItemObject.category + ')';
@@ -295,7 +295,16 @@ function generateScheduleItemString(scheduleItemObject, index) {
         var titleString = scheduleItemObject.title;
     }
 
-    var scheduleItemString = '<tr>\n                                <th scope="row">' + index + '</th>\n                                <td>\n                                    <a class="speedrun-link" id="next-game-title" href="' + scheduleItemObject.link + '" onclick="window.open(this.href); return false;"> ' + titleString + '</a>\n                                    <p class="runners-links" id="next-runners-information">' + runnerString + '</p>\n                                </td>\n                                <td style="width: 114px;">\n                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + scheduleItemObject.estimate + '</p>\n                                </td>\n                              </tr>';
+    console.log(highlightsObject);
+
+    if (typeof highlightsObject[scheduleItemObject.title] == 'undefined' || highlightsObject[scheduleItemObject.title] == false) {
+        var highlightStyle = '';
+    } else {
+        var highlightStyle = 'background-color:#555555;';
+        titleString = '<i class="fa fa-star"></i> ' + titleString;
+    }
+
+    var scheduleItemString = '<tr style=' + highlightStyle + '>\n                                <th scope="row">' + index + '</th>\n                                <td>\n                                    <a class="speedrun-link" id="next-game-title" href="' + scheduleItemObject.link + '" onclick="window.open(this.href); return false;"> ' + titleString + '</a>\n                                    <p class="runners-links" id="next-runners-information">' + runnerString + '</p>\n                                </td>\n                                <td style="width: 114px;">\n                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + scheduleItemObject.estimate + '</p>\n                                </td>\n                              </tr>';
 
     return scheduleItemString;
 }

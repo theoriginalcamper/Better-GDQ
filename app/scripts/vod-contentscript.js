@@ -30,6 +30,9 @@ function loadHighlightStorage() {
 		storageObj = JSON.parse(localStorage.getItem('scheduleHighlights'));
 	} else {
 		storageObj = JSON.parse(localStorage.getItem('scheduleHighlights'));
+		chrome.storage.sync.set({ 'scheduleHighlights': storageObj }, function () {
+			console.log('Schedule highlights saved to sync storage');
+		});
 	}
 }
 
@@ -48,6 +51,9 @@ function addHighlights() {
 
 				storageObj[gameTitle] = true;
 
+				chrome.storage.sync.set({ 'scheduleHighlights': storageObj }, function (data) {
+					console.log("Schedule highlights updated and saved to sync storage");
+				});
 				localStorage.setItem('scheduleHighlights', JSON.stringify(storageObj));
 				console.log('Starred and highlighted ' + gameTitle + ' on the schedule');
 			} else {
@@ -59,6 +65,9 @@ function addHighlights() {
 				storageObj[gameTitle] = false;
 
 				localStorage.setItem('scheduleHighlights', JSON.stringify(storageObj));
+				chrome.storage.sync.set({ 'scheduleHighlights': storageObj }, function () {
+					console.log("Schedule highlights updated");
+				});
 				console.log('Removed the star and highlight for ' + gameTitle + ' on the schedule');
 			}
 		});

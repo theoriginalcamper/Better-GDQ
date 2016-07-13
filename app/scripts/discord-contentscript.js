@@ -160,7 +160,7 @@ $(document).ready(function () {
 
 			var scheduleString = "";
 			_.each(msg.order, function (gameTitle, index) {
-				scheduleString += generateScheduleItemString(msg.schedule[gameTitle], index + 1);
+				scheduleString += generateScheduleItemString(msg.schedule[gameTitle], msg.highlights, index + 1);
 			});
 
 			$('#schedule-table tbody').html(scheduleString);
@@ -217,7 +217,7 @@ $(document).ready(function () {
 		}
 	}
 
-	function generateScheduleItemString(scheduleItemObject, index) {
+	function generateScheduleItemString(scheduleItemObject, highlightsObject, index) {
 		var runnerString = generateFormattedRunnerString(scheduleItemObject.runner, 'table');
 		if (scheduleItemObject.category != null) {
 			var titleString = scheduleItemObject.title + ' (' + scheduleItemObject.category + ')';
@@ -225,7 +225,14 @@ $(document).ready(function () {
 			var titleString = scheduleItemObject.title;
 		}
 
-		var scheduleItemString = '<tr>\n\t                                <th scope="row">' + index + '</th>\n\t                                <td>\n\t                                    <a class="speedrun-link" id="next-game-title" href="' + scheduleItemObject.link + '" onclick="window.open(this.href); return false;"> ' + titleString + '</a>\n\t                                    <p class="runners-links" id="next-runners-information">' + runnerString + '</p>\n\t                                </td>\n\t                                <td>\n\t                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + scheduleItemObject.estimate + '</p>\n\t                                </td>\n\t                              </tr>';
+		if (typeof highlightsObject[scheduleItemObject.title] == 'undefined' || highlightsObject[scheduleItemObject.title] == false) {
+			var highlightStyle = '';
+		} else {
+			var highlightStyle = 'background-color:#555555;';
+			titleString = '<i class="fa fa-star"></i> ' + titleString;
+		}
+
+		var scheduleItemString = '<tr style=' + highlightStyle + '>\n\t                                <th scope="row">' + index + '</th>\n\t                                <td>\n\t                                    <a class="speedrun-link" id="next-game-title" href="' + scheduleItemObject.link + '" onclick="window.open(this.href); return false;"> ' + titleString + '</a>\n\t                                    <p class="runners-links" id="next-runners-information">' + runnerString + '</p>\n\t                                </td>\n\t                                <td>\n\t                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + scheduleItemObject.estimate + '</p>\n\t                                </td>\n\t                              </tr>';
 
 		return scheduleItemString;
 	}
