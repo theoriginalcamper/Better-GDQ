@@ -258,6 +258,13 @@ $(document).ready(function () {
 				}
 			});
 
+			$('.dms').on('click', function () {
+				if (twitchActive) {
+					$('#twitch-container').css('display', 'none');
+					updateDiscordUI('remove');
+				}
+			});
+
 			clearInterval(checkForActiveGuild);
 		}
 	}, 1000);
