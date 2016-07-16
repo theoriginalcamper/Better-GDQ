@@ -11,7 +11,7 @@
   "background": {
     "scripts": [
       "scripts/vendor/jquery-2.2.0.min.js",
-      "scripts/underscore-min.js",
+      "scripts/vendor/underscore-min.js",
       "scripts/vendor/fuzzyset.js",
       "scripts/background.js"
     ]
@@ -51,7 +51,7 @@
         "scripts/vendor/jquery-2.2.0.min.js",
         "scripts/vendor/bootstrap-notify.min.js",
         "scripts/vendor/bootstrap-switch.min.js",
-        "scripts/underscore-min.js",
+        "scripts/vendor/underscore-min.js",
         "scripts/gdq/contentscript.js"
       ],
       "run_at": "document_end",
@@ -86,7 +86,7 @@
         "scripts/vendor/jquery-2.2.0.min.js",
         "scripts/vendor/bootstrap.min.js",
         "scripts/vendor/bootstrap-switch.min.js",
-        "scripts/underscore-min.js",
+        "scripts/vendor/underscore-min.js",
         "scripts/discord-contentscript.js"
       ],
       "run_at": "document_end",
