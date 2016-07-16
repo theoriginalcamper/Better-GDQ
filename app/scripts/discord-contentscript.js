@@ -75,7 +75,7 @@ $(document).ready(function () {
 
 	function addInformationBar() {
 
-		$('.app').before('\n\t\t\t\t\t\t\t<header id="gdq-header" style="width: ' + ($('.title-wrap').width() - $('.header-toolbar').width() + 30) + 'px; height: ' + ($('.title-wrap').outerHeight() - 1) + 'px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ' + ($('.guilds-wrapper').width() + $('.channels-wrap').width()) + 'px;">\n\t\t\t\t\t\t\t\t<div class="extension-container">\n\t\t\t\t\t\t\t\t\t<div id="options" style="transform: translateY(50%);">\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-refresh" id="settings-icon"></i>\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div class="game-information">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div style="clear:both;"></div>\n\t\t\t\t\t\t\t\t\t<div class="collapse" id="collapseCalendar" style="padding-top: 10px; height: 0px;">\n\t\t\t\t\t\t\t\t\t\t<!-- Schedule -->\n\t\t\t\t\t\t\t\t\t\t<p><i class="fa fa-calendar" style="margin-right: 10px;"></i> Next Runs</p>\n\t\t\t\t\t\t\t\t\t\t<table class="table" id="schedule-table" style="border-collapse: collapse;">\n\t\t\t\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</header>\n\t\t\t');
+		$('.app').before('\n\t\t\t\t\t\t\t<header id="gdq-header" style="width: ' + ($('.title-wrap').width() - $('.header-toolbar').width() + 10) + 'px; height: ' + ($('.title-wrap').outerHeight() - 1) + 'px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ' + ($('.guilds-wrapper').width() + $('.channels-wrap').width()) + 'px;">\n\t\t\t\t\t\t\t\t<div class="extension-container">\n\t\t\t\t\t\t\t\t\t<div id="options" style="transform: translateY(50%);">\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-refresh" id="settings-icon"></i>\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div class="game-information">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div style="clear:both;"></div>\n\t\t\t\t\t\t\t\t\t<div class="collapse" id="collapseCalendar" style="padding-top: 10px; height: 0px;">\n\t\t\t\t\t\t\t\t\t\t<!-- Schedule -->\n\t\t\t\t\t\t\t\t\t\t<p><i class="fa fa-calendar" style="margin-right: 10px;"></i> Next Runs</p>\n\t\t\t\t\t\t\t\t\t\t<table class="table" id="schedule-table" style="border-collapse: collapse;">\n\t\t\t\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</header>\n\t\t\t');
 
 		headerHeight = $('#gdq-header').css('height');
 
@@ -100,9 +100,9 @@ $(document).ready(function () {
 		if (msg == 'add') {
 			console.log('Switch is on. Adding Twitch iframe and modifying UI.');
 
-			if ($('.header-toolbar button:nth-child(2)').hasClass('active')) {
+			if ($('.header-toolbar button:nth-child(3)').hasClass('active')) {
 				userListStatus = true;
-				$('.header-toolbar button:nth-child(2)').click();
+				$('.header-toolbar button:nth-child(3)').click();
 			} else {
 				userListStatus = false;
 			}
@@ -121,7 +121,7 @@ $(document).ready(function () {
 			updateDiscordUI('remove');
 
 			if (userListStatus == true) {
-				$('.header-toolbar button:nth-child(2)').click();
+				$('.header-toolbar button:nth-child(3)').click();
 			}
 		}
 	}

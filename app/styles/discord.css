@@ -1,3 +1,7 @@
+.header-toolbar button+button {
+	margin-left: 1px !important
+}
+
 #twitch-player-display-label {
 	color: #FFF;
 	font-size: 14px;

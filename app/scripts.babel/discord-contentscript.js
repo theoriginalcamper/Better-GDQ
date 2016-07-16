@@ -72,7 +72,7 @@ $(document).ready(function() {
     function addInformationBar() {
 
     	$('.app').before(`
-							<header id="gdq-header" style="width: ${$('.title-wrap').width() - $('.header-toolbar').width() + 30}px; height: ${$('.title-wrap').outerHeight() - 1}px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ${$('.guilds-wrapper').width() + $('.channels-wrap').width()}px;">
+							<header id="gdq-header" style="width: ${$('.title-wrap').width() - $('.header-toolbar').width() + 10}px; height: ${$('.title-wrap').outerHeight() - 1}px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ${$('.guilds-wrapper').width() + $('.channels-wrap').width()}px;">
 								<div class="extension-container">
 									<div id="options" style="transform: translateY(50%);">
 										<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>
@@ -118,9 +118,9 @@ $(document).ready(function() {
         if(msg == 'add') {
             console.log('Switch is on. Adding Twitch iframe and modifying UI.');	
 
-            if($('.header-toolbar button:nth-child(2)').hasClass('active')) {
+            if($('.header-toolbar button:nth-child(3)').hasClass('active')) {
             	userListStatus = true;
-            	$('.header-toolbar button:nth-child(2)').click();
+            	$('.header-toolbar button:nth-child(3)').click();
             } else {
             	userListStatus = false;
             }
@@ -139,7 +139,7 @@ $(document).ready(function() {
             updateDiscordUI('remove');
 
             if(userListStatus == true) {
-            	$('.header-toolbar button:nth-child(2)').click();
+            	$('.header-toolbar button:nth-child(3)').click();
             }
             
         }
