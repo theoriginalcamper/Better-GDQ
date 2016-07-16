@@ -31,10 +31,13 @@ Other Functionality:
 ![Alt text](/discord-screenshot.png?raw=true "Extension Discord Screenshot")
 
 # To Install
-While the new features and bug fixes are being worked on, you can download the project and install Better-GDQ by:
+While the new features and bug fixes are being worked on, you can download the project and install the newest dev version of Better-GDQ by:
 
 1. Enabling developer mode on the Chrome Extensions page
 2. Loading the unpacked extension and opening the **dist** folder
 3. Visiting [GamesDoneQuick.com](https://gamesdonequick.com) or the [GDQ Discord Web Client](https://discord.gg/gamesdonequick) and verifying the UI has changed
+
+
+## Better-GDQ can also be installed from the [Chrome Web Store](https://chrome.google.com/webstore/detail/better-gdq/ejcaegeanpaohhmimojlgfipmdofmphh)
 
 All comments/feedback/criticisms, feature requests or ideas and bug reports are welcome.
