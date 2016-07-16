@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -10,9 +10,9 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/jquery-2.2.0.min.js",
-      "scripts/underscore-min.js",
-      "scripts/fuzzyset.js",
+      "scripts/vendor/jquery-2.2.0.min.js",
+      "scripts/vendor/underscore-min.js",
+      "scripts/vendor/fuzzyset.js",
       "scripts/background.js"
     ]
   },
@@ -48,11 +48,11 @@
         "styles/main.css"
       ],
       "js": [
-        "scripts/jquery-2.2.0.min.js",
-        "scripts/bootstrap-notify.min.js",
-        "scripts/bootstrap-switch.min.js",
-        "scripts/contentscript.js",
-        "scripts/underscore-min.js"
+        "scripts/vendor/jquery-2.2.0.min.js",
+        "scripts/vendor/bootstrap-notify.min.js",
+        "scripts/vendor/bootstrap-switch.min.js",
+        "scripts/vendor/underscore-min.js",
+        "scripts/gdq/contentscript.js"
       ],
       "run_at": "document_end",
       "all_frames": false
@@ -65,7 +65,7 @@
         "https://www.gamesdonequick.com/schedule"
       ],
       "js": [
-        "scripts/vod-contentscript.js"
+        "scripts/gdq/vod-contentscript.js"
       ],
       "run_at": "document_end",
       "all_frames": false
@@ -83,10 +83,10 @@
         "styles/discord.css"
       ],
       "js": [
-        "scripts/jquery-2.2.0.min.js",
-        "scripts/bootstrap.min.js",
-        "scripts/bootstrap-switch.min.js",
-        "scripts/underscore-min.js",
+        "scripts/vendor/jquery-2.2.0.min.js",
+        "scripts/vendor/bootstrap.min.js",
+        "scripts/vendor/bootstrap-switch.min.js",
+        "scripts/vendor/underscore-min.js",
         "scripts/discord-contentscript.js"
       ],
       "run_at": "document_end",
