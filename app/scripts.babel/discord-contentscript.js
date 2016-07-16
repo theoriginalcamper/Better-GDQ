@@ -26,12 +26,12 @@ $(document).ready(function() {
 	linkNode.href = "http://yui.yahooapis.com/pure/0.6.0/pure-min.css"
 	document.head.appendChild(linkNode);
 
-    var checkLinks = setInterval(function(){
-    	if ($(".topic").length > 0){ // Check if element has been found
+    var checkAccount = setInterval(function(){
+    	if ($(".account").length > 0){ // Check if element has been found
 	      	console.log('Add Switch to Links Panel');
 	      	addTwitchSwitch();
 	      	addInformationBar();
-	      	clearInterval(checkLinks);
+	      	clearInterval(checkAccount);
 
 	      	$('input[name="twitch-player-display"]').on('switchChange.bootstrapSwitch', function(event, state) {
 		        console.log('Clicked Twitch Switch.');
@@ -63,7 +63,7 @@ $(document).ready(function() {
     },1000);
 
     function addTwitchSwitch() {
-    	$('.links').html('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
+    	$('.account').after('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
 	    $('#twitch-switch').append(`<input type="checkbox" data-size="mini" name="twitch-player-display">`);
 	      	
 	    $("[name='twitch-player-display']").bootstrapSwitch();
@@ -131,7 +131,7 @@ $(document).ready(function() {
 
             updateDiscordUI('add');
 
-        	$('.app').before(`<div id="twitch-container" style="width: ${$(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()}px; height: ${$(document).height() - $('.title-wrap').outerHeight() - $('.links').outerHeight()}px; position: fixed; z-index:100; top: ${$('.title-wrap').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>`);
+        	$('.app').before(`<div id="twitch-container" style="width: ${$(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()}px; height: ${$(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('.title-wrap').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>`);
         } else if (msg == 'remove') {
             console.log('Switch is off. Removing Twitch iframe and UI changes.');
             $('#twitch-container').remove();

@@ -6,6 +6,10 @@
 }
 
 #twitch-switch {
+	background-color: #282b30;
+	text-align: center;
+	padding-top: 4px;
+	padding-bottom: 4px;
 }
 
 #gdq-header {
