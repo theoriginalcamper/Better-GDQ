@@ -116,7 +116,7 @@ function addVodLinks() {
 }
 
 function generateVodString(title, data) {
-    var twitchString = `https://www.twitch.tv/gamesdonequick/v/${data[title]["video-link"]}?t=${data[title]["time"]}`
+    var twitchString = `https://www.twitch.tv/esamarathon/v/${data[title]["video-link"]}?t=${data[title]["time"]}`
 
     if (typeof data[title]["youtube"] != 'undefined') {
         var youtubeString = data[title]["youtube"];
