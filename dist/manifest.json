@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "2.2.4",
+  "version": "2.2.6",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -107,6 +107,8 @@
     },
     {
       "matches": [
+        "https://discordapp.com/channels/85369684286767104/85369684286767104",
+        "https://discordapp.com/channels/85369684286767104/*",
         "https://discordapp.com/channels/140605087511740416/140605087511740416",
         "https://discordapp.com/channels/140605087511740416/*",
         "https://discordapp.com/channels/*"

@@ -30,7 +30,7 @@ $(document).ready(function () {
 
 	var checkAccount = setInterval(function () {
 		if ($(".account").length > 0) {
-			if ($('.guild.selected').has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
+			if ($('.guild.selected').has('a[href^="/channels/140605087511740416/"]').length > 0 || $('.guild.selected').has('a[href^="/channels/85369684286767104/"]').length > 0) {
 				// Check if element has been found
 				console.log('Add Switch to Links Panel');
 				addTwitchSwitch();
