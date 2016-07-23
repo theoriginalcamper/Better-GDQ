@@ -1,0 +1,50 @@
+<li>
+	<div class="col-md-12">
+		<form class="form" role="form" method="post" action="" accept-charset="UTF-8" id="refresh-timer-update">
+			<div class="form-group">
+				<label for="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> Refresh Timer</label>
+				<select class="form-control" id="refresh-timer-select" name="timer">
+					<option selected="selected">Set Refresh Timer:</option>
+				    <option value="1">1 minute</option>
+				    <option value="2">2 minutes</option>
+				    <option value="3">3 minutes</option>
+				    <option value="4">4 minutes</option>
+				    <option value="5">5 minutes</option>
+				    <option value="6">6 minutes</option>
+				    <option value="7">7 minutes</option>
+				    <option value="8">8 minutes</option>
+				    <option value="9">9 minutes</option>
+				    <option value="10">10 minutes</option>
+				    <option value="15">15 minutes</option>
+				    <option value="20">20 minutes</option>
+				    <option value="25">25 minutes</option>
+				    <option value="30">30 minutes</option>
+				</select>
+				<button type="submit" class="btn btn-primary" id="refresh-timer-submit"><i class="fa fa-check" id="refresh-form-check" aria-hidden="true"></i></button>
+			</div>
+		</form>
+
+		<form class="form" role="form" method="post" action="" accept-charset="UTF-8" id="schedule-items-update">
+			<div class="form-group">
+				<label for="schedule-items"><i class="fa fa-calendar" aria-hidden="true"></i> Schedule Display</label>
+				<select class="form-control" id="schedule-items-select" name="schedule-items">
+				    <option selected="selected"># of Runs to Display:</option>
+				    <option value="1">1 run</option>
+				    <option value="2">2 runs</option>
+				    <option value="3">3 runs</option>
+				    <option value="4">4 runs</option>
+				    <option value="5">5 runs</option>
+				</select>
+				<button type="submit" class="btn btn-primary" id="schedule-items-submit"><i class="fa fa-check" id="schedule-items-check" aria-hidden="true"></i></button>
+			</div>
+		</form>
+		<div style="margin-bottom: 10px;">
+			<label for="quakenet-chat-switch" id="quakenet-chat-switch"><i class="fa fa-commenting-o" aria-hidden="true"></i> Quake Chat Embed</label>
+			<input type="checkbox" name="quakenet-chat-switch" >
+		</div>
+		<div style="margin-bottom: 10px;">
+			<label for="theater-mode" id="theater-mode"><i class="fa fa-film" aria-hidden="true"></i> Quake Theater Mode</label>
+			<input type="checkbox" name="theater-mode" >
+		</div>
+	</div>
+</li>
