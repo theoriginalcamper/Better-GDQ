@@ -341,19 +341,9 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (tab.url.indexOf("https://discordapp.com/channels/140605087511740416/140605087511740416") > -1 && changeInfo.url === undefined) {
-        portForMessage.postMessage({ status: "reload",
-            game: current_game_title,
-            runner: current_runners,
-            estimate: current_estimate,
-            category: current_category,
-            link: current_link,
-            calendar: current_calendar });
-    }
-});
-
-chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    if (tab.url.indexOf("https://www.esamarathon.com") > -1 && changeInfo.url === undefined) {
-        if (portForMessage.name == 'esa') {    
+        if (current_game_title != current_game) {
+            getSpeedrunData(current_game, portForMessage)
+        } else {
             portForMessage.postMessage({ status: "reload",
                 game: current_game_title,
                 runner: current_runners,
@@ -366,15 +356,37 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 });
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
+    if (tab.url.indexOf("https://www.esamarathon.com") > -1 && changeInfo.url === undefined) {
+        if (portForMessage.name == 'esa') {    
+            if (current_game_title != current_game) {
+                getSpeedrunData(current_game, portForMessage)
+            } else {
+                portForMessage.postMessage({ status: "reload",
+                    game: current_game_title,
+                    runner: current_runners,
+                    estimate: current_estimate,
+                    category: current_category,
+                    link: current_link,
+                    calendar: current_calendar });
+            }
+        }
+    }
+});
+
+chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (tab.url.indexOf("http://www.esamarathon.com") > -1 && changeInfo.url === undefined) {
         if (portForMessage.name == 'esa') {
-            portForMessage.postMessage({ status: "reload",
-                game: current_game_title,
-                runner: current_runners,
-                estimate: current_estimate,
-                category: current_category,
-                link: current_link,
-                calendar: current_calendar });
+            if (current_game_title != current_game) {
+                getSpeedrunData(current_game, portForMessage)
+            } else {
+                portForMessage.postMessage({ status: "reload",
+                    game: current_game_title,
+                    runner: current_runners,
+                    estimate: current_estimate,
+                    category: current_category,
+                    link: current_link,
+                    calendar: current_calendar });
+            }
         }
     }
 });
