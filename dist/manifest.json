@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "2.1.4",
+  "version": "2.2.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -72,6 +72,41 @@
     },
     {
       "matches": [
+        "http://esamarathon.com/",
+        "https://esamarathon.com/",
+        "http://www.esamarathon.com/",
+        "https://www.esamarathon.com/",
+        "http://esamarathon.com/schedule",
+        "https://esamarathon.com/schedule",
+        "http://www.esamarathon.com/schedule",
+        "https://www.esamarathon.com/schedule"
+      ],
+      "css": [
+        "styles/fontawesome-min.css",
+        "styles/bootstrap-switch.min.css",
+        "styles/main.css"
+      ],
+      "js": [
+        "scripts/vendor/jquery-2.2.0.min.js",
+        "scripts/vendor/bootstrap-notify.min.js",
+        "scripts/vendor/bootstrap-switch.min.js",
+        "scripts/vendor/underscore-min.js",
+        "scripts/esa/esa-contentscript.js"
+      ]
+    },
+    {
+      "matches": [
+        "http://esamarathon.com/schedule",
+        "https://esamarathon.com/schedule",
+        "http://www.esamarathon.com/schedule",
+        "https://www.esamarathon.com/schedule"
+      ],
+      "js": [
+        "scripts/esa/esa-vod-contentscript.js"
+      ]
+    },
+    {
+      "matches": [
         "https://discordapp.com/channels/140605087511740416/140605087511740416",
         "https://discordapp.com/channels/140605087511740416/*",
         "https://discordapp.com/channels/*"
@@ -96,10 +131,14 @@
   "web_accessible_resources": [
     "html/gdq-footer.html",
     "html/quakenet-chat.html",
+    "html/esa-quakenet-chat.html",
     "html/quakenet-theater-mode.html",
+    "html/esa-quakenet-theater-mode.html",
     "html/settings-menu.html",
+    "html/esa-settings-menu.html",
     "html/twitch-chat.html",
     "fonts/fontawesome-webfont.woff",
-    "json/sgdq_runners.json"
+    "json/sgdq_runners.json",
+    "json/esa_schedule.json"
   ]
 }

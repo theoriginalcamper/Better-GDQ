@@ -27,22 +27,25 @@ $(document).ready(function() {
 	document.head.appendChild(linkNode);
 
     var checkAccount = setInterval(function(){
-    	if ($(".account").length > 0){ // Check if element has been found
-	      	console.log('Add Switch to Links Panel');
-	      	addTwitchSwitch();
-	      	addInformationBar();
-	      	clearInterval(checkAccount);
+    	if ($(".account").length > 0) {
+    		if($('.guild.selected').has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) { // Check if element has been found
+		      	console.log('Add Switch to Links Panel');
+		      	addTwitchSwitch();
+		      	addInformationBar();
+		      	clearInterval(checkAccount);
 
-	      	$('input[name="twitch-player-display"]').on('switchChange.bootstrapSwitch', function(event, state) {
-		        console.log('Clicked Twitch Switch.');
-		        console.log($("[name='twitch-player-display']").bootstrapSwitch('state'));
-		        if ($('input[name="twitch-player-display"]').bootstrapSwitch('state')) {
-		            updateTwitchPlayer('add');
-		        } else {
-		            updateTwitchPlayer('remove');
-		        }
-		    });
-		}
+		      	$('input[name="twitch-player-display"]').on('switchChange.bootstrapSwitch', function(event, state) {
+			        console.log('Clicked Twitch Switch.');
+			        console.log($("[name='twitch-player-display']").bootstrapSwitch('state'));
+			        if ($('input[name="twitch-player-display"]').bootstrapSwitch('state')) {
+			            updateTwitchPlayer('add');
+			        } else {
+			            updateTwitchPlayer('remove');
+			        }
+			    });
+
+			}
+    	}
     },1000);
 
     var checkRefresh = setInterval(function(){
@@ -96,7 +99,7 @@ $(document).ready(function() {
 			`);
 
     	headerHeight = $('#gdq-header').css('height');
-
+    	console.log('Width: ' + $('#gdq-header').width());
     	$('.header-toolbar').css('margin-left', '0px');
     	$('.game-information').append(game_link_container);
     	$('#gdq-link-container').html(`<b>Current Game: </b>`);
@@ -131,7 +134,7 @@ $(document).ready(function() {
 
             updateDiscordUI('add');
 
-        	$('.app').before(`<div id="twitch-container" style="width: ${$(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()}px; height: ${$(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('.title-wrap').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>`);
+        	$('.app').before(`<div id="twitch-container" style="width: ${$(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()}px; height: ${$(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('.title-wrap').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=esamarathon" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>`);
         } else if (msg == 'remove') {
             console.log('Switch is off. Removing Twitch iframe and UI changes.');
             $('#twitch-container').remove();
@@ -143,6 +146,14 @@ $(document).ready(function() {
             }
             
         }
+    }
+
+    function updateGDQHeaderDisplay(msg) {
+    	if(msg == 'add') {
+    		$('#gdq-header').css('display', '');
+    	} else if (msg == 'remove') {
+    		$('#gdq-header').css('display', 'none');
+    	}
     }
 
     function updateDiscordUI(msg) {
@@ -252,12 +263,12 @@ $(document).ready(function() {
 	    }
 	    
 	    var scheduleItemString = `<tr style=${highlightStyle}>
-	                                <th scope="row">${index}</th>
+	                                <th scope="row" style="text-align: center;">${index}</th>
 	                                <td>
 	                                    <a class="speedrun-link" id="next-game-title" href="${scheduleItemObject.link}" onclick="window.open(this.href); return false;"> ${titleString}</a>
 	                                    <p class="runners-links" id="next-runners-information">${runnerString}</p>
 	                                </td>
-	                                <td>
+	                                <td style="text-align: center;">
 	                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ${scheduleItemObject.estimate}</p>
 	                                </td>
 	                              </tr>`;
@@ -270,24 +281,29 @@ $(document).ready(function() {
     	if ($(".selected").length > 0) { // Check if element has been found
     		$('.guild').on('click', function() {
     			if (twitchActive) {
-    				if ($(this).has('a[href="/channels/140605087511740416/140605087511740416"]').length > 0) {
+    				if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
     					$('#twitch-container').css('display', '');
             			var uiUpdate = setInterval(function() {
-            				if($('.guild-header').length > 0 && $('.guild-header header span').text() == 'GamesDoneQuick') {
-
+            				if($('.guild-header').length > 0 && ($('.guild-header header span').text() == 'GamesDoneQuick' || $('.guild-header header span').text() == 'ESA16')) {
             					updateDiscordUI('add');
             					clearInterval(uiUpdate);
             				}
-            			}, 1000);
+            			}, 500);
     				} else {
     					$('#twitch-container').css('display', 'none');
-            			updateDiscordUI('remove');
+    					updateDiscordUI('remove');
     				}
     			}
 
+    			if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
+    				updateGDQHeaderDisplay('add');
+    			} else {
+    				updateGDQHeaderDisplay('remove');
+    			}
     		});
 
     		$('.dms').on('click', function() {
+    			updateGDQHeaderDisplay('remove');
     			if (twitchActive) {
 					$('#twitch-container').css('display', 'none');
         			updateDiscordUI('remove');
@@ -299,7 +315,7 @@ $(document).ready(function() {
 		}
     },1000);
 
-    var port = chrome.runtime.connect({name: "gdq"});
+    var port = chrome.runtime.connect({name: "esa"});
     port.postMessage({message: "request"});
     port.onMessage.addListener(function(msg) {
 	    if (msg.status == "changed") {
