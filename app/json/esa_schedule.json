@@ -215,14 +215,6 @@
     "platform": "PS2",
     "link": "http://www.speedrun.com/Jak_II"
   },
-  "Bloodborne": {
-    "title": "Bloodborne",
-    "runner": "MrTakahashi",
-    "estimate": "01:53",
-    "category": "All Bosses with DLC",
-    "platform": "PS4",
-    "link": "http://www.speedrun.com/Bloodborne"
-  },
   "Dark Souls 3": {
     "title": "Dark Souls III",
     "runner": "Elajjaz",
@@ -230,14 +222,6 @@
     "category": "All Bosses",
     "platform": "PC",
     "link": "http://www.speedrun.com/Dark_Souls_III"
-  },
-  "Borderlands 2": {
-    "title": "Borderlands 2",
-    "runner": "Incalex, Vemirtar, Filly_Vinyl, stenkaempen",
-    "estimate": "02:23",
-    "category": "4-Player Co-Op",
-    "platform": "PC",
-    "link": "http://www.speedrun.com/Borderlands_2"
   },
   "Grand Theft Auto III": {
     "title": "Grand Theft Auto III",
@@ -399,6 +383,14 @@
     "platform": "Wii U",
     "link": "http://www.speedrun.com/Pikmin_3"
   },
+  "Bloodborne": {
+    "title": "Bloodborne",
+    "runner": "MrTakahashi",
+    "estimate": "01:53",
+    "category": "All Bosses with DLC",
+    "platform": "PS4",
+    "link": "http://www.speedrun.com/Bloodborne"
+  },
   "Metroid Prime 2: Echoes": {
     "title": "Metroid Prime 2: Echoes",
     "runner": "E_Dragon",
@@ -430,6 +422,14 @@
     "category": "Any%",
     "platform": "PC",
     "link": null
+  },
+  "Borderlands 2": {
+    "title": "Borderlands 2",
+    "runner": "Incalex, Vemirtar, Filly_Vinyl, stenkaempen",
+    "estimate": "02:23",
+    "category": "4-Player Co-Op",
+    "platform": "PC",
+    "link": "http://www.speedrun.com/Borderlands_2"
   },
   "Lara Croft and the Guardian of Light": {
     "title": "Lara Croft and the Guardian of Light",
