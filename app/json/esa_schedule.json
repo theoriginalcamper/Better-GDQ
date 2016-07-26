@@ -543,14 +543,6 @@
     "platform": "PC",
     "link": "http://www.speedrun.com/Goat_Simulator"
   },
-  "Final Fantasy XII": {
-    "title": "Final Fantasy XII",
-    "runner": "Freddeh",
-    "estimate": "06:53",
-    "category": "Any%",
-    "platform": "PS2",
-    "link": "http://www.speedrun.com/Final_Fantasy_XII"
-  },
   "Oddworld: Abe's Oddysee": {
     "title": "Oddworld: Abe's Oddysee",
     "runner": "Samtastic",
@@ -558,6 +550,14 @@
     "category": "Any%",
     "platform": "PC",
     "link": "http://www.speedrun.com/Oddworld_Abes_Oddysee"
+  },
+  "Final Fantasy XII": {
+    "title": "Final Fantasy XII",
+    "runner": "Freddeh",
+    "estimate": "06:53",
+    "category": "Any%",
+    "platform": "PS2",
+    "link": "http://www.speedrun.com/Final_Fantasy_XII"
   },
   "Ori and the Blind Forest Definitive Edition": {
     "title": "Ori and the Blind Forest Definitive Edition",
@@ -895,6 +895,14 @@
     "platform": "PC",
     "link": "http://www.speedrun.com/The_Witness"
   },
+  "Tetris The Grand Master": {
+    "title": "Tetris The Grand Master",
+    "runner": "Qlex",
+    "estimate": "01:08",
+    "category": "Exhibition block",
+    "platform": "Arcade",
+    "link": "http://www.speedrun.com/Tetris_The_Grand_Master"
+  },
   "Master of Darkness": {
     "title": "Master of Darkness",
     "runner": "btrim",
@@ -974,14 +982,6 @@
     "category": "Any% Lilac",
     "platform": "PC",
     "link": "http://www.speedrun.com/Freedom_Planet"
-  },
-  "Tetris The Grand Master": {
-    "title": "Tetris The Grand Master",
-    "runner": "Qlex",
-    "estimate": "01:08",
-    "category": "Exhibition block",
-    "platform": "Arcade",
-    "link": "http://www.speedrun.com/Tetris_The_Grand_Master"
   },
   "Super Smash Bros. Melee": {
     "title": "Super Smash Bros. Melee",

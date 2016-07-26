@@ -67,15 +67,19 @@ function addHighlights() {
 }
 
 function addSpeedrunLinks() {
-    $('.visible-xs').remove();
 	$.getJSON('https://gist.githubusercontent.com/theoriginalcamper/cde736fb9e43b34cf8f49c0c82d7c564/raw/esa_schedule2016.json').done(function (resp) {
 		var scheduleJSON = resp;
-		$('tr.border-top:not(.row2) td.center-sm:not(:has(a))').each(function() {
-			var gameTitle = $(this).text();
+		$('tr.border-top:not(.row2) td.center-sm:not(:has(> a))').each(function() {
+			var clonedElement = $(this).clone()
+            clonedElement.find('.visible-xs').remove();
+            var clonedXS = $('.visible-xs', this);
+
+            var gameTitle = clonedElement.text();
             console.log(gameTitle);
 			if (scheduleJSON[gameTitle]['link'] != null) {
                 console.log(gameTitle);
 				$(this).html(`<a href="${scheduleJSON[gameTitle]['link']}">${gameTitle}</a>`);
+                $(this).append(clonedXS);
 			}
 		});
 
