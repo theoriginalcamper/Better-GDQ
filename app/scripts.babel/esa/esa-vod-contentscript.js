@@ -84,10 +84,16 @@ function addSpeedrunLinks() {
 		});
 
         $('tr.border-top:not(.row2) td.center-sm:contains(Mega Man)').each(function() {
-            var gameTitle = $(this).text();
-            if(scheduleJSON[gameTitle]['link'] != null) {
+            var clonedElement = $(this).clone()
+            clonedElement.find('.visible-xs').remove();
+            var clonedXS = $('.visible-xs', this);
+
+            var gameTitle = clonedElement.text();
+            console.log(gameTitle);
+            if (scheduleJSON[gameTitle]['link'] != null) {
                 console.log(gameTitle);
                 $(this).html(`<a href="${scheduleJSON[gameTitle]['link']}">${gameTitle}</a>`);
+                $(this).append(clonedXS);
             }
         });
 	});
@@ -112,7 +118,9 @@ function addVodLinks() {
         $.each(titles, function(index, title) {
             // console.log(title);
             var templateString = generateVodString(title, data);
-            $(`tr.border-top:not(.row2) td.center-sm`).filter(function(index) {return $(this).text() == title}).append(templateString);
+            $(`tr.border-top:not(.row2) td.center-sm`).filter(function(index) {
+                return $(this).text().indexOf(title) >= 0
+            }).append(templateString);
         });
 
         console.log("Done");
