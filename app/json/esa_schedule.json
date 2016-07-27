@@ -887,6 +887,14 @@
     "platform": "PC",
     "link": "http://www.speedrun.com/Environmental_Station_Alpha"
   },
+  "Portal": {
+    "title": "Portal",
+    "runner": "karl__k",
+    "estimate": "00:23",
+    "category": "No OOB",
+    "platform": "PC",
+    "link": "http://www.speedrun.com/Portal"
+  },
   "Tetris The Grand Master": {
     "title": "Tetris The Grand Master",
     "runner": "Qlex",
@@ -1046,14 +1054,6 @@
     "category": "Any%",
     "platform": "PSTV",
     "link": "http://www.speedrun.com/Disgaea_2_Dark_Hero_Days"
-  },
-  "Portal": {
-    "title": "Portal",
-    "runner": "karl__k",
-    "estimate": "00:23",
-    "category": "No OOB",
-    "platform": "PC",
-    "link": "http://www.speedrun.com/Portal"
   },
   "BattleBlock Theater": {
     "title": "BattleBlock Theater",
