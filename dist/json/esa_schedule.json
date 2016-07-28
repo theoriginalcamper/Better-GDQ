@@ -783,14 +783,6 @@
     "platform": "PC",
     "link": "http://www.speedrun.com/I_Wanna_Be_The_Boshy"
   },
-  "VVVVVV": {
-    "title": "VVVVVV",
-    "runner": "sheilalpoint",
-    "estimate": "00:23",
-    "category": "Any% No Telejumping",
-    "platform": "PC",
-    "link": "http://www.speedrun.com/VVVVVV"
-  },
   "The Binding of Isaac: Afterbirth": {
     "title": "The Binding of Isaac: Afterbirth",
     "runner": "Shigan",
@@ -798,14 +790,6 @@
     "category": "Hard The Lost",
     "platform": "PC",
     "link": "http://www.speedrun.com/The_Binding_of_Isaac_Afterbirth"
-  },
-  "Fallout 4": {
-    "title": "Fallout 4",
-    "runner": "BubblesDelFuego",
-    "estimate": "01:18",
-    "category": "Any%",
-    "platform": "PC",
-    "link": "http://www.speedrun.com/Fallout_4"
   },
   "TimeSplitters 2": {
     "title": "TimeSplitters 2",
@@ -1094,6 +1078,14 @@
     "category": "Non-Lethal, Ghost",
     "platform": "PC",
     "link": "http://www.speedrun.com/Dishonored"
+  },
+  "Fallout 4": {
+    "title": "Fallout 4",
+    "runner": "BubblesDelFuego",
+    "estimate": "01:18",
+    "category": "Any%",
+    "platform": "PC",
+    "link": "http://www.speedrun.com/Fallout_4"
   },
   "Kirby's Dream Land": {
     "title": "Kirby's Dream Land",
