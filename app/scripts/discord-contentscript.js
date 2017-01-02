@@ -77,7 +77,7 @@ $(document).ready(function () {
 
 	function addInformationBar() {
 
-		$('.app').before('\n\t\t\t\t\t\t\t<header id="gdq-header" style="width: ' + ($('.title-wrap').width() - $('.header-toolbar').width() + 10) + 'px; height: ' + ($('.title-wrap').outerHeight() - 1) + 'px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ' + ($('.guilds-wrapper').width() + $('.channels-wrap').width()) + 'px;">\n\t\t\t\t\t\t\t\t<div class="extension-container">\n\t\t\t\t\t\t\t\t\t<div id="options" style="transform: translateY(50%);">\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-refresh" id="settings-icon"></i>\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div class="game-information">\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t<div style="clear:both;"></div>\n\t\t\t\t\t\t\t\t\t<div class="collapse" id="collapseCalendar" style="padding-top: 10px; height: 0px;">\n\t\t\t\t\t\t\t\t\t\t<!-- Schedule -->\n\t\t\t\t\t\t\t\t\t\t<p><i class="fa fa-calendar" style="margin-right: 10px;"></i> Next Runs</p>\n\t\t\t\t\t\t\t\t\t\t<table class="table" id="schedule-table" style="border-collapse: collapse;">\n\t\t\t\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</header>\n\t\t\t');
+		$('.app').before('\n\t\t\t\t\t\t\t<header id="gdq-header" style="width: ' + ($('.title-wrap').width() - $('.header-toolbar').width() + 10) + 'px; height: ' + ($('.title-wrap').outerHeight() - 1) + 'px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ' + ($('.guilds-wrapper').width() + $('.channels-wrap').width()) + 'px;">\n\t\t\t\t\t\t\t\t<div class="extension-container">\n\t\t\t\t\t\t\t\t\t<div id="options" style="transform: translateY(50%);">\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-refresh" id="settings-icon"></i>\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div class="game-information">\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div style="clear:both;"></div>\n\t\t\t\t\t\t\t\t\t<div class="collapse" id="collapseCalendar" style="padding-top: 10px; height: 0px;">\n\t\t\t\t\t\t\t\t\t\t<!-- Schedule -->\n\t\t\t\t\t\t\t\t\t\t<p><i class="fa fa-calendar" style="margin-right: 10px;"></i> Next Runs</p>\n\t\t\t\t\t\t\t\t\t\t<table class="table" id="schedule-table" style="border-collapse: collapse;">\n\t\t\t\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</header>\n\t\t\t');
 
 		headerHeight = $('#gdq-header').css('height');
 		console.log('Width: ' + $('#gdq-header').width());
@@ -115,7 +115,7 @@ $(document).ready(function () {
 
 			updateDiscordUI('add');
 
-			$('.app').before('<div id="twitch-container" style="width: ' + ($(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()) + 'px; height: ' + ($(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()) + 'px; position: fixed; z-index:100; top: ' + $('.title-wrap').outerHeight() + 'px; left: ' + $('.guilds-wrapper').width() + 'px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=esamarathon" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>');
+			$('.app').before('<div id="twitch-container" style="width: ' + ($(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()) + 'px; height: ' + ($(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()) + 'px; position: fixed; z-index:100; top: ' + $('.title-wrap').outerHeight() + 'px; left: ' + $('.guilds-wrapper').width() + 'px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>');
 		} else if (msg == 'remove') {
 			console.log('Switch is off. Removing Twitch iframe and UI changes.');
 			$('#twitch-container').remove();
@@ -166,11 +166,13 @@ $(document).ready(function () {
 		console.log("Calendar updating...");
 		console.log(msg);
 		if (msg != null) {
+			console.log("Calendar not null.");
 			$('#schedule-table tbody').empty();
 
 			var scheduleString = "";
 			_.each(msg.order, function (gameTitle, index) {
 				scheduleString += generateScheduleItemString(msg.schedule[gameTitle], msg.highlights, index + 1);
+				console.log(scheduleString);
 			});
 
 			$('#schedule-table tbody').html(scheduleString);
@@ -228,6 +230,8 @@ $(document).ready(function () {
 	}
 
 	function generateScheduleItemString(scheduleItemObject, highlightsObject, index) {
+		console.log(scheduleItemObject);
+		console.log(highlightsObject);
 		var runnerString = generateFormattedRunnerString(scheduleItemObject.runner, 'table');
 		if (scheduleItemObject.category != null) {
 			var titleString = scheduleItemObject.title + ' (' + scheduleItemObject.category + ')';
@@ -285,7 +289,7 @@ $(document).ready(function () {
 		}
 	}, 1000);
 
-	var port = chrome.runtime.connect({ name: "esa" });
+	var port = chrome.runtime.connect({ name: "gdq" });
 	port.postMessage({ message: "request" });
 	port.onMessage.addListener(function (msg) {
 		if (msg.status == "changed") {

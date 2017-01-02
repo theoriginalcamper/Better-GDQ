@@ -1,6 +1,6 @@
 var runners_paragraph = document.createElement('div');
 var game_link_container = document.createElement('div')
-var game_link_a = document.createElement('a'); 
+var game_link_a = document.createElement('a');
 
 runners_paragraph.id = "gdq-runners-information";
 game_link_container.id = "gdq-link-container";
@@ -15,7 +15,7 @@ $(document).ready(function() {
 	var userListStatus = null;
 	var twitchActive = false;
 	var headerHeight = null;
-	
+
 	var styleNode = document.createElement("style");
 	styleNode.type = "text/css";
 	styleNode.textContent = `@font-face { font-family: FontAwesome; src: url(${chrome.extension.getURL("/fonts/fontawesome-webfont.woff")});}`;
@@ -68,7 +68,7 @@ $(document).ready(function() {
     function addTwitchSwitch() {
     	$('.account').after('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
 	    $('#twitch-switch').append(`<input type="checkbox" data-size="mini" name="twitch-player-display">`);
-	      	
+
 	    $("[name='twitch-player-display']").bootstrapSwitch();
     }
 
@@ -84,7 +84,7 @@ $(document).ready(function() {
 
 									<div class="game-information">
 									</div>
-									
+
 									<div style="clear:both;"></div>
 									<div class="collapse" id="collapseCalendar" style="padding-top: 10px; height: 0px;">
 										<!-- Schedule -->
@@ -119,7 +119,7 @@ $(document).ready(function() {
 
     function updateTwitchPlayer(msg) {
         if(msg == 'add') {
-            console.log('Switch is on. Adding Twitch iframe and modifying UI.');	
+            console.log('Switch is on. Adding Twitch iframe and modifying UI.');
 
             if($('.header-toolbar button:nth-child(3)').hasClass('active')) {
             	userListStatus = true;
@@ -134,7 +134,7 @@ $(document).ready(function() {
 
             updateDiscordUI('add');
 
-        	$('.app').before(`<div id="twitch-container" style="width: ${$(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()}px; height: ${$(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('.title-wrap').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=esamarathon" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>`);
+        	$('.app').before(`<div id="twitch-container" style="width: ${$(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()}px; height: ${$(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('.title-wrap').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>`);
         } else if (msg == 'remove') {
             console.log('Switch is off. Removing Twitch iframe and UI changes.');
             $('#twitch-container').remove();
@@ -144,7 +144,7 @@ $(document).ready(function() {
             if(userListStatus == true) {
             	$('.header-toolbar button:nth-child(3)').click();
             }
-            
+
         }
     }
 
@@ -186,11 +186,13 @@ $(document).ready(function() {
 	    console.log("Calendar updating...");
 	    console.log(msg);
 	    if (msg != null) {
+					console.log("Calendar not null.");
 	        $('#schedule-table tbody').empty();
-	        
+
 	        var scheduleString = "";
 	        _.each(msg.order, function(gameTitle, index) {
 	            scheduleString += generateScheduleItemString(msg.schedule[gameTitle], msg.highlights, index + 1);
+							console.log(scheduleString);
 	        });
 
 	        $('#schedule-table tbody').html(scheduleString);
@@ -205,7 +207,7 @@ $(document).ready(function() {
 	    var runner_string = "by ";
 	    if (runners_keys.length > 2) {
 	    	if (location != 'table') {
-	    		runner_string = "<b>Current Runners: </b>"	
+	    		runner_string = "<b>Current Runners: </b>"
 	    	}
 	        var last_runner = runners_keys.pop()
 	        var  second_runner = runners_keys.pop();
@@ -218,17 +220,17 @@ $(document).ready(function() {
 	        runner_string += generateRunnerElement(runners, last_runner);
 	    } else if (runners_keys.length == 2) {
 	    	if (location != 'table') {
-	    		runner_string = "<b>Current Runners: </b>"	
+	    		runner_string = "<b>Current Runners: </b>"
 	    	}
 	        var last_runner = runners_keys.pop()
 	        var  second_runner = runners_keys.pop();
-	        
+
 	        runner_string += generateRunnerElement(runners, second_runner);
 	        runner_string += ' and ';
 	        runner_string += generateRunnerElement(runners, last_runner);
 	    } else if (runners_keys.length == 1) {
 	    	if (location != 'table') {
-	    		runner_string = "<b>Current Runner: </b>"	
+	    		runner_string = "<b>Current Runner: </b>"
 	    	}
 	        var runner_key = runners_keys[0];
 	        runner_string += generateRunnerElement(runners, runners_keys[0]);
@@ -248,6 +250,8 @@ $(document).ready(function() {
 	}
 
 	function generateScheduleItemString(scheduleItemObject, highlightsObject, index) {
+			console.log(scheduleItemObject);
+			console.log(highlightsObject);
 	    var runnerString = generateFormattedRunnerString(scheduleItemObject.runner, 'table');
 	    if (scheduleItemObject.category != null) {
 	        var titleString = scheduleItemObject.title + ' (' + scheduleItemObject.category +')';
@@ -261,7 +265,7 @@ $(document).ready(function() {
 	        var highlightStyle = 'background-color:#555555;';
 	        titleString = '<i class="fa fa-star"></i> ' + titleString;
 	    }
-	    
+
 	    var scheduleItemString = `<tr style=${highlightStyle}>
 	                                <th scope="row" style="text-align: center;">${index}</th>
 	                                <td>
@@ -315,7 +319,7 @@ $(document).ready(function() {
 		}
     },1000);
 
-    var port = chrome.runtime.connect({name: "esa"});
+    var port = chrome.runtime.connect({name: "gdq"});
     port.postMessage({message: "request"});
     port.onMessage.addListener(function(msg) {
 	    if (msg.status == "changed") {

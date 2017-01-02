@@ -52,10 +52,10 @@ var checkForUpdatedScheduleJSON = null;
 
 var portForMessage = null;
 
-$.getJSON('/json/sgdq_runners.json').done(function (resp) {
+$.getJSON('/json/agdq2017_runners.json').done(function (resp) {
     gdqRunnerJSON = resp;
 });
-$.getJSON('/json/sgdq_schedule.json').done(function (resp) {
+$.getJSON('/json/agdq2017_schedule.json').done(function (resp) {
     gdqScheduleJSON = resp;
     gdqFuzzySearchArray = _.keys(gdqScheduleJSON);
     gdqFuzzySet = FuzzySet(gdqFuzzySearchArray);
@@ -78,17 +78,24 @@ chrome.runtime.onConnect.addListener(function (port) {
         console.assert(port.name == "gdq");
         port.onMessage.addListener(function (msg) {
             if (msg.message == "request") {
-                $.getJSON("https://api.twitch.tv/channels/gamesdonequick").done(function (resp) {
-                    console.log("Completed request to Twitch");
+                $.ajax({
+                    datatype: "json",
+                    url: "https://api.twitch.tv/channels/gamesdonequick",
+                    beforeSend: function beforeSend(req) {
+                        req.setRequestHeader('Client-ID', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w');
+                    },
+                    success: function success(resp) {
+                        console.log("Completed request to Twitch");
 
-                    if (current_game != resp.game) {
-                        console.log("The Current Game being run is: " + resp.game);
+                        if (current_game != resp.game) {
+                            console.log("The Current Game being run is: " + resp.game);
 
-                        current_game = resp.game;
-                        getSpeedrunData(current_game, port);
-                        console.log(current_link);
-                    } else {
-                        console.log("Still the same");
+                            current_game = resp.game;
+                            getSpeedrunData(current_game, port);
+                            console.log(current_link);
+                        } else {
+                            console.log("Still the same");
+                        }
                     }
                 });
             } else if (msg.message == "schedule") {
@@ -96,17 +103,24 @@ chrome.runtime.onConnect.addListener(function (port) {
                 current_number_calendar_items = msg.calendarItemsNumber;
                 getSpeedrunData(current_game, port);
             } else if (msg.message == "refresh") {
-                $.getJSON("https://api.twitch.tv/channels/gamesdonequick").done(function (resp) {
-                    console.log("Completed request to Twitch");
-                    if (current_game != resp.game) {
-                        console.log("The Current Game being run is: " + resp.game);
+                $.ajax({
+                    datatype: "json",
+                    url: "https://api.twitch.tv/channels/gamesdonequick",
+                    beforeSend: function beforeSend(req) {
+                        req.setRequestHeader('Client-ID', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w');
+                    },
+                    success: function success(resp) {
+                        console.log("Completed request to Twitch");
+                        if (current_game != resp.game) {
+                            console.log("The Current Game being run is: " + resp.game);
 
-                        current_game = resp.game;
-                        getSpeedrunData(current_game, port);
-                        console.log(current_link);
-                    } else {
-                        console.log("Still the same");
-                        getSpeedrunData(current_game, port);
+                            current_game = resp.game;
+                            getSpeedrunData(current_game, port);
+                            console.log(current_link);
+                        } else {
+                            console.log("Still the same");
+                            getSpeedrunData(current_game, port);
+                        }
                     }
                 });
             };
@@ -172,7 +186,30 @@ function getSpeedrunData(game, port) {
 
     if (typeof gameData == 'undefined') {
         // Query for gist version of Schedule JSON
-        if (port.name == 'esa') {
+        if (port.name == 'gdq') {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/a52c2dabf5d326ecb5fa82ddffaf7bef/raw/agdq2017_schedule.json").done(function (resp) {
+                console.log("Request for Schedule JSON sent");
+                if (_.difference(_.keys(resp), _.keys(scheduleJSON)) == []) {
+                    console.log("JSON is not updated");
+                    checkForUpdatedScheduleJSON = setInterval(function () {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/a52c2dabf5d326ecb5fa82ddffaf7bef/raw/agdq2017_schedule.json").done(function (resp) {
+                            if (_.difference(_.keys(resp), _.keys(scheduleJSON)) != []) {
+                                gdqScheduleJSON = resp;
+                                scheduleJSON = gdqScheduleJSON;
+                                clearInterval(checkForUpdatedScheduleJSON);
+                                getSpeedrunData(current_game, portForMessage);
+                            }
+                        });
+                    }, 60000);
+                } else {
+                    // Set Schedule JSON equal to the updated gist version
+                    console.log("JSON has been updated. Using new version!");
+                    gdqScheduleJSON = resp;
+                    scheduleJSON = gdqScheduleJSON;
+                    gameData = scheduleJSON[game];
+                }
+            });
+        } else if (port.name == 'esa') {
             $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/cde736fb9e43b34cf8f49c0c82d7c564/raw/esa_schedule2016.json").done(function (resp) {
                 console.log("Request for Schedule JSON sent");
                 if (_.difference(_.keys(resp), _.keys(scheduleJSON)) == []) {
@@ -256,7 +293,12 @@ function getSpeedrunData(game, port) {
         chrome.storage.sync.get(highlightsTitle, function (data) {
             current_calendar["order"] = next_games;
             current_calendar["schedule"] = schedule_object;
-            current_calendar["highlights"] = data[highlightsTitle];
+
+            if (_.isEmpty(data)) {
+                current_calendar["highlights"] = {};
+            } else {
+                current_calendar["highlights"] = data[highlightsTitle];
+            }
 
             console.log(current_calendar);
 
@@ -285,21 +327,21 @@ function getRunnerData(runners) {
     var runnersObject = _.reduce(runnersArray, function (object, runner) {
         var runnerData = runnerJSON[runner];
         if (typeof runnerData == "undefined") {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/bfd9e975d7d3b06b5ff95dc39a8f774b/raw/esa_runners2016.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/9b04fd80decf9ba8db08ef06d76c412c/raw/agdq2017_runners.json").done(function (resp) {
                 if (_.difference(_.keys(resp), _.keys(runnerJSON)) == []) {
                     checkForUpdatedRunnerJSON = setInterval(function () {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/bfd9e975d7d3b06b5ff95dc39a8f774b/raw/esa_runners2016.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/9b04fd80decf9ba8db08ef06d76c412c/raw/agdq2017_runners.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(runnerJSON)) != []) {
-                                esaRunnerJSON = resp;
-                                runnerJSON = esaRunnerJSON;
+                                gdqRunnerJSON = resp;
+                                runnerJSON = gdqRunnerJSON;
                                 clearInterval(checkForUpdatedRunnerJSON);
                                 getSpeedrunData(current_game, portForMessage);
                             }
                         });
                     }, 60000);
                 } else {
-                    esaRunnerJSON = resp;
-                    runnerJSON = esaRunnerJSON;
+                    gdqRunnerJSON = resp;
+                    runnerJSON = gdqRunnerJSON;
                     runnerData = runnerJSON[runner];
                     object[runner] = { logo: runnerData.logo, link: runnerData.link };
                     return object;

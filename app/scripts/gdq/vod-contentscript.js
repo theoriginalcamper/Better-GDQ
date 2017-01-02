@@ -10,10 +10,12 @@ $(document).ready(function () {
 	addRunnerLinks();
 	addVodLinks();
 	addBidWars();
-	addMarioMakerLink();
+	// addMarioMakerLink();
 });
 
 function retrieveGameTitleList() {
+	$('tr:not(.day-split):not(.second-row) td:nth-child(2):contains("Mystery Game Tournament")').next().text("Tech Crew");
+	console.log($('tr:not(.day-split):not(.second-row) td:nth-child(2):contains("Mystery Game Tournament")').next().text());
 
 	$('tr:not(.day-split):not(.second-row) td:nth-child(2)').each(function () {
 		gameArray.push($(this).text());
@@ -80,7 +82,7 @@ function addHighlights() {
 
 function addBidWars() {
 	console.log("Starting to add bid war indications");
-	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/sgdq2016">Donation Incentives Bid War Tracker</a></h4>');
+	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/agdq2017">Donation Incentives Bid War Tracker</a></h4>');
 }
 
 function addMarioMakerLink() {
@@ -91,7 +93,7 @@ function addMarioMakerLink() {
 function addRunnerLinks() {
 	console.log("Adding Runners");
 
-	$.getJSON(chrome.extension.getURL('/json/sgdq_runners.json')).done(function (resp) {
+	$.getJSON(chrome.extension.getURL('/json/agdq2017_runners.json')).done(function (resp) {
 		console.log(resp);
 		var runnerJSON = resp;
 
@@ -164,7 +166,7 @@ function addVodLinks() {
 	$('td:contains(' + "Super Mario World" + '):first').text('Super Mario World Race');
 	$('td:contains(' + "The Legend of Zelda: Ocarina of Time" + ')').eq(1).text('The Legend of Zelda: Ocarina of Time Glitch Exhibition');
 
-	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/30bddc447895b64988412671cfc12898/raw/sgdq2016-vod.json").done(function (data) {
+	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/097c11a5d7a6cf7b2b45649eaff706f0/raw/agdq2017-vod.json").done(function (data) {
 		console.log(data);
 		var titles = _.keys(data);
 		console.log(titles);
