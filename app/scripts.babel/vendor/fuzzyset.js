@@ -1,3 +1,5 @@
+// https://github.com/Glench/fuzzyset.js
+
 var FuzzySet = function(arr, useLevenshtein, gramSizeLower, gramSizeUpper) {
     var fuzzyset = {
         version: '0.0.1'

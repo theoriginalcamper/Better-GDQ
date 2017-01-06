@@ -601,13 +601,6 @@
         "category": "Any%",
         "link": "http://www.speedrun.com/Crowtel"
     },
-    "Furi": {
-        "title": "Furi",
-        "runner": "Studio",
-        "estimate": "0:48:00",
-        "category": "Any%",
-        "link": "http://www.speedrun.com/Furi#Any"
-    },
     "JumpJet Rex": {
         "title": "JumpJet Rex",
         "runner": "PvtCb",
@@ -951,6 +944,13 @@
         "category": "Any%",
         "link": "http://www.speedrun.com/Bleed#Story_NG%2B"
     },
+    "Furi": {
+        "title": "Furi",
+        "runner": "Studio",
+        "estimate": "0:48:00",
+        "category": "Any%",
+        "link": "http://www.speedrun.com/Furi#Any"
+    },
     "Flywrench": {
         "title": "Flywrench",
         "runner": "killingpepsi, SsupNerds",
@@ -1189,18 +1189,39 @@
         "category": "Any%",
         "link": null
     },
-    "TASBot plays a mystery game": {
-        "title": "TASBot plays a mystery game",
+    "TASBot vs NES Classic": {
+        "title": "TASBot vs NES Classic",
         "runner": "dwangoAC",
-        "estimate": "0:15:00",
-        "category": "By micro500, dwangoAC and the rest of the team",
+        "estimate": "0:08:00",
+        "category": "By micro500, MediaMagnet, Spikestuff, link_7777, and dwangoAC",
         "link": null
     },
-    "TASBot plays Donkey Kong Country": {
-        "title": "TASBot plays Donkey Kong Country",
+    "TASBot plays Super Mario Bros. 3": {
+        "title": "TASBot plays Super Mario Bros. 3",
         "runner": "dwangoAC",
-        "estimate": "0:20:00",
-        "category": "By p4plus2, Ilari, micro500, Ownasaurus & dwangoAC",
+        "estimate": "0:03:00",
+        "category": "By total and Ilari",
+        "link": null
+    },
+    "TASBot dominates Mega Man 1": {
+        "title": "TASBot dominates Mega Man 1",
+        "runner": "dwangoAC",
+        "estimate": "0:04:00",
+        "category": "by total",
+        "link": null
+    },
+    "TASBot plays A Link to the Past": {
+        "title": "TASBot plays A Link to the Past",
+        "runner": "dwangoAC",
+        "estimate": "0:10:00",
+        "category": "by Tompa, Masterjun, and Arkun",
+        "link": null
+    },
+    "TASBot plays the Community Choice": {
+        "title": "TASBot plays the Community Choice",
+        "runner": "dwangoAC",
+        "estimate": "0:15:00",
+        "category": "By Masterjun, micro500, Ilari, p4plus2 and dwangoAC",
         "link": "https://dkcspeedruns.com/Leaderboards#Donkey_Kong_Country"
     },
     "Dark Souls 3": {
