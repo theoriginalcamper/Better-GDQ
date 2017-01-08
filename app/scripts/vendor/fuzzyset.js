@@ -1,5 +1,7 @@
 'use strict';
 
+// https://github.com/Glench/fuzzyset.js
+
 var FuzzySet = function FuzzySet(arr, useLevenshtein, gramSizeLower, gramSizeUpper) {
     var fuzzyset = {
         version: '0.0.1'

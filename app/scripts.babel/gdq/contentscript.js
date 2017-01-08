@@ -11,7 +11,7 @@ var page_elem = document.querySelector('body');
 console.log(page_elem);
 
 var runners_paragraph = document.createElement('p');
-var game_link_a = document.createElement('a'); 
+var game_link_a = document.createElement('a');
 
 runners_paragraph.id = "gdq-runners-information";
 game_link_a.id = "gdq-speedrun-link";
@@ -92,7 +92,7 @@ $(document).ready(function() {
             updateQuakeChat('remove');
             $('input[name="quakenet-chat-switch"]').bootstrapSwitch('state', false, true);
         }
-        
+
         if ($('input[name="theater-mode"]').bootstrapSwitch('state')) {
             $('#stream').html('');
             $.get(chrome.extension.getURL('/html/quakenet-theater-mode.html'), function (data) {
@@ -196,7 +196,7 @@ port.onMessage.addListener(function(msg) {
         console.log("The Current Game is: " + msg.game);
         if ($()) {
             updateUI(msg);
-            updateCalendarUI(msg.calendar);   
+            updateCalendarUI(msg.calendar);
         }
     } else if (msg.status == "unchanged") {
         console.log("Current game has not changed since last request");
@@ -222,10 +222,10 @@ function updateUI(msg) {
     runners_paragraph.innerHTML = generateFormattedRunnerString(msg.runner);
     game_link_a.href = msg.link;
     game_link_a.onclick = function() {
-        window.open(this.href); 
+        window.open(this.href);
         return false;
     }
-    
+
     if (msg.category != null) {
         game_link_a.innerHTML = msg.game + ' (' + msg.category +')';
     } else {
@@ -238,7 +238,7 @@ function updateCalendarUI(msg) {
     console.log(msg);
     if (msg != null) {
         $('#schedule-table tbody').empty();
-        
+
         var scheduleString = "";
         _.each(msg.order, function(gameTitle, index) {
             scheduleString += generateScheduleItemString(msg.schedule[gameTitle], msg.highlights, index + 1);
@@ -267,7 +267,7 @@ function generateFormattedRunnerString(runners) {
     } else if (runners_keys.length == 2) {
         var last_runner = runners_keys.pop()
         var  second_runner = runners_keys.pop();
-        
+
         runner_string += generateRunnerElement(runners, second_runner);
         runner_string += ' and ';
         runner_string += generateRunnerElement(runners, last_runner);
@@ -283,9 +283,9 @@ function generateFormattedRunnerString(runners) {
 
 function generateRunnerElement(runnerObject, runner_key) {
     if (runnerObject[runner_key]["logo"] == null) {
-        return `<a href="${runnerObject[runner_key]["link"]}" onclick="window.open(this.href); return false;">${runner_key}</a>`;
+        return `<a href="https://${runnerObject[runner_key]["link"]}" onclick="window.open(this.href); return false;">${runner_key}</a>`;
     } else {
-        return `<a href="${runnerObject[runner_key]["link"]}" onclick="window.open(this.href); return false;"><img class="runner-logo" src="${runnerObject[runner_key]["logo"]}" />${runner_key}</a>`;
+        return `<a href="https://${runnerObject[runner_key]["link"]}" onclick="window.open(this.href); return false;"><img class="runner-logo" src="${runnerObject[runner_key]["logo"]}" />${runner_key}</a>`;
     }
 }
 
@@ -296,9 +296,9 @@ function generateScheduleItemString(scheduleItemObject, highlightsObject, index)
     } else {
         var titleString = scheduleItemObject.title;
     }
-    
+
     console.log(highlightsObject);
-    
+
 
     if (typeof highlightsObject[scheduleItemObject.title] == 'undefined' || highlightsObject[scheduleItemObject.title] == false) {
         var highlightStyle = '';

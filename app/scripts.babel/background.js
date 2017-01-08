@@ -1,27 +1,5 @@
 'use strict';
 
-// chrome.runtime.onInstalled.addListener(details => {
-//   console.log('previousVersion', details.previousVersion);
-//   if(details.reason == "install"){
-//         console.log("This is a first install!");
-//         chrome.storage.local.set({'currentVersion': chrome.runtime.getManifest().version});
-//     }else if(details.reason == "update"){
-//         var thisVersion = chrome.runtime.getManifest().version;
-//         var previousVersion = null;
-//         chrome.storage.local.get('previousVersion', function(data) {
-//             previousVersion = data;
-//         })
-
-//         if (Object.keys(previousVersion).length == 0) {
-//             chrome.storage.local.set({'previousVersion': })
-//         } else {
-
-//         }
-//         console.log("Updated from " + details.previousVersion + " to " + thisVersion + "!");
-//         chrome.storage.local.set({'previousVersion': })
-//     }
-// });
-
 var current_game = null;
 var current_game_title = null;
 var current_link = null;
