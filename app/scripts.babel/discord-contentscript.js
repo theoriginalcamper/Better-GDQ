@@ -16,6 +16,7 @@ $(document).ready(function() {
 	var twitchActive = false;
 	var headerHeight = null;
 	var twitchPlayerInitialSize = $(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width();
+	var twitchPlayerSizeState = 'small';
 
 	var styleNode = document.createElement("style");
 	styleNode.type = "text/css";
@@ -70,19 +71,16 @@ $(document).ready(function() {
     	if ($("#player-size-icon").length > 0){ // Check if element has been found
 					$("#player-size-icon").click(function() {
 							console.log("Clicked size icon");
-							console.log($("#player-size-icon"));
 							if ($("#player-size-icon").hasClass("fa-expand")) {
 								console.log("EXPAND");
-								$('#twitch-container').css('width', '70%');
-								$('.messages-wrapper').css('width', '32%');
-		            $('.messages-wrapper').next('form').css({'width': '29%', 'margin-right': '2%', 'margin-left': '0px'});
+								twitchPlayerSizeState = 'large';
+								adjustTwitchPlayerSize(twitchPlayerSizeState);
 								this.className = 'fa fa-compress';
 							} else if ($("#player-size-icon").hasClass("fa-compress")) {
 								console.log("COMPRESS");
-								console.log(twitchPlayerInitialSize)
-								$('#twitch-container').css('width', twitchPlayerInitialSize);
-								$('.messages-wrapper').css('width', '48%');
-		            $('.messages-wrapper').next('form').css({'width': '46%', 'margin-right': '2%', 'margin-left': '0px'});
+								console.log(twitchPlayerInitialSize);
+								twitchPlayerSizeState = 'small';
+								adjustTwitchPlayerSize(twitchPlayerSizeState);
 								this.className = 'fa fa-expand';
 							}
 			    });
@@ -175,6 +173,20 @@ $(document).ready(function() {
         }
     }
 
+		function adjustTwitchPlayerSize(msg) {
+			if (twitchPlayerSizeState == 'large') {
+				// Switch to large display
+				$('#twitch-container').css('width', '70%');
+				$('.messages-wrapper').css('width', '32%');
+				$('.messages-wrapper').next('form').css({'width': '29%', 'margin-right': '2%', 'margin-left': '0px'});
+			} else if (twitchPlayerSizeState == 'small') {
+				// Switch to small display
+				$('#twitch-container').css('width', twitchPlayerInitialSize);
+				$('.messages-wrapper').css('width', '48%');
+				$('.messages-wrapper').next('form').css({'width': '46%', 'margin-right': '2%', 'margin-left': '0px'});
+			}
+		}
+
     function updateGDQHeaderDisplay(msg) {
     	if(msg == 'add') {
     		$('#gdq-header').css('display', '');
@@ -188,8 +200,7 @@ $(document).ready(function() {
     	if (msg == 'add') {
     		console.log("Rearranging Discord UI");
 				$('.messages-wrapper').parent().css('align-items', 'flex-end');
-            $('.messages-wrapper').css('width', '48%');
-            $('.messages-wrapper').next('form').css({'width': '46%', 'margin-right': '2%', 'margin-left': '0px'});
+						adjustTwitchPlayerSize(twitchPlayerSizeState);
 						$('#player-size-icon').css('display', 'inline-block');
     	} else if (msg == 'remove') {
     		console.log("Discord UI returned to normal");
@@ -338,7 +349,7 @@ $(document).ready(function() {
     		$('.dms').on('click', function() {
     			updateGDQHeaderDisplay('remove');
     			if (twitchActive) {
-					$('#twitch-container').css('display', 'none');
+							$('#twitch-container').css('display', 'none');
         			updateDiscordUI('remove');
     			}
 
