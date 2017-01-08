@@ -16,6 +16,17 @@
 	padding-bottom: 4px;
 }
 
+#twitch-switch i {
+	transition: color 0.25s ease;
+	margin-right: 15px;
+	color: #aeafb1;
+	cursor: pointer;
+}
+
+#twitch-switch i:hover {
+	color: #FFF;
+}
+
 #gdq-header {
 	background: #36393e;
 	overflow: hidden;

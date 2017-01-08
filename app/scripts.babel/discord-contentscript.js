@@ -15,6 +15,7 @@ $(document).ready(function() {
 	var userListStatus = null;
 	var twitchActive = false;
 	var headerHeight = null;
+	var twitchPlayerInitialSize = $(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width();
 
 	var styleNode = document.createElement("style");
 	styleNode.type = "text/css";
@@ -60,14 +61,39 @@ $(document).ready(function() {
 		            that.className = 'fa fa-refresh';
 		            console.log("Refresh complete.")
 		        }, 2000);
-		    });
+		    	});
 	      	clearInterval(checkRefresh);
-		}
+		  }
+    },1000);
+
+		var checkPlayerSize = setInterval(function(){
+    	if ($("#player-size-icon").length > 0){ // Check if element has been found
+					$("#player-size-icon").click(function() {
+							console.log("Clicked size icon");
+							console.log($("#player-size-icon"));
+							if ($("#player-size-icon").hasClass("fa-expand")) {
+								console.log("EXPAND");
+								$('#twitch-container').css('width', '70%');
+								$('.messages-wrapper').css('width', '32%');
+		            $('.messages-wrapper').next('form').css({'width': '29%', 'margin-right': '2%', 'margin-left': '0px'});
+								this.className = 'fa fa-compress';
+							} else if ($("#player-size-icon").hasClass("fa-compress")) {
+								console.log("COMPRESS");
+								console.log(twitchPlayerInitialSize)
+								$('#twitch-container').css('width', twitchPlayerInitialSize);
+								$('.messages-wrapper').css('width', '48%');
+		            $('.messages-wrapper').next('form').css({'width': '46%', 'margin-right': '2%', 'margin-left': '0px'});
+								this.className = 'fa fa-expand';
+							}
+			    });
+					clearInterval(checkPlayerSize);
+		  }
     },1000);
 
     function addTwitchSwitch() {
     	$('.account').after('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
 	    $('#twitch-switch').append(`<input type="checkbox" data-size="mini" name="twitch-player-display">`);
+	    $('#twitch-switch').append(`<i class="fa fa-expand" id="player-size-icon" style="margin-left: 10px; display: none;"></i>`);
 
 	    $("[name='twitch-player-display']").bootstrapSwitch();
     }
@@ -107,12 +133,12 @@ $(document).ready(function() {
     	$('.game-information').append(runners_paragraph);
 
 	    $('#collapseCalendar').on('show.bs.collapse', function () {
-			$('#gdq-header').css('height', 'auto');
-		})
+				$('#gdq-header').css('height', 'auto');
+			});
 
-		$('#collapseCalendar').on('hide.bs.collapse', function () {
-		  $('#gdq-header').css('height', headerHeight);
-		})
+			$('#collapseCalendar').on('hide.bs.collapse', function () {
+			  $('#gdq-header').css('height', headerHeight);
+			});
 
     	port.postMessage({message: "refresh"});
     }
@@ -133,8 +159,9 @@ $(document).ready(function() {
             twitchActive = true;
 
             updateDiscordUI('add');
+						twitchPlayerInitialSize = $(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width();
 
-        	$('.app').before(`<div id="twitch-container" style="width: ${$(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()}px; height: ${$(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('.title-wrap').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>`);
+        		$('.app').before(`<div id="twitch-container" style="width: ${$(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()}px; height: ${$(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('.title-wrap').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>`);
         } else if (msg == 'remove') {
             console.log('Switch is off. Removing Twitch iframe and UI changes.');
             $('#twitch-container').remove();
@@ -160,14 +187,16 @@ $(document).ready(function() {
     	console.log("TwitchActive: " + twitchActive);
     	if (msg == 'add') {
     		console.log("Rearranging Discord UI");
-			$('.messages-wrapper').parent().css('align-items', 'flex-end');
+				$('.messages-wrapper').parent().css('align-items', 'flex-end');
             $('.messages-wrapper').css('width', '48%');
             $('.messages-wrapper').next('form').css({'width': '46%', 'margin-right': '2%', 'margin-left': '0px'});
+						$('#player-size-icon').css('display', 'inline-block');
     	} else if (msg == 'remove') {
     		console.log("Discord UI returned to normal");
     		$('.messages-wrapper').parent().removeAttr('style');
             $('.messages-wrapper').removeAttr('style');
             $('.messages-wrapper').next('form').removeAttr('style');
+						$('#player-size-icon').css('display', 'none');
     	}
     }
 
