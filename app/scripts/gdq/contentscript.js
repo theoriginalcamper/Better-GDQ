@@ -281,9 +281,9 @@ function generateFormattedRunnerString(runners) {
 
 function generateRunnerElement(runnerObject, runner_key) {
     if (runnerObject[runner_key]["logo"] == null) {
-        return '<a href="https://' + runnerObject[runner_key]["link"] + '" onclick="window.open(this.href); return false;">' + runner_key + '</a>';
+        return '<a href="' + runnerObject[runner_key]["link"] + '" onclick="window.open(this.href); return false;">' + runner_key + '</a>';
     } else {
-        return '<a href="https://' + runnerObject[runner_key]["link"] + '" onclick="window.open(this.href); return false;"><img class="runner-logo" src="' + runnerObject[runner_key]["logo"] + '" />' + runner_key + '</a>';
+        return '<a href="' + runnerObject[runner_key]["link"] + '" onclick="window.open(this.href); return false;"><img class="runner-logo" src="' + runnerObject[runner_key]["logo"] + '" />' + runner_key + '</a>';
     }
 }
 
