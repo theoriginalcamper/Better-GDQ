@@ -230,12 +230,19 @@
         "category": "Any%",
         "link": "http://www.speedrun.com/sega_bass_fishing#Arcade_Mode_DC_Any"
     },
-    "SETUP BLOCK 1": {
-        "title": "SETUP BLOCK 1",
-        "runner": "Tech Crew",
-        "estimate": "0:50:00",
+    "BONUS: Kirby Tilt 'n' Tumble": {
+        "title": "BONUS: Kirby Tilt 'n' Tumble",
+        "runner": "Theguesst",
+        "estimate": "0:15:10",
         "category": "Any%",
-        "link": null
+        "link": "http://www.speedrun.com/ktnt#Any"
+    },
+    "Rocket: Robot on Wheels": {
+        "title": "Rocket: Robot on Wheels",
+        "runner": "mashystrr",
+        "estimate": "1:10:00",
+        "category": "Any%",
+        "link": "http://www.speedrun.com/rrow#Any1"
     },
     "Super Monkey Ball 2": {
         "title": "Super Monkey Ball 2",
