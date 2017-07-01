@@ -31,7 +31,7 @@ $(document).ready(function () {
 	document.head.appendChild(linkNode);
 
 	var checkAccount = setInterval(function () {
-		if ($(".account").length > 0) {
+		if ($('[class^="accountDetails"]').length > 0) {
 			if ($('.guild.selected').has('a[href^="/channels/140605087511740416/"]').length > 0 || $('.guild.selected').has('a[href^="/channels/85369684286767104/"]').length > 0) {
 				// Check if element has been found
 				console.log('Add Switch to Links Panel');
@@ -93,7 +93,7 @@ $(document).ready(function () {
 	}, 1000);
 
 	function addTwitchSwitch() {
-		$('.account').after('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
+		$('.discriminator').parent().parent().after('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
 		$('#twitch-switch').append('<input type="checkbox" data-size="mini" name="twitch-player-display">');
 		$('#twitch-switch').append('<i class="fa fa-expand" id="player-size-icon" style="margin-left: 10px; display: none;"></i>');
 
@@ -287,7 +287,7 @@ $(document).ready(function () {
 			titleString = '<i class="fa fa-star"></i> ' + titleString;
 		}
 
-		var scheduleItemString = '<tr style=' + highlightStyle + '>\n\t                                <th scope="row" style="text-align: center;">' + index + '</th>\n\t                                <td>\n\t                                    <a class="speedrun-link" id="next-game-title" href="' + scheduleItemObject.link + '" onclick="window.open(this.href); return false;"> ' + titleString + '</a>\n\t                                    <p class="runners-links" id="next-runners-information">' + runnerString + '</p>\n\t                                </td>\n\t                                <td style="text-align: center;">\n\t                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + scheduleItemObject.estimate + '</p>\n\t                                </td>\n\t                              </tr>';
+		var scheduleItemString = '<tr style=' + highlightStyle + '>\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t<th scope="row" style="text-align: center; vertical-align: middle;">' + index + '</th>\n\t                                <td>\n\t                                    <a class="speedrun-link" id="next-game-title" href="' + scheduleItemObject.link + '" onclick="window.open(this.href); return false;"> ' + titleString + '</a>\n\t                                    <p class="runners-links" id="next-runners-information">' + runnerString + '</p>\n\t                                </td>\n\t                                <td style="text-align: center; vertical-align: middle;">\n\t                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ' + scheduleItemObject.estimate + '</p>\n\t                                </td>\n\t                              </tr>';
 
 		return scheduleItemString;
 	}
@@ -300,7 +300,7 @@ $(document).ready(function () {
 					if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
 						$('#twitch-container').css('display', '');
 						var uiUpdate = setInterval(function () {
-							if ($('.guild-header').length > 0 && ($('.guild-header header span').text() == 'GamesDoneQuick' || $('.guild-header header span').text() == 'ESA16')) {
+							if ($('.channels-wrap').length > 0 && ($('.channels-wrap header span').text() == 'GamesDoneQuick' || $('.channels-wrap header span').text() == 'ESA16')) {
 								updateDiscordUI('add');
 								clearInterval(uiUpdate);
 							}

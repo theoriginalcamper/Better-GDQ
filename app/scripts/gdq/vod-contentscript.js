@@ -10,13 +10,9 @@ $(document).ready(function () {
 	addRunnerLinks();
 	addVodLinks();
 	addBidWars();
-	// addMarioMakerLink();
 });
 
 function retrieveGameTitleList() {
-	$('tr:not(.day-split):not(.second-row) td:nth-child(2):contains("Mystery Game Tournament")').next().text("Tech Crew");
-	console.log($('tr:not(.day-split):not(.second-row) td:nth-child(2):contains("Mystery Game Tournament")').next().text());
-
 	$('tr:not(.day-split):not(.second-row) td:nth-child(2)').each(function () {
 		gameArray.push($(this).text());
 	});
@@ -82,23 +78,20 @@ function addHighlights() {
 
 function addBidWars() {
 	console.log("Starting to add bid war indications");
-	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/agdq2017">Donation Incentives Bid War Tracker</a></h4>');
-}
-
-function addMarioMakerLink() {
-	console.log("Adding Super Mario Maker Link");
-	$('#star-highlight-notice').before('<h4 class="text-gdq-black well" id="gdq-mario-maker-levels"><a href="https://makersofmario.com/worlds/view/547">SGDQ Super Mario Maker Levels!</a></h4>');
+	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/sgdq2017">Donation Incentives Bid War Tracker</a></h4>');
 }
 
 function addRunnerLinks() {
 	console.log("Adding Runners");
 
-	$.getJSON(chrome.extension.getURL('/json/agdq2017_runners.json')).done(function (resp) {
+	$.getJSON(chrome.extension.getURL('/json/sgdq2017_runners.json')).done(function (resp) {
 		console.log(resp);
 		var runnerJSON = resp;
 
 		$.each(runnerArray, function (index, runnerString) {
-			$('tr:not(.day-split):not(.second-row) td:nth-child(3):contains(' + runnerString + ')').each(function (index, element) {
+			$('tr:not(.day-split):not(.second-row) td:nth-child(3)').filter(function () {
+				return $(this).text() === runnerString;
+			}).each(function (index, element) {
 				var runners = runnerString.split(', ');
 				var runnerObjects = {};
 
@@ -166,7 +159,7 @@ function addVodLinks() {
 	$('td:contains(' + "Super Mario World" + '):first').text('Super Mario World Race');
 	$('td:contains(' + "The Legend of Zelda: Ocarina of Time" + ')').eq(1).text('The Legend of Zelda: Ocarina of Time Glitch Exhibition');
 
-	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/097c11a5d7a6cf7b2b45649eaff706f0/raw/agdq2017-vod.json").done(function (data) {
+	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/8b9870ae4a5158695eb08520c07b849d/raw/sgdq2017-vod.json").done(function (data) {
 		console.log(data);
 		var titles = _.keys(data);
 		console.log(titles);

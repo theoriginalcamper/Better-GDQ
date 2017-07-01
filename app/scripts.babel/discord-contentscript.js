@@ -29,7 +29,7 @@ $(document).ready(function() {
 	document.head.appendChild(linkNode);
 
     var checkAccount = setInterval(function(){
-    	if ($(".account").length > 0) {
+    	if ($('[class^="accountDetails"]').length > 0) {
     		if($('.guild.selected').has('a[href^="/channels/140605087511740416/"]').length > 0 || $('.guild.selected').has('a[href^="/channels/85369684286767104/"]').length > 0) { // Check if element has been found
 		      	console.log('Add Switch to Links Panel');
 		      	addTwitchSwitch();
@@ -46,7 +46,7 @@ $(document).ready(function() {
 			        }
 			    });
 
-			}
+				}
     	}
     },1000);
 
@@ -89,8 +89,8 @@ $(document).ready(function() {
     },1000);
 
     function addTwitchSwitch() {
-    	$('.account').after('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
-	    $('#twitch-switch').append(`<input type="checkbox" data-size="mini" name="twitch-player-display">`);
+			$('.discriminator').parent().parent().after('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
+			$('#twitch-switch').append(`<input type="checkbox" data-size="mini" name="twitch-player-display">`);
 	    $('#twitch-switch').append(`<i class="fa fa-expand" id="player-size-icon" style="margin-left: 10px; display: none;"></i>`);
 
 	    $("[name='twitch-player-display']").bootstrapSwitch();
@@ -307,12 +307,12 @@ $(document).ready(function() {
 	    }
 
 	    var scheduleItemString = `<tr style=${highlightStyle}>
-	                                <th scope="row" style="text-align: center;">${index}</th>
+																	<th scope="row" style="text-align: center; vertical-align: middle;">${index}</th>
 	                                <td>
 	                                    <a class="speedrun-link" id="next-game-title" href="${scheduleItemObject.link}" onclick="window.open(this.href); return false;"> ${titleString}</a>
 	                                    <p class="runners-links" id="next-runners-information">${runnerString}</p>
 	                                </td>
-	                                <td style="text-align: center;">
+	                                <td style="text-align: center; vertical-align: middle;">
 	                                    <p class="text-right"><i class="fa fa-clock-o" aria-hidden="true"></i> ${scheduleItemObject.estimate}</p>
 	                                </td>
 	                              </tr>`;
@@ -328,8 +328,8 @@ $(document).ready(function() {
     				if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
     					$('#twitch-container').css('display', '');
             			var uiUpdate = setInterval(function() {
-            				if($('.guild-header').length > 0 && ($('.guild-header header span').text() == 'GamesDoneQuick' || $('.guild-header header span').text() == 'ESA16')) {
-            					updateDiscordUI('add');
+            				if($('.channels-wrap').length > 0 && ($('.channels-wrap header span').text() == 'GamesDoneQuick' || $('.channels-wrap header span').text() == 'ESA16')) {
+											updateDiscordUI('add');
             					clearInterval(uiUpdate);
             				}
             			}, 500);
