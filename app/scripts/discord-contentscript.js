@@ -12,8 +12,6 @@ game_link_a.className = "speedrun-link";
 $(document).ready(function () {
 	console.log("Hello Discord!");
 
-	console.log($('.messages-wrapper'));
-
 	var userListStatus = null;
 	var twitchActive = false;
 	var headerHeight = null;
@@ -25,23 +23,18 @@ $(document).ready(function () {
 	styleNode.textContent = '@font-face { font-family: FontAwesome; src: url(' + chrome.extension.getURL("/fonts/fontawesome-webfont.woff") + ');}';
 	document.head.appendChild(styleNode);
 
-	var linkNode = document.createElement("link");
-	linkNode.type = "text/css";
-	linkNode.href = "http://yui.yahooapis.com/pure/0.6.0/pure-min.css";
-	document.head.appendChild(linkNode);
-
 	var checkAccount = setInterval(function () {
 		if ($('[class^="accountDetails"]').length > 0) {
 			if ($('.guild.selected').has('a[href^="/channels/140605087511740416/"]').length > 0 || $('.guild.selected').has('a[href^="/channels/85369684286767104/"]').length > 0) {
 				// Check if element has been found
 				console.log('Add Switch to Links Panel');
-				addTwitchSwitch();
 				addInformationBar();
+				addTwitchSwitch();
+
 				clearInterval(checkAccount);
 
 				$('input[name="twitch-player-display"]').on('switchChange.bootstrapSwitch', function (event, state) {
-					console.log('Clicked Twitch Switch.');
-					console.log($("[name='twitch-player-display']").bootstrapSwitch('state'));
+					console.log('Clicked Twitch Switch. Current switch state: ' + $("[name='twitch-player-display']").bootstrapSwitch('state'));
 					if ($('input[name="twitch-player-display"]').bootstrapSwitch('state')) {
 						updateTwitchPlayer('add');
 					} else {
@@ -93,7 +86,8 @@ $(document).ready(function () {
 	}, 1000);
 
 	function addTwitchSwitch() {
-		$('.discriminator').parent().parent().after('<div id="twitch-switch"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
+		$('.discriminator').parent().parent().css('margin-bottom', '30px');
+		$('#gdq-header').after('<div id="twitch-switch" style="position: fixed; width: ' + $('div[class^="channels"]').width() + 'px; height: 22px; left: ' + $('.guilds-wrapper').width() + 'px; bottom: 0;"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>');
 		$('#twitch-switch').append('<input type="checkbox" data-size="mini" name="twitch-player-display">');
 		$('#twitch-switch').append('<i class="fa fa-expand" id="player-size-icon" style="margin-left: 10px; display: none;"></i>');
 
@@ -102,7 +96,7 @@ $(document).ready(function () {
 
 	function addInformationBar() {
 
-		$('.app').before('\n\t\t\t\t\t\t\t<header id="gdq-header" style="width: ' + ($('.title-wrap').width() - $('.header-toolbar').width() + 10) + 'px; height: ' + ($('.title-wrap').outerHeight() - 1) + 'px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ' + ($('.guilds-wrapper').width() + $('.channels-wrap').width()) + 'px;">\n\t\t\t\t\t\t\t\t<div class="extension-container">\n\t\t\t\t\t\t\t\t\t<div id="options" style="transform: translateY(50%);">\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-refresh" id="settings-icon"></i>\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div class="game-information">\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div style="clear:both;"></div>\n\t\t\t\t\t\t\t\t\t<div class="collapse" id="collapseCalendar" style="padding-top: 10px; height: 0px;">\n\t\t\t\t\t\t\t\t\t\t<!-- Schedule -->\n\t\t\t\t\t\t\t\t\t\t<p><i class="fa fa-calendar" style="margin-right: 10px;"></i> Next Runs</p>\n\t\t\t\t\t\t\t\t\t\t<table class="table" id="schedule-table" style="border-collapse: collapse;">\n\t\t\t\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</header>\n\t\t\t');
+		$('.app').before('\n\t\t\t\t\t\t\t<header id="gdq-header" style="width: ' + ($('div[class^="titleWrapper"]').width() - $('div[class^="titleWrapper"] div:nth-child(3)').width() - 10) + 'px; height: ' + ($('div[class^="titleWrapper"]').outerHeight() - 1) + 'px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ' + ($('.guilds-wrapper').width() + $('div[class^="channels"]').width()) + 'px;">\n\t\t\t\t\t\t\t\t<div class="extension-container">\n\t\t\t\t\t\t\t\t\t<div id="options" style="transform: translateY(37.5%);">\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>\n\t\t\t\t\t\t\t\t\t\t<i class="fa fa-refresh" id="settings-icon"></i>\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div class="game-information">\n\t\t\t\t\t\t\t\t\t</div>\n\n\t\t\t\t\t\t\t\t\t<div style="clear:both;"></div>\n\t\t\t\t\t\t\t\t\t<div class="collapse" id="collapseCalendar" style="padding-top: 10px; height: 0px;">\n\t\t\t\t\t\t\t\t\t\t<!-- Schedule -->\n\t\t\t\t\t\t\t\t\t\t<p><i class="fa fa-calendar" style="margin-right: 10px;"></i> Next Runs</p>\n\t\t\t\t\t\t\t\t\t\t<table class="table" id="schedule-table" style="border-collapse: collapse;">\n\t\t\t\t\t\t\t\t\t\t\t<tbody>\n\t\t\t\t\t\t\t\t\t\t\t</tbody>\n\t\t\t\t\t\t\t\t\t\t</table>\n\t\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t\t</div>\n\t\t\t\t\t\t\t</header>\n\t\t\t');
 
 		headerHeight = $('#gdq-header').css('height');
 		console.log('Width: ' + $('#gdq-header').width());
@@ -127,21 +121,24 @@ $(document).ready(function () {
 		if (msg == 'add') {
 			console.log('Switch is on. Adding Twitch iframe and modifying UI.');
 
-			if ($('.header-toolbar button:nth-child(3)').hasClass('active')) {
-				userListStatus = true;
-				$('.header-toolbar button:nth-child(3)').click();
-			} else {
-				userListStatus = false;
-			}
-
 			$('button.active').click();
 
 			twitchActive = true;
 
 			updateDiscordUI('add');
-			twitchPlayerInitialSize = $(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width();
 
-			$('.app').before('<div id="twitch-container" style="width: ' + ($(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width()) + 'px; height: ' + ($(document).height() - $('.title-wrap').outerHeight() - $('#twitch-switch').outerHeight()) + 'px; position: fixed; z-index:100; top: ' + $('.title-wrap').outerHeight() + 'px; left: ' + $('.guilds-wrapper').width() + 'px;"><iframe id="twitch-embed" src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe></div>');
+			if ($('div[class^="titleWrapper"] > div > :nth-child(3) > :nth-child(3)').is('[class^="iconActive"]')) {
+				userListStatus = true;
+				$('.header-toolbar button:nth-child(3)').click();
+				// $('.channel-members-wrap').css('display', 'none');
+				twitchPlayerInitialSize = Math.round($(document).width() - $('.guilds-wrapper').width() - $('.chat').width() * parseFloat($('.messages-wrapper')[0].style.width) / 100);
+			} else {
+				userListStatus = false;
+				twitchPlayerInitialSize = $(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width();
+			}
+
+			$('.app').before('<div id="twitch-container" style="width: ' + twitchPlayerInitialSize + 'px; height: ' + ($(document).height() - $('div[class^="titleWrapper"]').outerHeight() - $('#twitch-switch').outerHeight()) + 'px; position: fixed; z-index:100; top: ' + $('div[class^="titleWrapper"]').outerHeight() + 'px; left: ' + $('.guilds-wrapper').width() + 'px;"></div>');
+			$('.app').before('<script type="text/javascript">\n\t\t\t\t\t      new Twitch.Embed("twitch-container", {\n\t\t\t\t\t        width: "100%",\n\t\t\t\t\t        height: "100%",\n\t\t\t\t\t\t\t\t\tlayout: "video",\n\t\t\t\t\t\t\t\t\tallowfullscreen: true,\n\t\t\t\t\t        channel: "gamesdonequick"\n\t\t\t\t\t      });\n\t\t\t\t\t    </script>');
 		} else if (msg == 'remove') {
 			console.log('Switch is off. Removing Twitch iframe and UI changes.');
 			$('#twitch-container').remove();
@@ -150,6 +147,7 @@ $(document).ready(function () {
 
 			if (userListStatus == true) {
 				$('.header-toolbar button:nth-child(3)').click();
+				// $('.channel-members-wrap').css('display', '')
 			}
 		}
 	}
@@ -162,9 +160,10 @@ $(document).ready(function () {
 			$('.messages-wrapper').next('form').css({ 'width': '29%', 'margin-right': '2%', 'margin-left': '0px' });
 		} else if (twitchPlayerSizeState == 'small') {
 			// Switch to small display
-			$('#twitch-container').css('width', twitchPlayerInitialSize);
+			// $('#twitch-container').css('width', twitchPlayerInitialSize);
 			$('.messages-wrapper').css('width', '48%');
 			$('.messages-wrapper').next('form').css({ 'width': '46%', 'margin-right': '2%', 'margin-left': '0px' });
+			$('#twitch-container').css('width', $(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width());
 		}
 	}
 
@@ -295,12 +294,13 @@ $(document).ready(function () {
 	var checkForActiveGuild = setInterval(function () {
 		if ($(".selected").length > 0) {
 			// Check if element has been found
-			$('.guild').on('click', function () {
+			$(document).on('click', '.guild', function () {
 				if (twitchActive) {
 					if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
 						$('#twitch-container').css('display', '');
+
 						var uiUpdate = setInterval(function () {
-							if ($('.channels-wrap').length > 0 && ($('.channels-wrap header span').text() == 'GamesDoneQuick' || $('.channels-wrap header span').text() == 'ESA16')) {
+							if ($('[class^="channels"]').length > 0 && ($('[class^="channels"] header span').text() == 'GamesDoneQuick' || $('[class^="channels"] header span]').text() == 'European Speedrunner Assembly')) {
 								updateDiscordUI('add');
 								clearInterval(uiUpdate);
 							}
@@ -309,6 +309,10 @@ $(document).ready(function () {
 						$('#twitch-container').css('display', 'none');
 						updateDiscordUI('remove');
 					}
+				}
+
+				if ($('#twitch-switch').length) {
+					$('.discriminator', $('[class^="channels"]')).parent().parent().css('margin-bottom', '30px');
 				}
 
 				if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {

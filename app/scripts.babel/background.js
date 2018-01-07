@@ -30,10 +30,10 @@ var checkForUpdatedScheduleJSON = null;
 
 var portForMessage = null;
 
-$.getJSON('/json/sgdq2017_runners.json').done(function(resp) {
+$.getJSON('/json/agdq2018_runners.json').done(function(resp) {
     gdqRunnerJSON = resp;
 });
-$.getJSON('/json/sgdq2017_schedule.json').done(function(resp) {
+$.getJSON('/json/agdq2018_schedule.json').done(function(resp) {
     gdqScheduleJSON = resp;
     gdqFuzzySearchArray = _.keys(gdqScheduleJSON);
     gdqFuzzySet = FuzzySet(gdqFuzzySearchArray);
@@ -55,6 +55,7 @@ chrome.runtime.onConnect.addListener(function (port) {
     if (port.name == "gdq") {
         console.assert(port.name == "gdq");
         port.onMessage.addListener(function (msg) {
+            console.log(msg);
             if (msg.message == "request") {
                 $.ajax({
                   datatype: "json",
@@ -165,12 +166,12 @@ function getSpeedrunData(game, port) {
     if (typeof gameData == 'undefined') {
         // Query for gist version of Schedule JSON
         if (port.name == 'gdq') {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/59b94f98b1b0fc2f53aa1286cab5d0f5/raw/sgdq2017_schedule.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/bb8f36270cd390286f95bb2a7818611f/raw/agdq2018_schedule.json").done(function (resp) {
                 console.log("Request for Schedule JSON sent")
                 if (_.difference(_.keys(resp), _.keys(scheduleJSON)) == []) {
                     console.log("JSON is not updated");
                     checkForUpdatedScheduleJSON = setInterval(function() {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/59b94f98b1b0fc2f53aa1286cab5d0f5/raw/sgdq2017_schedule.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/bb8f36270cd390286f95bb2a7818611f/raw/agdq2018_schedule.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(scheduleJSON)) != []) {
                                 gdqScheduleJSON = resp;
                                 scheduleJSON = gdqScheduleJSON;

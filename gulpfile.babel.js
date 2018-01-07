@@ -16,6 +16,8 @@ gulp.task('extras', () => {
     'app/json/sgdq_super_mario_maker_levels.json',
     'app/json/esa_runners.json',
     'app/json/esa_schedule.json',
+    'app/json/agdq2018_runners.json',
+    'app/json/agdq2018_schedule.json',
     'app/json/agdq2017_runners.json',
     'app/json/agdq2017_schedule.json',
     'app/json/sgdq2017_runners.json',
