@@ -1,7 +1,7 @@
 # Better-GDQ
 Chrome Extension that adds functionality and UI changes to improve the GDQ viewing experience on GamesDoneQuick.com and the GDQ Discord web client
 
-## GameDoneQuick.com
+## GamesDoneQuick.com
 Adds a fixed footer to the GamesDoneQuick.com website that displays:
 * Current run with links to the WR list on Speedrun.com and other leaderboards
 * Links to the current runner or runners' Twitch.tv page
