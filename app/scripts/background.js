@@ -55,6 +55,7 @@ chrome.runtime.onConnect.addListener(function (port) {
     if (port.name == "gdq") {
         console.assert(port.name == "gdq");
         port.onMessage.addListener(function (msg) {
+            console.log(msg);
             if (msg.message == "request") {
                 $.ajax({
                     datatype: "json",
@@ -305,10 +306,10 @@ function getRunnerData(runners) {
     var runnersObject = _.reduce(runnersArray, function (object, runner) {
         var runnerData = runnerJSON[runner];
         if (typeof runnerData == "undefined") {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/9b04fd80decf9ba8db08ef06d76c412c/raw/agdq2017_runners.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/ea5ac7bd58a83efe54b036b6ad794741/raw/adgq2018_runners.json").done(function (resp) {
                 if (_.difference(_.keys(resp), _.keys(runnerJSON)) == []) {
                     checkForUpdatedRunnerJSON = setInterval(function () {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/9b04fd80decf9ba8db08ef06d76c412c/raw/agdq2017_runners.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/ea5ac7bd58a83efe54b036b6ad794741/raw/adgq2018_runners.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(runnerJSON)) != []) {
                                 gdqRunnerJSON = resp;
                                 runnerJSON = gdqRunnerJSON;

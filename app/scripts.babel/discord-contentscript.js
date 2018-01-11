@@ -337,7 +337,7 @@ $(document).ready(function() {
     					$('#twitch-container').css('display', '');
 
 							var uiUpdate = setInterval(function() {
-        				if($('[class^="channels"]').length > 0 && ($('[class^="channels"] header span').text() == 'GamesDoneQuick' || $('[class^="channels"] header span]').text() == 'European Speedrunner Assembly')) {
+        				if($('[class^="channels"]').length > 0 && ($('[class^="channels"] header span').text() == 'GamesDoneQuick' || $('[class^="channels"] header span').text() == 'European Speedrunner Assembly')) {
 									updateDiscordUI('add');
         					clearInterval(uiUpdate);
         				}
