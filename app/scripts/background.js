@@ -30,10 +30,10 @@ var checkForUpdatedScheduleJSON = null;
 
 var portForMessage = null;
 
-$.getJSON('/json/agdq2018_runners.json').done(function (resp) {
+$.getJSON('/json/sgdq2018_runners.json').done(function (resp) {
     gdqRunnerJSON = resp;
 });
-$.getJSON('/json/agdq2018_schedule.json').done(function (resp) {
+$.getJSON('/json/sgdq2018_schedule.json').done(function (resp) {
     gdqScheduleJSON = resp;
     gdqFuzzySearchArray = _.keys(gdqScheduleJSON);
     gdqFuzzySet = FuzzySet(gdqFuzzySearchArray);
@@ -166,12 +166,12 @@ function getSpeedrunData(game, port) {
     if (typeof gameData == 'undefined') {
         // Query for gist version of Schedule JSON
         if (port.name == 'gdq') {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/bb8f36270cd390286f95bb2a7818611f/raw/agdq2018_schedule.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/5e099cbf8b4bae47743e75393317bb95/raw/sgdq2018_schedule.json").done(function (resp) {
                 console.log("Request for Schedule JSON sent");
                 if (_.difference(_.keys(resp), _.keys(scheduleJSON)) == []) {
                     console.log("JSON is not updated");
                     checkForUpdatedScheduleJSON = setInterval(function () {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/bb8f36270cd390286f95bb2a7818611f/raw/agdq2018_schedule.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/5e099cbf8b4bae47743e75393317bb95/raw/sgdq2018_schedule.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(scheduleJSON)) != []) {
                                 gdqScheduleJSON = resp;
                                 scheduleJSON = gdqScheduleJSON;
@@ -301,15 +301,16 @@ function getSpeedrunData(game, port) {
 
 function getRunnerData(runners) {
     console.log(runners);
+
     var runnersArray = runners.split(", ");
 
     var runnersObject = _.reduce(runnersArray, function (object, runner) {
         var runnerData = runnerJSON[runner];
         if (typeof runnerData == "undefined") {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/ea5ac7bd58a83efe54b036b6ad794741/raw/adgq2018_runners.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/c94a8817e1228b5ca3bda0d5138ebccf/raw/sgdq2018_runners.json").done(function (resp) {
                 if (_.difference(_.keys(resp), _.keys(runnerJSON)) == []) {
                     checkForUpdatedRunnerJSON = setInterval(function () {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/ea5ac7bd58a83efe54b036b6ad794741/raw/adgq2018_runners.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/c94a8817e1228b5ca3bda0d5138ebccf/raw/sgdq2018_runners.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(runnerJSON)) != []) {
                                 gdqRunnerJSON = resp;
                                 runnerJSON = gdqRunnerJSON;
