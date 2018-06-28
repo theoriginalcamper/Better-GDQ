@@ -426,12 +426,12 @@
     "category": "Sonic — Genesis",
     "link": "https://www.speedrun.com/sonic2#Sonic_and_Tails_Beat_the_Game"
   },
-  "SETUP BLOCK 2": {
-    "title": "SETUP BLOCK 2",
-    "runner": "Tech Crew",
+  "Sonic 3 and Knuckles": {
+    "title": "Sonic 3 and Knuckles",
+    "runner": "mike89",
     "estimate": "0:48:00",
-    "category": "Tech Stuff —",
-    "link": "http://www.gamesdonequick.com"
+    "category": "Sonic any% — Genesis",
+    "link": "https://www.speedrun.com/s3k#Sonic"
   },
   "Metroid: Zero Mission": {
     "title": "Metroid: Zero Mission",
@@ -496,12 +496,12 @@
     "category": "Story Mode All Levels — Wii",
     "link": "https://www.speedrun.com/supermonkeyball2"
   },
-  "SETUP BLOCK 3": {
-    "title": "SETUP BLOCK 3",
-    "runner": "Tech Crew",
+  "Super Monkey Ball 2: Monkeyed Ball": {
+    "title": "Super Monkey Ball 2: Monkeyed Ball",
+    "runner": "Yutori, Geoff",
     "estimate": "0:35:00",
-    "category": "Tech Stuff —",
-    "link": "http://www.gamesdonequick.com"
+    "category": "Story Mode All Levels Race — Wii",
+    "link": "https://www.speedrun.com/smb2mb"
   },
   "Spider-Man: Web of Fire": {
     "title": "Spider-Man: Web of Fire",
@@ -601,12 +601,12 @@
     "category": "Any% race — PC",
     "link": "https://www.speedrun.com/Celeste"
   },
-  "SETUP BLOCK 4": {
-    "title": "SETUP BLOCK 4",
-    "runner": "Tech Crew",
+  "Pepsiman": {
+    "title": "Pepsiman",
+    "runner": "theboyks",
     "estimate": "0:26:00",
-    "category": "Tech Stuff —",
-    "link": "http://www.gamesdonequick.com"
+    "category": "Cutscene% - PSX",
+    "link": "https://www.speedrun.com/Pepsiman"
   },
   "Getting Over It with Bennett Foddy": {
     "title": "Getting Over It with Bennett Foddy",
@@ -729,7 +729,7 @@
   },
   "The Legend of Zelda": {
     "title": "The Legend of Zelda",
-    "runner": "LackAttack24, BT, Eunos",
+    "runner": "LackAttack24, beeteas, Eunos",
     "estimate": "1:00:00",
     "category": "low% Race — NES",
     "link": "https://www.speedrun.com/The_Legend_of_Zelda#Low"
