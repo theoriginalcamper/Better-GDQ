@@ -776,13 +776,6 @@
     "category": "No OoB — PC",
     "link": "https://www.speedrun.com/prey2017#No_OoB"
   },
-  "SETUP BLOCK 5": {
-    "title": "SETUP BLOCK 5",
-    "runner": "Tech Crew",
-    "estimate": "0:35:00",
-    "category": "Tech Stuff —",
-    "link": "http://www.gamesdonequick.com"
-  },
   "Super Mario Bros.": {
     "title": "Super Mario Bros.",
     "runner": "SuperSonic71087, RetroBob_, Kosmic, RoyLGamer",
@@ -810,6 +803,13 @@
     "estimate": "1:37:00",
     "category": "32 Tracks, 200cc, Items — Switch",
     "link": "https://www.speedrun.com/mk8dx#32_Tracks"
+  },
+  "Half-Life": {
+    "title": "Half-Life",
+    "runner": "ProtoAus",
+    "estimate": "0:35:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/hl1#WON"
   },
   "Wave Race: Blue Storm": {
     "title": "Wave Race: Blue Storm",
