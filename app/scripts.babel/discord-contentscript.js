@@ -23,7 +23,16 @@ $(document).ready(function() {
 
     var checkAccount = setInterval(function(){
     	if ($('[class^="accountDetails"]').length > 0) {
-    		if($('.guild.selected').has('a[href^="/channels/140605087511740416/"]').length > 0 || $('.guild.selected').has('a[href^="/channels/85369684286767104/"]').length > 0) { // Check if element has been found
+
+				var guildList = $('[class^="guild-"]').filter(function( index ) {
+					var classList = $(this).attr('class').split(' ');
+					var match = classList.filter(value => /^selected-/.test(value));
+					if (match.length > 0) {
+						return $(this);
+					}
+			  });
+				
+    		if(guildList.has('a[href^="/channels/140605087511740416/"]').length > 0 || guildList.has('a[href^="/channels/85369684286767104/"]').length > 0) { // Check if element has been found
 		      	console.log('Add Switch to Links Panel');
 		      	addInformationBar();
 						addTwitchSwitch();
@@ -83,7 +92,7 @@ $(document).ready(function() {
 
     function addTwitchSwitch() {
 			$('.discriminator').parent().parent().css('margin-bottom', '30px');
-			$('#gdq-header').after(`<div id="twitch-switch" style="position: fixed; width: ${$('div[class^="channels"]').width()}px; height: 22px; left: ${$('.guilds-wrapper').width()}px; bottom: 0;"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>`);
+			$('#gdq-header').after(`<div id="twitch-switch" style="position: fixed; width: ${$('div[class^="channels"]').width()}px; height: 22px; left: ${$('[class^="guildsWrapper"]').width()}px; bottom: 0;"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>`);
 			$('#twitch-switch').append(`<input type="checkbox" data-size="mini" name="twitch-player-display">`);
 	    $('#twitch-switch').append(`<i class="fa fa-expand" id="player-size-icon" style="margin-left: 10px; display: none;"></i>`);
 
@@ -93,7 +102,7 @@ $(document).ready(function() {
     function addInformationBar() {
 
 			$('.app').before(`
-							<header id="gdq-header" style="width: ${$('div[class^="titleWrapper"]').width() - $('div[class^="titleWrapper"] div:nth-child(3)').width() - 10}px; height: ${$('div[class^="titleWrapper"]').outerHeight() - 1}px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ${$('.guilds-wrapper').width() + $('div[class^="channels"]').width()}px;">
+							<header id="gdq-header" style="width: ${$('div[class^="titleWrapper"]').width() - $('div[class^="titleWrapper"] > div > div:nth-child(2)').width() - 10}px; height: ${$('div[class^="titleWrapper"]').outerHeight() - 1}px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ${$('[class^="guildsWrapper"]').width() + $('div[class^="channels"]').width()}px;">
 								<div class="extension-container">
 									<div id="options" style="transform: translateY(37.5%);">
 										<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>
@@ -145,17 +154,20 @@ $(document).ready(function() {
 
             updateDiscordUI('add');
 
-						if($('div[class^="titleWrapper"] > div > :nth-child(3) > :nth-child(3)').is('[class^="iconActive"]')) {
-            	userListStatus = true;
-            	$('.header-toolbar button:nth-child(3)').click();
-							// $('.channel-members-wrap').css('display', 'none');
-							twitchPlayerInitialSize = Math.round($(document).width() - $('.guilds-wrapper').width() - ($('.chat').width() * (parseFloat($('.messages-wrapper')[0].style.width)) / 100));
-            } else {
-            	userListStatus = false;
-							twitchPlayerInitialSize = $(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width();
-            }
+						// if($('div[class^="titleWrapper"] > div > :nth-child(3) > :nth-child(3)').is('[class^="iconActive"]')) {
+            // 	userListStatus = true;
+            // 	$('.header-toolbar button:nth-child(3)').click();
+						// 	// $('.channel-members-wrap').css('display', 'none');
+						// 	twitchPlayerInitialSize = Math.round($(document).width() - $('[class^="guildsWrapper"]').width() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100));
+            // } else {
+            // 	userListStatus = false;
+						// 	twitchPlayerInitialSize = $(document).width() - $('[class^="guildsWrapper"]').width() - $('[class^="messagesWrapper"]').width();
+            // }
+						console.log(Math.round($(document).width() - $('[class^="guildsWrapper"]').width() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100)));
+						twitchPlayerInitialSize = Math.round($(document).width() - $('[class^="guildsWrapper"]').width() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100));
 
-						$('.app').before(`<div id="twitch-container" style="width: ${twitchPlayerInitialSize}px; height: ${$(document).height() - $('div[class^="titleWrapper"]').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('div[class^="titleWrapper"]').outerHeight()}px; left: ${$('.guilds-wrapper').width()}px;"></div>`);
+
+						$('.app').before(`<div id="twitch-container" style="width: ${twitchPlayerInitialSize}px; height: ${$(document).height() - $('div[class^="titleWrapper"]').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('div[class^="titleWrapper"]').outerHeight()}px; left: ${$('[class^="guildsWrapper"]').width()}px;"></div>`);
 						$('.app').before(`<script type="text/javascript">
 					      new Twitch.Embed("twitch-container", {
 					        width: "100%",
@@ -184,14 +196,14 @@ $(document).ready(function() {
 			if (twitchPlayerSizeState == 'large') {
 				// Switch to large display
 				$('#twitch-container').css('width', '70%');
-				$('.messages-wrapper').css('width', '32%');
-				$('.messages-wrapper').next('form').css({'width': '29%', 'margin-right': '2%', 'margin-left': '0px'});
+				$('[class^="messagesWrapper"]').css('width', '32%');
+				$('[class^="messagesWrapper"]').next('form').css({'width': '29%', 'margin-right': '2%', 'margin-left': '0px'});
 			} else if (twitchPlayerSizeState == 'small') {
 				// Switch to small display
 				// $('#twitch-container').css('width', twitchPlayerInitialSize);
-				$('.messages-wrapper').css('width', '48%');
-				$('.messages-wrapper').next('form').css({'width': '46%', 'margin-right': '2%', 'margin-left': '0px'});
-				$('#twitch-container').css('width', $(document).width() - $('.guilds-wrapper').width() - $('.messages-wrapper').width());
+				$('[class^="messagesWrapper"]').css('width', '48%');
+				$('[class^="messagesWrapper"]').next('form').css({'width': '46%', 'margin-right': '2%', 'margin-left': '0px'});
+				$('#twitch-container').css('width', $(document).width() - $('[class^="guildsWrapper"]').width() - $('[class^="messagesWrapper"]').width());
 			}
 		}
 
@@ -207,14 +219,14 @@ $(document).ready(function() {
     	console.log("TwitchActive: " + twitchActive);
     	if (msg == 'add') {
     		console.log("Rearranging Discord UI");
-				$('.messages-wrapper').parent().css('align-items', 'flex-end');
+				$('[class^="messagesWrapper"]').parent().css('align-items', 'flex-end');
 						adjustTwitchPlayerSize(twitchPlayerSizeState);
 						$('#player-size-icon').css('display', 'inline-block');
     	} else if (msg == 'remove') {
     		console.log("Discord UI returned to normal");
-    		$('.messages-wrapper').parent().removeAttr('style');
-            $('.messages-wrapper').removeAttr('style');
-            $('.messages-wrapper').next('form').removeAttr('style');
+    		$('[class^="messagesWrapper"]').parent().removeAttr('style');
+            $('[class^="messagesWrapper"]').removeAttr('style');
+            $('[class^="messagesWrapper"]').next('form').removeAttr('style');
 						$('#player-size-icon').css('display', 'none');
     	}
     }
@@ -253,10 +265,12 @@ $(document).ready(function() {
 	function generateFormattedRunnerString(runners, location) {
 	    var runners_keys = _.keys(runners);
 	    var runner_string = "by ";
+
+			if (location != 'table') {
+				runner_string = "<b>Current Runners: </b>"
+			}
+
 	    if (runners_keys.length > 2) {
-	    	if (location != 'table') {
-	    		runner_string = "<b>Current Runners: </b>"
-	    	}
 	        var last_runner = runners_keys.pop()
 	        var  second_runner = runners_keys.pop();
 	        $.each(runners_keys, function(index, runner_key) {
@@ -267,9 +281,6 @@ $(document).ready(function() {
 	        runner_string += 'and '
 	        runner_string += generateRunnerElement(runners, last_runner);
 	    } else if (runners_keys.length == 2) {
-	    	if (location != 'table') {
-	    		runner_string = "<b>Current Runners: </b>"
-	    	}
 	        var last_runner = runners_keys.pop()
 	        var  second_runner = runners_keys.pop();
 
@@ -277,9 +288,6 @@ $(document).ready(function() {
 	        runner_string += ' and ';
 	        runner_string += generateRunnerElement(runners, last_runner);
 	    } else if (runners_keys.length == 1) {
-	    	if (location != 'table') {
-	    		runner_string = "<b>Current Runner: </b>"
-	    	}
 	        var runner_key = runners_keys[0];
 	        runner_string += generateRunnerElement(runners, runners_keys[0]);
 	    } else {
@@ -330,8 +338,8 @@ $(document).ready(function() {
 	}
 
     var checkForActiveGuild = setInterval(function() {
-    	if ($(".selected").length > 0) { // Check if element has been found
-    		$(document).on('click', '.guild', function() {
+    	if ($('[class*="selected-"]').length > 0) { // Check if element has been found
+    		$(document).on('click', '[class^="guild-"]', function() {
     			if (twitchActive) {
     				if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
     					$('#twitch-container').css('display', '');

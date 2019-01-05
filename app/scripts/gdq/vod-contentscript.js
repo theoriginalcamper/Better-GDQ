@@ -78,13 +78,13 @@ function addHighlights() {
 
 function addBidWars() {
 	console.log("Starting to add bid war indications");
-	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/sgdq2018">Donation Incentives Bid War Tracker</a></h4>');
+	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/agdq2019">Donation Incentives Bid War Tracker</a></h4>');
 }
 
 function addRunnerLinks() {
 	console.log("Adding Runners");
 
-	$.getJSON(chrome.extension.getURL('/json/sgdq2018_runners.json')).done(function (resp) {
+	$.getJSON(chrome.extension.getURL('/json/agdq2019_runners.json')).done(function (resp) {
 		console.log(resp);
 		var runnerJSON = resp;
 
@@ -96,6 +96,12 @@ function addRunnerLinks() {
 				var runnerObjects = {};
 
 				console.log(runnerString);
+
+				// Skip to next when runner's section is empty
+				if (runnerString.length == 0) {
+					return;
+				}
+
 				$.each(runners, function (index, runner) {
 					runnerObjects[runner] = runnerJSON[runner];
 				});
@@ -159,7 +165,7 @@ function addVodLinks() {
 	$('td:contains(' + "Super Mario World" + '):first').text('Super Mario World Race');
 	$('td:contains(' + "The Legend of Zelda: Ocarina of Time" + ')').eq(1).text('The Legend of Zelda: Ocarina of Time Glitch Exhibition');
 
-	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/ab1ed3ebfe4a842e00b789aec070e54e/raw/sgdq2018-vod.json").done(function (data) {
+	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/b2d15303f9d2d3c3050750855ec0f85d/raw/agdq2019-vod.json").done(function (data) {
 		console.log(data);
 		var titles = _.keys(data);
 		console.log(titles);

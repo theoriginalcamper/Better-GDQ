@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "2.9.5",
+  "version": "2.11.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -40,7 +40,11 @@
         "http://gamesdonequick.com/schedule",
         "https://gamesdonequick.com/schedule",
         "http://www.gamesdonequick.com/schedule",
-        "https://www.gamesdonequick.com/schedule"
+        "https://www.gamesdonequick.com/schedule",
+        "http://gamesdonequick.com/schedule/25",
+        "https://gamesdonequick.com/schedule/25",
+        "http://www.gamesdonequick.com/schedule/25",
+        "https://www.gamesdonequick.com/schedule/25"
       ],
       "css": [
         "styles/fontawesome-min.css",
@@ -62,7 +66,11 @@
         "http://gamesdonequick.com/schedule",
         "https://gamesdonequick.com/schedule",
         "http://www.gamesdonequick.com/schedule",
-        "https://www.gamesdonequick.com/schedule"
+        "https://www.gamesdonequick.com/schedule",
+        "http://gamesdonequick.com/schedule/25",
+        "https://gamesdonequick.com/schedule/25",
+        "http://www.gamesdonequick.com/schedule/25",
+        "https://www.gamesdonequick.com/schedule/25"
       ],
       "js": [
         "scripts/gdq/vod-contentscript.js"
@@ -142,7 +150,7 @@
     "html/twitch-chat.html",
     "fonts/fontawesome-webfont.woff",
     "fonts/fontawesome-webfont.woff2",
-    "json/sgdq2018_runners.json",
+    "json/agdq2019_runners.json",
     "json/esa_schedule.json"
   ]
 }
