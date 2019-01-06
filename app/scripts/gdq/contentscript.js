@@ -98,11 +98,11 @@ $(document).ready(function () {
                 console.log($.parseHTML(data));
                 $('#battlescene').before($.parseHTML(data));
             });
-            $('#footer').addClass('theater-footer').removeClass('standard-footer');
+            $('#extension-footer').addClass('theater-footer').removeClass('standard-footer');
         } else {
             $('#theater-mode-div').remove();
             $('#stream').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
-            $('#footer').addClass('standard-footer').removeClass('theater-footer');
+            $('#extension-footer').addClass('standard-footer').removeClass('theater-footer');
         }
     });
 

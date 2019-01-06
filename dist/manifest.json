@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "2.11.0",
+  "version": "2.11.1",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -31,6 +31,23 @@
     "https://api.twitch.tv/channels/gamesdonequick"
   ],
   "content_scripts": [
+    {
+      "matches": [
+        "http://gamesdonequick.com/",
+        "https://gamesdonequick.com/",
+        "http://www.gamesdonequick.com/",
+        "https://www.gamesdonequick.com/"
+      ],
+      "css": [
+        "styles/bootstrap.3.3.6.min.css"
+      ],
+      "js": [
+        "scripts/vendor/jquery-2.2.0.min.js",
+        "scripts/vendor/bootstrap.min.js"
+      ],
+      "run_at": "document_start",
+      "all_frames": false
+    },
     {
       "matches": [
         "http://gamesdonequick.com/",

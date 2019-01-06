@@ -84,7 +84,7 @@ function addBidWars() {
 function addRunnerLinks() {
 	console.log("Adding Runners");
 
-	$.getJSON(chrome.extension.getURL('/json/agdq2019_runners.json')).done(function (resp) {
+	$.getJSON('https://gist.githubusercontent.com/theoriginalcamper/c88b9d199104d821a493b13f4c1ab86b/raw/adgq2019_runners.json').done(function (resp) {
 		console.log(resp);
 		var runnerJSON = resp;
 

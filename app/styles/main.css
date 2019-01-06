@@ -1,8 +1,16 @@
+@font-face {
+  font-family: 'FontAwesome';
+  font-style: normal;
+  font-weight: 400;
+  src: url('chrome-extension://__MSG_@@extension_id__/fonts/fontawesome-webfont.woff') format('woff');
+}
+
+
 body {
 	margin-bottom: 70px;
 }
 
-#footer {
+#extension-footer {
 	position: fixed;
 	left: 0px;
 	bottom: 0px;
@@ -108,17 +116,17 @@ input[type=checkbox].highlight-run {
 	display: none;
 }
 
-input[type=checkbox].highlight-run + label:before { 
+input[type=checkbox].highlight-run + label:before {
 	font-family: FontAwesome;
-	content: "\f006"; 
+	content: "\f006";
 } /* unchecked icon */
-input[type=checkbox].highlight-run + label:before { 
-	letter-spacing: 10px; 
+input[type=checkbox].highlight-run + label:before {
+	letter-spacing: 10px;
 } /* space between checkbox and label */
 
-input[type=checkbox].highlight-run:checked + label:before { 
-	content: "\f005"; 
+input[type=checkbox].highlight-run:checked + label:before {
+	content: "\f005";
 } /* checked icon */
-input[type=checkbox].highlight-run:checked + label:before { 
-	letter-spacing: 10px; 
+input[type=checkbox].highlight-run:checked + label:before {
+	letter-spacing: 10px;
 } /* allow space for check mark */
