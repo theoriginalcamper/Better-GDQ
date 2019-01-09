@@ -1,11 +1,9 @@
 var runners_paragraph = document.createElement('div');
 var game_link_container = document.createElement('div')
-var game_link_a = document.createElement('a');
+var game_link_a = '<a id="gdq-speedrun-link" class="speedrun-link" onclick="window.open(this.href); return false;"></a>'
 
 runners_paragraph.id = "gdq-runners-information";
 game_link_container.id = "gdq-link-container";
-game_link_a.id = "gdq-speedrun-link";
-game_link_a.className = "speedrun-link";
 
 $(document).ready(function() {
 	console.log("Hello Discord!");
@@ -31,7 +29,7 @@ $(document).ready(function() {
 						return $(this);
 					}
 			  });
-				
+
     		if(guildList.has('a[href^="/channels/140605087511740416/"]').length > 0 || guildList.has('a[href^="/channels/85369684286767104/"]').length > 0) { // Check if element has been found
 		      	console.log('Add Switch to Links Panel');
 		      	addInformationBar();

@@ -2,12 +2,10 @@
 
 var runners_paragraph = document.createElement('div');
 var game_link_container = document.createElement('div');
-var game_link_a = document.createElement('a');
+var game_link_a = '<a id="gdq-speedrun-link" class="speedrun-link" onclick="window.open(this.href); return false;"></a>';
 
 runners_paragraph.id = "gdq-runners-information";
 game_link_container.id = "gdq-link-container";
-game_link_a.id = "gdq-speedrun-link";
-game_link_a.className = "speedrun-link";
 
 $(document).ready(function () {
 	console.log("Hello Discord!");
