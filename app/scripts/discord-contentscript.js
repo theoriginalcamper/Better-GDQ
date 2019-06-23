@@ -154,15 +154,14 @@ $(document).ready(function() {
 
             updateDiscordUI('add');
 
-						// if($('div[class^="titleWrapper"] > div > :nth-child(3) > :nth-child(3)').is('[class^="iconActive"]')) {
-            // 	userListStatus = true;
-            // 	$('.header-toolbar button:nth-child(3)').click();
-						// 	// $('.channel-members-wrap').css('display', 'none');
-						// 	twitchPlayerInitialSize = Math.round($(document).width() - $('[class^="guildsWrapper"]').width() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100));
-            // } else {
-            // 	userListStatus = false;
-						// 	twitchPlayerInitialSize = $(document).width() - $('[class^="guildsWrapper"]').width() - $('[class^="messagesWrapper"]').width();
-            // }
+						if($('[aria-label*="Member List"]').is('[class*="selected"]')) {
+            	userListStatus = true;
+            	$('[aria-label*="Member List"]').click();
+							// twitchPlayerInitialSize = Math.round($(document).width() - $('[class^="guildsWrapper"]').width() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100));
+            } else {
+            	userListStatus = false;
+							// twitchPlayerInitialSize = $(document).width() - $('[class^="guildsWrapper"]').width() - $('[class^="messagesWrapper"]').width();
+            }
 						console.log(Math.round($(document).width() - $('[class^="unreadMentionsIndicatorTop-"]').outerWidth() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100)));
 						twitchPlayerInitialSize = Math.round($(document).width() - $('[class^="unreadMentionsIndicatorTop-"]').outerWidth() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100));
 
@@ -185,8 +184,7 @@ $(document).ready(function() {
             updateDiscordUI('remove');
 
             if(userListStatus == true) {
-            	$('.header-toolbar button:nth-child(3)').click();
-							// $('.channel-members-wrap').css('display', '')
+            	$('[aria-label*="Member List"]').click();
             }
 
         }
