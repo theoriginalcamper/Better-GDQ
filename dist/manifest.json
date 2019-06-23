@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "2.11.2",
+  "version": "3.0.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -10,9 +10,9 @@
   "default_locale": "en",
   "background": {
     "scripts": [
-      "scripts/vendor/jquery-2.2.0.min.js",
-      "scripts/vendor/underscore-min.js",
-      "scripts/vendor/fuzzyset.js",
+      "vendor/jquery-2.2.0.min.js",
+      "vendor/underscore-min.js",
+      "vendor/fuzzyset.js",
       "scripts/background.js"
     ]
   },
@@ -42,8 +42,8 @@
         "styles/bootstrap.3.3.6.min.css"
       ],
       "js": [
-        "scripts/vendor/jquery-2.2.0.min.js",
-        "scripts/vendor/bootstrap.min.js"
+        "vendor/jquery-2.2.0.min.js",
+        "vendor/bootstrap.min.js"
       ],
       "run_at": "document_start",
       "all_frames": false
@@ -69,11 +69,11 @@
         "styles/main.css"
       ],
       "js": [
-        "scripts/vendor/jquery-2.2.0.min.js",
-        "scripts/vendor/bootstrap-notify.min.js",
-        "scripts/vendor/bootstrap-switch.min.js",
-        "scripts/vendor/underscore-min.js",
-        "scripts/gdq/contentscript.js"
+        "vendor/jquery-2.2.0.min.js",
+        "vendor/bootstrap-notify.min.js",
+        "vendor/bootstrap-switch.min.js",
+        "vendor/underscore-min.js",
+        "scripts/gdq/gdq-contentscript.js"
       ],
       "run_at": "document_end",
       "all_frames": false
@@ -90,7 +90,7 @@
         "https://www.gamesdonequick.com/schedule/25"
       ],
       "js": [
-        "scripts/gdq/vod-contentscript.js"
+        "scripts/gdq/gdq-vod-contentscript.js"
       ],
       "run_at": "document_end",
       "all_frames": false
@@ -112,10 +112,10 @@
         "styles/main.css"
       ],
       "js": [
-        "scripts/vendor/jquery-2.2.0.min.js",
-        "scripts/vendor/bootstrap-notify.min.js",
-        "scripts/vendor/bootstrap-switch.min.js",
-        "scripts/vendor/underscore-min.js",
+        "vendor/jquery-2.2.0.min.js",
+        "vendor/bootstrap-notify.min.js",
+        "vendor/bootstrap-switch.min.js",
+        "vendor/underscore-min.js",
         "scripts/esa/esa-contentscript.js"
       ]
     },
@@ -136,7 +136,13 @@
         "https://discordapp.com/channels/85369684286767104/*",
         "https://discordapp.com/channels/140605087511740416/140605087511740416",
         "https://discordapp.com/channels/140605087511740416/*",
-        "https://discordapp.com/channels/*"
+        "https://discordapp.com/channels/*",
+        "https://discordapp.com/activity",
+        "https://discordapp.com/activity/*",
+        "https://discordapp.com/store",
+        "https://discordapp.com/store/*",
+        "https://discordapp.com/library",
+        "https://discordapp.com/library/*"
       ],
       "css": [
         "styles/fontawesome-min.css",
@@ -145,11 +151,11 @@
         "styles/discord.css"
       ],
       "js": [
-        "scripts/vendor/jquery-2.2.0.min.js",
-        "scripts/vendor/bootstrap.min.js",
-        "scripts/vendor/bootstrap-switch.min.js",
-        "scripts/vendor/underscore-min.js",
-        "scripts/vendor/twitch.embed.v1.js",
+        "vendor/jquery-2.2.0.min.js",
+        "vendor/bootstrap.min.js",
+        "vendor/bootstrap-switch.min.js",
+        "vendor/underscore-min.js",
+        "vendor/twitch.embed.v1.js",
         "scripts/discord-contentscript.js"
       ],
       "run_at": "document_end",
@@ -167,7 +173,7 @@
     "html/twitch-chat.html",
     "fonts/fontawesome-webfont.woff",
     "fonts/fontawesome-webfont.woff2",
-    "json/agdq2019_runners.json",
+    "json/sgdq2019_runners.json",
     "json/esa_schedule.json"
   ]
 }

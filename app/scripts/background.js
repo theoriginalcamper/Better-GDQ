@@ -1,39 +1,39 @@
 'use strict';
 
-var current_game = null;
-var current_game_title = null;
-var current_link = null;
-var current_runners = null;
-var current_estimate = null;
-var current_category = null;
-var current_calendar = null;
-var current_number_calendar_items = 4;
+window.current_game = null;
+window.current_game_title = null;
+window.current_link = null;
+window.current_runners = null;
+window.current_estimate = null;
+window.current_category = null;
+window.current_calendar = null;
+window.current_number_calendar_items = 4;
 
-var runnerJSON = null;
-var scheduleJSON = null;
-var fuzzySet = null;
-var highlightsTitle = null;
+window.runnerJSON = null;
+window.scheduleJSON = null;
+window.fuzzySet = null;
+window.highlightsTitle = null;
 
-var gdqRunnerJSON = null;
-var gdqScheduleJSON = null;
-var gdqFuzzySet = null;
-var gdqFuzzySearchArray = null;
-var gdqHighlightsTitle = 'scheduleHighlights';
+window.gdqRunnerJSON = null;
+window.gdqScheduleJSON = null;
+window.gdqFuzzySet = null;
+window.gdqFuzzySearchArray = null;
+window.gdqHighlightsTitle = 'scheduleHighlights';
 
-var esaRunnerJSON = null;
-var esaScheduleJSON = null;
-var esaFuzzySet = null;
-var esaFuzzySearchArray = null;
-var esaHighlightsTitle = 'esa16scheduleHighlights';
+window.esaRunnerJSON = null;
+window.esaScheduleJSON = null;
+window.esaFuzzySet = null;
+window.esaFuzzySearchArray = null;
+window.esaHighlightsTitle = 'esa16scheduleHighlights';
 
-var checkForUpdatedScheduleJSON = null;
+window.checkForUpdatedScheduleJSON = null;
 
-var portForMessage = null;
+window.portForMessage = null;
 
-$.getJSON('/json/agdq2019_runners.json').done(function (resp) {
+$.getJSON('/json/sgdq2019_runners.json').done(function(resp) {
     gdqRunnerJSON = resp;
 });
-$.getJSON('/json/agdq2019_schedule.json').done(function (resp) {
+$.getJSON('/json/sgdq2019_schedule.json').done(function(resp) {
     gdqScheduleJSON = resp;
     gdqFuzzySearchArray = _.keys(gdqScheduleJSON);
     gdqFuzzySet = FuzzySet(gdqFuzzySearchArray);
@@ -58,24 +58,24 @@ chrome.runtime.onConnect.addListener(function (port) {
             console.log(msg);
             if (msg.message == "request") {
                 $.ajax({
-                    datatype: "json",
-                    url: "https://api.twitch.tv/channels/gamesdonequick",
-                    beforeSend: function beforeSend(req) {
-                        req.setRequestHeader('Client-ID', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w');
-                    },
-                    success: function success(resp) {
-                        console.log("Completed request to Twitch");
+                  datatype: "json",
+                  url: "https://api.twitch.tv/channels/gamesdonequick",
+                  beforeSend: function(req) {
+                    req.setRequestHeader('Client-ID', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w')
+                  },
+                  success: function(resp) {
+                    console.log("Completed request to Twitch");
 
-                        if (current_game != resp.game) {
-                            console.log("The Current Game being run is: " + resp.game);
+                    if (current_game != resp.game) {
+                        console.log("The Current Game being run is: " + resp.game);
 
-                            current_game = resp.game;
-                            getSpeedrunData(current_game, port);
-                            console.log(current_link);
-                        } else {
-                            console.log("Still the same");
-                        }
+                        current_game = resp.game;
+                        getSpeedrunData(current_game, port);
+                        console.log(current_link);
+                    } else {
+                        console.log("Still the same");
                     }
+                  }
                 });
             } else if (msg.message == "schedule") {
                 console.log(msg.calendarItemsNumber);
@@ -83,24 +83,24 @@ chrome.runtime.onConnect.addListener(function (port) {
                 getSpeedrunData(current_game, port);
             } else if (msg.message == "refresh") {
                 $.ajax({
-                    datatype: "json",
-                    url: "https://api.twitch.tv/channels/gamesdonequick",
-                    beforeSend: function beforeSend(req) {
-                        req.setRequestHeader('Client-ID', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w');
-                    },
-                    success: function success(resp) {
-                        console.log("Completed request to Twitch");
-                        if (current_game != resp.game) {
-                            console.log("The Current Game being run is: " + resp.game);
+                  datatype: "json",
+                  url: "https://api.twitch.tv/channels/gamesdonequick",
+                  beforeSend: function(req) {
+                    req.setRequestHeader('Client-ID', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w')
+                  },
+                  success: function(resp) {
+                    console.log("Completed request to Twitch");
+                    if (current_game != resp.game) {
+                        console.log("The Current Game being run is: " + resp.game);
 
-                            current_game = resp.game;
-                            getSpeedrunData(current_game, port);
-                            console.log(current_link);
-                        } else {
-                            console.log("Still the same");
-                            getSpeedrunData(current_game, port);
-                        }
+                        current_game = resp.game;
+                        getSpeedrunData(current_game, port);
+                        console.log(current_link);
+                    } else {
+                        console.log("Still the same");
+                        getSpeedrunData(current_game, port);
                     }
+                  }
                 });
             };
         });
@@ -144,7 +144,7 @@ chrome.runtime.onConnect.addListener(function (port) {
     }
 });
 
-function getSpeedrunData(game, port) {
+window.getSpeedrunData = (game, port) => {
     console.log(port.name);
 
     if (port.name == 'gdq') {
@@ -166,12 +166,12 @@ function getSpeedrunData(game, port) {
     if (typeof gameData == 'undefined') {
         // Query for gist version of Schedule JSON
         if (port.name == 'gdq') {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/68bc835b42580146fef04b935f568910/raw/agdq2019_schedule.json").done(function (resp) {
-                console.log("Request for Schedule JSON sent");
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/99cf3867bf38cd66b52d95640a6689a0/raw/sgdq2019_schedule.json").done(function (resp) {
+                console.log("Request for Schedule JSON sent")
                 if (_.difference(_.keys(resp), _.keys(scheduleJSON)) == []) {
                     console.log("JSON is not updated");
-                    checkForUpdatedScheduleJSON = setInterval(function () {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/68bc835b42580146fef04b935f568910/raw/agdq2019_schedule.json").done(function (resp) {
+                    checkForUpdatedScheduleJSON = setInterval(function() {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/99cf3867bf38cd66b52d95640a6689a0/raw/sgdq2019_schedule.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(scheduleJSON)) != []) {
                                 gdqScheduleJSON = resp;
                                 scheduleJSON = gdqScheduleJSON;
@@ -190,10 +190,10 @@ function getSpeedrunData(game, port) {
             });
         } else if (port.name == 'esa') {
             $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/cde736fb9e43b34cf8f49c0c82d7c564/raw/esa_schedule2016.json").done(function (resp) {
-                console.log("Request for Schedule JSON sent");
+                console.log("Request for Schedule JSON sent")
                 if (_.difference(_.keys(resp), _.keys(scheduleJSON)) == []) {
                     console.log("JSON is not updated");
-                    checkForUpdatedScheduleJSON = setInterval(function () {
+                    checkForUpdatedScheduleJSON = setInterval(function() {
                         $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/cde736fb9e43b34cf8f49c0c82d7c564/raw/esa_schedule2016.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(scheduleJSON)) != []) {
                                 esaScheduleJSON = resp;
@@ -212,6 +212,7 @@ function getSpeedrunData(game, port) {
                 }
             });
         }
+
 
         // console.log("Current game cannot be found in the parsed schedule.");
         // console.log("Returned a value of undefined.");
@@ -274,9 +275,9 @@ function getSpeedrunData(game, port) {
             current_calendar["schedule"] = schedule_object;
 
             if (_.isEmpty(data)) {
-                current_calendar["highlights"] = {};
+              current_calendar["highlights"] = {};
             } else {
-                current_calendar["highlights"] = data[highlightsTitle];
+              current_calendar["highlights"] = data[highlightsTitle];
             }
 
             console.log(current_calendar);
@@ -307,10 +308,10 @@ function getRunnerData(runners) {
     var runnersObject = _.reduce(runnersArray, function (object, runner) {
         var runnerData = runnerJSON[runner];
         if (typeof runnerData == "undefined") {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/c88b9d199104d821a493b13f4c1ab86b/raw/adgq2019_runners.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/250f581aec12ecd9a6510feeb9216b2a/raw/sgdq2019_runners.json").done(function (resp) {
                 if (_.difference(_.keys(resp), _.keys(runnerJSON)) == []) {
-                    checkForUpdatedRunnerJSON = setInterval(function () {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/c88b9d199104d821a493b13f4c1ab86b/raw/adgq2019_runners.json").done(function (resp) {
+                    checkForUpdatedRunnerJSON = setInterval(function() {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/250f581aec12ecd9a6510feeb9216b2a/raw/sgdq2019_runners.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(runnerJSON)) != []) {
                                 gdqRunnerJSON = resp;
                                 runnerJSON = gdqRunnerJSON;
@@ -338,32 +339,36 @@ function getRunnerData(runners) {
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (tab.url.indexOf("https://gamesdonequick.com") > -1 && changeInfo.url === undefined) {
-        portForMessage.postMessage({ status: "reload",
-            game: current_game_title,
-            runner: current_runners,
-            estimate: current_estimate,
-            category: current_category,
-            link: current_link,
-            calendar: current_calendar });
+        if (portForMessage != null) {
+            portForMessage.postMessage({ status: "reload",
+              game: current_game_title,
+              runner: current_runners,
+              estimate: current_estimate,
+              category: current_category,
+              link: current_link,
+              calendar: current_calendar });
+        }
     }
 });
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (tab.url.indexOf("http://gamesdonequick.com") > -1 && changeInfo.url === undefined) {
-        portForMessage.postMessage({ status: "reload",
-            game: current_game_title,
-            runner: current_runners,
-            estimate: current_estimate,
-            category: current_category,
-            link: current_link,
-            calendar: current_calendar });
+        if (portForMessage != null) {
+            portForMessage.postMessage({ status: "reload",
+                game: current_game_title,
+                runner: current_runners,
+                estimate: current_estimate,
+                category: current_category,
+                link: current_link,
+                calendar: current_calendar });
+        }
     }
 });
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (tab.url.indexOf("https://discordapp.com/channels/140605087511740416/140605087511740416") > -1 && changeInfo.url === undefined) {
         if (current_game_title != current_game) {
-            getSpeedrunData(current_game, portForMessage);
+            getSpeedrunData(current_game, portForMessage)
         } else {
             portForMessage.postMessage({ status: "reload",
                 game: current_game_title,
@@ -380,7 +385,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (tab.url.indexOf("https://www.esamarathon.com") > -1 && changeInfo.url === undefined) {
         if (portForMessage.name == 'esa') {
             if (current_game_title != current_game) {
-                getSpeedrunData(current_game, portForMessage);
+                getSpeedrunData(current_game, portForMessage)
             } else {
                 portForMessage.postMessage({ status: "reload",
                     game: current_game_title,
@@ -398,7 +403,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
     if (tab.url.indexOf("http://www.esamarathon.com") > -1 && changeInfo.url === undefined) {
         if (portForMessage.name == 'esa') {
             if (current_game_title != current_game) {
-                getSpeedrunData(current_game, portForMessage);
+                getSpeedrunData(current_game, portForMessage)
             } else {
                 portForMessage.postMessage({ status: "reload",
                     game: current_game_title,

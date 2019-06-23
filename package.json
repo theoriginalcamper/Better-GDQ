@@ -1,51 +1,25 @@
 {
-  "name": "better-gdq",
+  "name": "Better-GDQ",
+  "version": "3.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/theoriginalcamper/Better-GDQ",
+  "author": "theoriginalcamper",
+  "license": "MIT",
   "private": true,
-  "engines": {
-    "node": ">=0.8.0"
-  },
   "devDependencies": {
-    "atob": ">=2.1.0",
-    "babel-core": "^6.26.3",
-    "babel-preset-es2015": "^6.6.0",
-    "deep-extend": ">=0.5.1",
-    "del": "^2.2.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-cache": "^0.4.3",
-    "gulp-chrome-manifest": "0.0.13",
-    "gulp-clean-css": "^2.0.3",
-    "gulp-eslint": "^2.0.0",
-    "gulp-htmlmin": "^1.3.0",
-    "gulp-if": "^2.0.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-livereload": "^4.0.1",
-    "gulp-load-plugins": "^1.2.0",
-    "gulp-size": "^2.1.0",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
-    "gulp-useref": "^3.0.8",
-    "gulp-zip": "^3.2.0",
-    "main-bower-files": "^2.11.1",
-    "run-sequence": "^1.1.5",
-    "wiredep": "^4.0.0"
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
   },
-  "eslintConfig": {
-    "env": {
-      "node": true,
-      "browser": true
-    },
-    "globals": {
-      "chrome": true
-    },
-    "rules": {
-      "eol-last": 0,
-      "quotes": [
-        2,
-        "single"
-      ]
-    }
+  "scripts": {
+    "build": "webpack",
+    "build:dev": "webpack --mode development"
   },
   "dependencies": {
-    "gulp": "^3.9.1"
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^5.0.3",
+    "filemanager-webpack-plugin": "^2.0.5"
   }
 }
