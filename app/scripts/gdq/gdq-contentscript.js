@@ -34,8 +34,12 @@ $(page_elem).on('click', 'ul.dropdown-menu', function (e) {
 
 $(document).ready(function() {
     $(page_elem).css('margin-bottom', '70px');
-    $('#stream').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
-    $('#stream').css('margin-top', '24px');
+    if ($('#twitch').length) {
+      $(page_elem).css('color', '#fff');
+      $(page_elem).css('background-color', '#353535');
+    }
+    $('#twitch').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
+    $('#twitch').css('margin-top', '24px');
     $('.game-information').append(game_link_a);
     $('.game-information').append(runners_paragraph);
 
@@ -79,91 +83,110 @@ $(document).ready(function() {
         }, 2000);
     });
 
-    $("[name='quakenet-chat-switch']").bootstrapSwitch();
-    $("[name='twitch-chat-switch']").bootstrapSwitch();
-    $("[name='theater-mode']").bootstrapSwitch();
+    var setSwitches = setInterval(function(){
+
+      console.log("TWITCH SWITCH CHECK");
+      console.log($("[name='quakenet-chat-switch']"));
+      $("[name='quakenet-chat-switch']").bootstrapSwitch();
+      $("[name='twitch-chat-switch']").bootstrapSwitch();
+      $("[name='theater-mode']").bootstrapSwitch();
+
+      $('input[name="theater-mode"]').on('switchChange.bootstrapSwitch', function (event, state) {
+          if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
+              updateQuakeChat('remove');
+              $('input[name="quakenet-chat-switch"]').bootstrapSwitch('state', false, true);
+          }
+
+          if ($('input[name="theater-mode"]').bootstrapSwitch('state')) {
+              $('#twitch').html('');
+              $.get(chrome.extension.getURL('/html/quakenet-theater-mode.html'), function (data) {
+                  console.log("Adding theater mode!")
+                  console.log($.parseHTML(data));
+                  $('footer').after($.parseHTML(data));
+              });
+              $('#extension-footer').addClass('theater-footer').removeClass('standard-footer');
+          } else {
+              $('#theater-mode-div').remove();
+              $('#twitch').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
+              $('#extension-footer').addClass('standard-footer').removeClass('theater-footer');
+          }
+      });
+
+      $('input[name="quakenet-chat-switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
+          console.log('Clicked QUAKENET Switch.');
+          console.log(this);
+          console.log("Twitch State:");
+          console.log($('input[name="twitch-chat-switch"]').bootstrapSwitch('state'));
+          console.log("Quake State:");
+          console.log($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state'));
+
+          if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
+              updateTwitchChat('remove');
+              $('input[name="twitch-chat-switch"]').bootstrapSwitch('state', false, true);
+              if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
+                  updateQuakeChat('add');
+              } else {
+                  updateQuakeChat('remove');
+              }
+          } else {
+              console.log()
+              if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
+                  updateQuakeChat('add');
+              } else {
+                  updateQuakeChat('remove');
+              }
+          }
+      });
+
+      $('input[name="twitch-chat-switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
+          console.log('Clicked Twitch Switch.');
+          if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
+              updateQuakeChat('remove');
+              $('input[name="quakenet-chat-switch"]').bootstrapSwitch('state', false, true);
+              if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
+                  updateTwitchChat('add');
+              } else {
+                  updateTwitchChat('remove');
+              }
+          } else {
+              if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
+                  updateTwitchChat('add');
+              } else {
+                  updateTwitchChat('remove');
+              }
+          }
+      });
+      if($(".bootstrap-switch").length) {
+        console.log("CLEARING SWITCH INTERVAL");
+        clearInterval(setSwitches);
+      }
+    }, 1000);
+
+
 
     /*
         QUAKENET IRC THEATER MODE BUTTON
     */
 
-    $('input[name="theater-mode"]').on('switchChange.bootstrapSwitch', function (event, state) {
-        if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
-            updateQuakeChat('remove');
-            $('input[name="quakenet-chat-switch"]').bootstrapSwitch('state', false, true);
-        }
 
-        if ($('input[name="theater-mode"]').bootstrapSwitch('state')) {
-            $('#stream').html('');
-            $.get(chrome.extension.getURL('/html/quakenet-theater-mode.html'), function (data) {
-                console.log("Adding theater mode!")
-                console.log($.parseHTML(data));
-                $('#battlescene').before($.parseHTML(data));
-            });
-            $('#extension-footer').addClass('theater-footer').removeClass('standard-footer');
-        } else {
-            $('#theater-mode-div').remove();
-            $('#stream').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
-            $('#extension-footer').addClass('standard-footer').removeClass('theater-footer');
-        }
-    });
-
-    $('input[name="quakenet-chat-switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
-        console.log('Clicked QUAKENET Switch.');
-        console.log(this);
-        console.log("Twitch State:");
-        console.log($('input[name="twitch-chat-switch"]').bootstrapSwitch('state'));
-        console.log("Quake State:");
-        console.log($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state'));
-
-        if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
-            updateTwitchChat('remove');
-            $('input[name="twitch-chat-switch"]').bootstrapSwitch('state', false, true);
-            if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
-                updateQuakeChat('add');
-            } else {
-                updateQuakeChat('remove');
-            }
-        } else {
-            console.log()
-            if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
-                updateQuakeChat('add');
-            } else {
-                updateQuakeChat('remove');
-            }
-        }
-    });
-
-    $('input[name="twitch-chat-switch"]').on('switchChange.bootstrapSwitch', function(event, state) {
-        console.log('Clicked Twitch Switch.');
-        if ($('input[name="quakenet-chat-switch"]').bootstrapSwitch('state')) {
-            updateQuakeChat('remove');
-            $('input[name="quakenet-chat-switch"]').bootstrapSwitch('state', false, true);
-            if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
-                updateTwitchChat('add');
-            } else {
-                updateTwitchChat('remove');
-            }
-        } else {
-            if ($('input[name="twitch-chat-switch"]').bootstrapSwitch('state')) {
-                updateTwitchChat('add');
-            } else {
-                updateTwitchChat('remove');
-            }
-        }
-    });
 
     function updateQuakeChat(msg) {
         if(msg == 'add') {
             console.log('Switch is on. Adding Chat iframe and modifying UI.');
-            $('#stream').removeClass('center-block').addClass('pull-left');
+            $('#fixembed').css('display', 'flex')
+            $('#fixembed').css('max-height', '640px')
+            $('#fixembed').css('max-width', '1600px')
+            $('#twitch').css('display', 'flex');
             $.get(chrome.extension.getURL('/html/quakenet-chat.html'), function(data) {
-                var twitchStream = $("#stream");
+                var twitchStream = $("#twitch");
                 $(twitchStream).after($.parseHTML(data));
             });
         } else if (msg == 'remove') {
             console.log('Switch is off. Removing UI.');
-            $('#stream').addClass('center-block').removeClass('pull-left');
+            $('#fixembed').css('display', '')
+            $('#fixembed').css('max-height', '540px')
+            $('#fixembed').css('max-width', '960px')
+            $('#twitch').css('display', '');
             $('#quakenet-chat').remove();
             $('#quakenet-clear').remove();
         }
@@ -172,14 +195,20 @@ $(document).ready(function() {
     function updateTwitchChat(msg) {
         if(msg == 'add') {
             console.log('Switch is on. Adding Chat iframe and modifying UI.');
-            $('#stream').removeClass('center-block').addClass('pull-left');
+            $('#fixembed').css('display', 'flex')
+            $('#fixembed').css('max-height', '640px')
+            $('#fixembed').css('max-width', '1600px')
+            $('#twitch').css('display', 'flex');
             $.get(chrome.extension.getURL('/html/twitch-chat.html'), function(data) {
-                var twitchStream = $("#stream");
+                var twitchStream = $("#twitch");
                 $(twitchStream).after($.parseHTML(data));
             });
         } else if (msg == 'remove') {
             console.log('Switch is off. Removing UI.');
-            $('#stream').addClass('center-block').removeClass('pull-left');
+            $('#fixembed').css('display', '')
+            $('#fixembed').css('max-height', '540px')
+            $('#fixembed').css('max-width', '960px')
+            $('#twitch').css('display', '');
             $('#twitch-chat').remove();
             $('#twitch-clear').remove();
         }
