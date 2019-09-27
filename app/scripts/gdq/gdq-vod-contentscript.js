@@ -83,7 +83,7 @@ function addBidWars() {
 function addRunnerLinks() {
 	console.log("Adding Runners");
 
-	$.getJSON('https://gist.githubusercontent.com/theoriginalcamper/250f581aec12ecd9a6510feeb9216b2a/raw/sgdq2019_runners.json').done(function (resp) {
+	$.getJSON('https://gist.githubusercontent.com/theoriginalcamper/f8b6a283329d20b3384f992d80a5a388/raw/gdqx2019_runners.json').done(function (resp) {
 	    console.log(resp);
 	    var runnerJSON = resp;
 
@@ -164,7 +164,7 @@ function addVodLinks() {
 	$(`td:contains(${"Super Mario World"}):first`).text('Super Mario World Race');
 	$(`td:contains(${"The Legend of Zelda: Ocarina of Time"})`).eq(1).text('The Legend of Zelda: Ocarina of Time Glitch Exhibition');
 
-	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/971d7630e40986c626ec1147b2c42c38/raw/sgdq2019-vod.json").done(function(data) {
+	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/4b3f0bb28ab04b4e4e24045a69d575c0/raw/gdqx2019-vod.json").done(function(data) {
 		console.log(data);
 		var titles = _.keys(data);
 		console.log(titles);

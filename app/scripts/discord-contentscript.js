@@ -101,7 +101,7 @@ $(document).ready(function() {
 
     function addInformationBar() {
 			$('#app-mount').before(`
-							<header id="gdq-header" style="width: ${$('div[class^="title-"]').width() - $('div[class^="title-"] > div[class^="toolbar-"]').width() - 10}px; height: ${$('div[class^="title-"]').outerHeight() - 1}px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth() + $('div[class^="channels-"]').width()}px;">
+							<header id="gdq-header" style="width: ${$('div[class^="title-"]').width() - $('div[class^="title-"] > div[class^="toolbar-"]').width() - 10}px; height: ${$('div[class^="title-"]').outerHeight() - 1}px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth() + $('div[class^="sidebar-"]').width()}px;">
 								<div class="extension-container">
 									<div id="options" style="transform: translateY(37.5%);">
 										<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>
