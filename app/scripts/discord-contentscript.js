@@ -354,12 +354,16 @@ $(document).ready(function() {
     			if (twitchActive) {
     				if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
     					$('#twitch-container').css('display', '');
-
+							// var uiUpdate = setInterval(function() {
+        			// 	if($('[class^="channels"]').length > 0 && ($('[class^="channels"] header span').text() == 'GamesDoneQuick' || $('[class^="channels"] header span').text() == 'European Speedrunner Assembly')) {
+							// 		console.log('First Click Event - Debug');
+							// 		updateDiscordUI('add');
+        			// 		clearInterval(uiUpdate);
+        			// 	}
+        			// }, 500);
 							var uiUpdate = setInterval(function() {
-        				if($('[class^="channels"]').length > 0 && ($('[class^="channels"] header span').text() == 'GamesDoneQuick' || $('[class^="channels"] header span').text() == 'European Speedrunner Assembly')) {
-									updateDiscordUI('add');
-        					clearInterval(uiUpdate);
-        				}
+								updateDiscordUI('add');
+      					clearInterval(uiUpdate);
         			}, 500);
     				} else {
     					$('#twitch-container').css('display', 'none');
@@ -372,7 +376,8 @@ $(document).ready(function() {
 					}
 
     			if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
-    				updateGDQHeaderDisplay('add');
+						console.log('Add Header - Debug')
+						updateGDQHeaderDisplay('add');
     			} else {
     				updateGDQHeaderDisplay('remove');
     			}
@@ -388,7 +393,7 @@ $(document).ready(function() {
     		});
 
     		clearInterval(checkForActiveGuild);
-		}
+			}
     },1000);
 
     var port = chrome.runtime.connect({name: "gdq"});
