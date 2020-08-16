@@ -39,7 +39,7 @@ $(document).ready(function() {
       $(page_elem).css('background-color', '#353535');
     }
     $('#twitch').wrap('<div style="display:flex; justify-content: center; margin: 279px auto 0 auto;"></div>');
-    $('#twitch').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
+    $('#twitch').html('<iframe src="https://player.twitch.tv/?channel=gamesdonequick&parent=gamesdonequick.com" width="100%" height="100%" frameborder="0" scrolling="no" allowFullscreen="true" class="center-block"></iframe>');
     $('#twitch').css('margin', '0');
     $('.game-information').append(game_link_a);
     $('.game-information').append(runners_paragraph);

@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "3.1.1",
+  "version": "3.3.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -58,10 +58,10 @@
         "https://gamesdonequick.com/schedule",
         "http://www.gamesdonequick.com/schedule",
         "https://www.gamesdonequick.com/schedule",
-        "http://gamesdonequick.com/schedule/28",
-        "https://gamesdonequick.com/schedule/28",
-        "http://www.gamesdonequick.com/schedule/28",
-        "https://www.gamesdonequick.com/schedule/28"
+        "http://gamesdonequick.com/schedule/30",
+        "https://gamesdonequick.com/schedule/30",
+        "http://www.gamesdonequick.com/schedule/30",
+        "https://www.gamesdonequick.com/schedule/30"
       ],
       "css": [
         "styles/fontawesome-min.css",
@@ -84,10 +84,10 @@
         "https://gamesdonequick.com/schedule",
         "http://www.gamesdonequick.com/schedule",
         "https://www.gamesdonequick.com/schedule",
-        "http://gamesdonequick.com/schedule/28",
-        "https://gamesdonequick.com/schedule/28",
-        "http://www.gamesdonequick.com/schedule/28",
-        "https://www.gamesdonequick.com/schedule/28"
+        "http://gamesdonequick.com/schedule/30",
+        "https://gamesdonequick.com/schedule/30",
+        "http://www.gamesdonequick.com/schedule/30",
+        "https://www.gamesdonequick.com/schedule/30"
       ],
       "js": [
         "scripts/gdq/gdq-vod-contentscript.js"
@@ -132,17 +132,17 @@
     },
     {
       "matches": [
-        "https://discordapp.com/channels/85369684286767104/85369684286767104",
-        "https://discordapp.com/channels/85369684286767104/*",
-        "https://discordapp.com/channels/140605087511740416/140605087511740416",
-        "https://discordapp.com/channels/140605087511740416/*",
-        "https://discordapp.com/channels/*",
-        "https://discordapp.com/activity",
-        "https://discordapp.com/activity/*",
-        "https://discordapp.com/store",
-        "https://discordapp.com/store/*",
-        "https://discordapp.com/library",
-        "https://discordapp.com/library/*"
+        "https://discord.com/channels/85369684286767104/85369684286767104",
+        "https://discord.com/channels/85369684286767104/*",
+        "https://discord.com/channels/140605087511740416/140605087511740416",
+        "https://discord.com/channels/140605087511740416/*",
+        "https://discord.com/channels/*",
+        "https://discord.com/activity",
+        "https://discord.com/activity/*",
+        "https://discord.com/store",
+        "https://discord.com/store/*",
+        "https://discord.com/library",
+        "https://discord.com/library/*"
       ],
       "css": [
         "styles/fontawesome-min.css",
@@ -173,7 +173,7 @@
     "html/twitch-chat.html",
     "fonts/fontawesome-webfont.woff",
     "fonts/fontawesome-webfont.woff2",
-    "json/agdq2020_runners.json",
+    "json/sgdq2020_runners.json",
     "json/esa_schedule.json"
   ]
 }

@@ -101,7 +101,7 @@ $(document).ready(function() {
 
     function addInformationBar() {
 			$('#app-mount').before(`
-							<header id="gdq-header" style="width: ${$('div[class^="title-"]').width() - $('div[class^="title-"] > div[class^="toolbar-"]').width() - 10}px; height: ${$('div[class^="title-"]').outerHeight() - 1}px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth() + $('div[class^="sidebar-"]').width()}px;">
+							<header id="gdq-header" style="width: ${$('div[class^="chat-"] > section > div[class^="children"]').width()}px; height: ${$('div[class^="title-"]').outerHeight() - 1}px; overflow: hidden; min-height: 48px; position: fixed; top: 0px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth() + $('div[class^="sidebar-"]').width()}px;">
 								<div class="extension-container">
 									<div id="options" style="transform: translateY(37.5%);">
 										<i class="fa fa-calendar collapsed" data-toggle="collapse" data-target="#collapseCalendar" aria-expanded="false"></i>
@@ -164,15 +164,15 @@ $(document).ready(function() {
 						console.log(Math.round($(document).width() - $('[class^="unreadMentionsIndicatorTop-"]').outerWidth() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100)));
 						twitchPlayerInitialSize = Math.round($(document).width() - $('[class^="unreadMentionsIndicatorTop-"]').outerWidth() - ($('[class^="chat"]').width() * (parseFloat($('[class^="messagesWrapper"]')[0].style.width)) / 100));
 
-
-						$('#app-mount').before(`<div id="twitch-container" style="width: ${twitchPlayerInitialSize}px; height: ${$(document).height() - $('div[class^="title-"]').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('div[class^="title-"]').outerHeight()}px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth()}px;"></div>`);
+						$('#app-mount').before(`<div id="twitch-container" style="width: ${twitchPlayerInitialSize - 10}px; height: ${$(document).height() - $('[aria-label="Channel header"]').outerHeight() - $('#twitch-switch').outerHeight()}px; position: fixed; z-index:100; top: ${$('[aria-label="Channel header"]').outerHeight()}px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth()}px;"></div>`);
 						$('#app-mount').before(`<script type="text/javascript">
 					      new Twitch.Embed("twitch-container", {
 					        width: "100%",
 					        height: "100%",
 									layout: "video",
 									allowfullscreen: true,
-					        channel: "gamesdonequick"
+					        channel: "gamesdonequick",
+									parent: ["discord.com"]
 					      });
 					    </script>`);
 
@@ -199,7 +199,7 @@ $(document).ready(function() {
 				// Switch to small display
 				// $('#twitch-container').css('width', twitchPlayerInitialSize);
 				$('[class^="messagesWrapper"]').css('width', '48%');
-				$('[class^="messagesWrapper"]').next('form').css({'width': '46%', 'margin-right': '2%', 'margin-left': '0px'});
+				$('[class^="messagesWrapper"]').next('form').css({'width': '44%', 'margin-right': '2%', 'margin-left': '0px'});
 				$('#twitch-container').css('width', $(document).width() - $('[class^="unreadMentionsIndicatorTop-"]').outerWidth() - $('[class^="messagesWrapper"]').width());
 			}
 		}
