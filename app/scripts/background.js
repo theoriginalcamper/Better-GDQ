@@ -368,7 +368,7 @@ chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
 });
 
 chrome.tabs.onUpdated.addListener(function (tabId, changeInfo, tab) {
-    if (tab.url.indexOf("https://discordapp.com/channels/140605087511740416/140605087511740416") > -1 && changeInfo.url === undefined) {
+    if (tab.url.indexOf("https://discord.com/channels/140605087511740416/140605087511740416") > -1 && changeInfo.url === undefined) {
         if (current_game_title != current_game) {
             getSpeedrunData(current_game, portForMessage)
         } else {
