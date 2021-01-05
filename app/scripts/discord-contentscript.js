@@ -31,8 +31,7 @@ $(document).ready(function() {
 						}
 					}
 			  });
-
-    		if(guildList.has('a[href^="/channels/140605087511740416/"]').length > 0 || guildList.has('a[href^="/channels/85369684286767104/"]').length > 0) { // Check if element has been found
+    		if(guildList.has('div[href^="/channels/140605087511740416/"]').length > 0 || guildList.has('div[href^="/channels/85369684286767104/"]').length > 0) { // Check if element has been found
 		      	console.log('Add Switch to Links Panel');
 		      	addInformationBar();
 						addTwitchSwitch();
@@ -350,9 +349,10 @@ $(document).ready(function() {
 
 			console.log(guildList);
     	if ($('[class*="selected-"]').length > 0) { // Check if element has been found
-    		$(document).on('click', '[class^="listItem-2P"] > [class^="blob"]', function() {
+    		$(document).on('click', '[class^="listItem-2P"] > div', function() {
+					console.log($('[class^="listItem-2P"] > div').length);
     			if (twitchActive) {
-    				if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
+    				if ($(this).has('div[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('div[href^="/channels/85369684286767104"]').length > 0) {
     					$('#twitch-container').css('display', '');
 							// var uiUpdate = setInterval(function() {
         			// 	if($('[class^="channels"]').length > 0 && ($('[class^="channels"] header span').text() == 'GamesDoneQuick' || $('[class^="channels"] header span').text() == 'European Speedrunner Assembly')) {
@@ -375,7 +375,7 @@ $(document).ready(function() {
 						$('[class*=usernameContainer]', $('[class^="channels"]')).parent().parent().css('margin-bottom', '30px');
 					}
 
-    			if ($(this).has('a[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('a[href^="/channels/85369684286767104"]').length > 0) {
+    			if ($(this).has('div[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('div[href^="/channels/85369684286767104"]').length > 0) {
 						console.log('Add Header - Debug')
 						updateGDQHeaderDisplay('add');
     			} else {

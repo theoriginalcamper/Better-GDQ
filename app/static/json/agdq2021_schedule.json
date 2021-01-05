@@ -1,0 +1,1108 @@
+{
+  "Pre-Show": {
+    "title": "Pre-Show",
+    "runner": "SpikeVegeta, feasel, Keizaron, JHobz, Kungfufruitcup",
+    "estimate": "0:20:00",
+    "category": "Intro —",
+    "link": "https://gamesdonequick.com"
+  },
+  "Mirror's Edge": {
+    "title": "Mirror's Edge",
+    "runner": "Hekigan",
+    "estimate": "0:46:00",
+    "category": "Inbounds — PC",
+    "link": "https://www.speedrun.com/me#Inbounds"
+  },
+  "Donkey Kong Country": {
+    "title": "Donkey Kong Country",
+    "runner": "Eazinn, DadLovesBeer",
+    "estimate": "0:50:00",
+    "category": "Any% No Major Skips Race — SNES",
+    "link": "https://www.speedrun.com/dkc#No_Major_Skips"
+  },
+  "Just Cause 3": {
+    "title": "Just Cause 3",
+    "runner": "pmcTRILOGY",
+    "estimate": "0:52:00",
+    "category": "Sky Fortress DLC — PC",
+    "link": "https://www.speedrun.com/jc3#Sky_Fortress_DLC"
+  },
+  "Ratchet & Clank (2016)": {
+    "title": "Ratchet & Clank (2016)",
+    "runner": "PerilousPeanut",
+    "estimate": "0:37:00",
+    "category": "NG+ — PS4",
+    "link": "https://www.speedrun.com/racps4#NG"
+  },
+  "Mega Man X5": {
+    "title": "Mega Man X5",
+    "runner": "Luiz Miguel",
+    "estimate": "0:56:00",
+    "category": "Any% — PS1",
+    "link": "http://megamanleaderboards.net/index.php?game=16&category=360"
+  },
+  "Dragon Age: Origins": {
+    "title": "Dragon Age: Origins",
+    "runner": "Lemuura",
+    "estimate": "1:00:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/daorigins#Any"
+  },
+  "Ori and the Will of the Wisps": {
+    "title": "Ori and the Will of the Wisps",
+    "runner": "Hetfield90, Skarfelt",
+    "estimate": "1:15:00",
+    "category": "Main Quest Order Race — PC",
+    "link": "https://www.speedrun.com/ori_wotw"
+  },
+  "Diddy Kong Racing": {
+    "title": "Diddy Kong Racing",
+    "runner": "Obiyo",
+    "estimate": "1:52:00",
+    "category": "100% — N64",
+    "link": "https://www.speedrun.com/dkr#100"
+  },
+  "Metroid: Zero Mission": {
+    "title": "Metroid: Zero Mission",
+    "runner": "CScottyW",
+    "estimate": "1:00:00",
+    "category": "9% normal — GBA",
+    "link": "https://www.speedrun.com/mzm#9_Normal"
+  },
+  "Daily Recap - Sunday": {
+    "title": "Daily Recap - Sunday",
+    "runner": "SpikeVegeta, feasel, JHobz, Kungfufruitcup",
+    "estimate": "0:10:00",
+    "category": "Recap% —",
+    "link": "https://gamesdonequick.com"
+  },
+  "Lightmatter": {
+    "title": "Lightmatter",
+    "runner": "bobbyburm",
+    "estimate": "0:52:00",
+    "category": "Any% NMG — PC",
+    "link": "https://www.speedrun.com/lightmatter#Any_NMG"
+  },
+  "Pikmin 2": {
+    "title": "Pikmin 2",
+    "runner": "Draz",
+    "estimate": "1:55:00",
+    "category": "Pay Off Debt — Gamecube",
+    "link": "https://www.speedrun.com/pikmin2#Pay_Off_Debt"
+  },
+  "Metal Gear Solid 4: Guns of the Patriots": {
+    "title": "Metal Gear Solid 4: Guns of the Patriots",
+    "runner": "Jaguar King",
+    "estimate": "2:05:00",
+    "category": "The Boss Extreme — PS3",
+    "link": "https://www.speedrun.com/mgs4"
+  },
+  "Otogi: Myth of Demons": {
+    "title": "Otogi: Myth of Demons",
+    "runner": "Ameiii",
+    "estimate": "1:20:00",
+    "category": "Any% — Xbox",
+    "link": "https://www.speedrun.com/otogi#Any"
+  },
+  "Ghostbusters": {
+    "title": "Ghostbusters",
+    "runner": "RetroBrando",
+    "estimate": "0:35:00",
+    "category": "Any% — Genesis",
+    "link": "https://www.speedrun.com/ghostbusters_genesis#Any"
+  },
+  "Magical Taruruuto-kun": {
+    "title": "Magical Taruruuto-kun",
+    "runner": "Joeybaby69",
+    "estimate": "0:30:00",
+    "category": "Any% — Genesis",
+    "link": "https://www.speedrun.com/magical_taruruuto-kun#Any"
+  },
+  "Ecco the Dolphin": {
+    "title": "Ecco the Dolphin",
+    "runner": "GrimShins",
+    "estimate": "0:30:00",
+    "category": "Any% No Camera-Freeze — Genesis",
+    "link": "https://www.speedrun.com/ecco#Any_No_Camera-Freeze"
+  },
+  "Taz-Mania": {
+    "title": "Taz-Mania",
+    "runner": "coolkid",
+    "estimate": "0:12:00",
+    "category": "any% — SMS",
+    "link": "https://www.speedrun.com/taz_mania_sms#any"
+  },
+  "The Lucky Dime Caper starring Donald Duck": {
+    "title": "The Lucky Dime Caper starring Donald Duck",
+    "runner": "Chachamaxx",
+    "estimate": "0:18:00",
+    "category": "Beat the game — SMS",
+    "link": "https://www.speedrun.com/luckydimecaper#Beat_the_Game"
+  },
+  "Startropics": {
+    "title": "Startropics",
+    "runner": "BugDoctor",
+    "estimate": "1:10:00",
+    "category": "any% — NES",
+    "link": "https://www.speedrun.com/startropics#Any"
+  },
+  "Yooka-Laylee and the Impossible Lair": {
+    "title": "Yooka-Laylee and the Impossible Lair",
+    "runner": "hedweg",
+    "estimate": "1:05:00",
+    "category": "24 Bees — PC",
+    "link": "https://www.speedrun.com/ylil#24_Bees"
+  },
+  "Turok: Dinosaur Hunter - PC Remaster": {
+    "title": "Turok: Dinosaur Hunter - PC Remaster",
+    "runner": "pale2",
+    "estimate": "0:38:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/turok1#Any_PC_Remaster"
+  },
+  "Sonic 1 (2013)": {
+    "title": "Sonic 1 (2013)",
+    "runner": "flying fox",
+    "estimate": "0:25:00",
+    "category": "Tails: Beat The Game — Android",
+    "link": "https://www.speedrun.com/s12013#Tails_Beat_The_Game"
+  },
+  "Sonic 3: Angel Island Revisited": {
+    "title": "Sonic 3: Angel Island Revisited",
+    "runner": "Zaxon96",
+    "estimate": "0:42:00",
+    "category": "Any% Sonic + Tails — PC",
+    "link": "https://www.speedrun.com/s3air#Sonic_and_Tails"
+  },
+  "Sonic Mania": {
+    "title": "Sonic Mania",
+    "runner": "Argick",
+    "estimate": "0:58:00",
+    "category": "Sonic & Tails Good Ending — PC",
+    "link": "https://www.speedrun.com/sonic_mania#Sonic_and_Tails"
+  },
+  "Sonic the Hedgehog (2006)": {
+    "title": "Sonic the Hedgehog (2006)",
+    "runner": "Gordon Ramsay",
+    "estimate": "0:52:00",
+    "category": "Shadow's Story (No MSG) — Xbox 360",
+    "link": "https://www.speedrun.com/sonic06#Shadows_Story"
+  },
+  "Darksiders": {
+    "title": "Darksiders",
+    "runner": "heny",
+    "estimate": "1:35:00",
+    "category": "All Chosen Bosses — PC",
+    "link": "https://www.speedrun.com/darksiders#All_Chosen_Bosses"
+  },
+  "Dark Messiah of Might and Magic": {
+    "title": "Dark Messiah of Might and Magic",
+    "runner": "Cropax",
+    "estimate": "0:29:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/dmomm#Any"
+  },
+  "Bonus Game 1 - The Elder Scrolls V: Skyrim": {
+    "title": "Bonus Game 1 - The Elder Scrolls V: Skyrim",
+    "runner": "nucular",
+    "estimate": "1:30:00",
+    "category": "Glitchless Main Quest — PC",
+    "link": "https://www.speedrun.com/skyrim#Glitchless_Main_Quest"
+  },
+  "Dishonored 2": {
+    "title": "Dishonored 2",
+    "runner": "DemonicRobots",
+    "estimate": "0:35:00",
+    "category": "Any% bid war — PC",
+    "link": "https://www.speedrun.com/dishonored_2#Any"
+  },
+  "Divinity: Original Sin 2 Definitive Edition": {
+    "title": "Divinity: Original Sin 2 Definitive Edition",
+    "runner": "Worldlyy",
+    "estimate": "0:35:00",
+    "category": "any% Current Patch — PC",
+    "link": "https://www.speedrun.com/dos2#Any"
+  },
+  "Daily Recap - Monday": {
+    "title": "Daily Recap - Monday",
+    "runner": "feasel, Keizaron, Kungfufruitcup",
+    "estimate": "0:10:00",
+    "category": "Recap% —",
+    "link": "https://gamesdonequick.com"
+  },
+  "Diablo III": {
+    "title": "Diablo III",
+    "runner": "meatr0o, Heckson, Whisperra",
+    "estimate": "1:35:00",
+    "category": "any% NG co-op — PC",
+    "link": "https://www.speedrun.com/d3_ros#Any_co-op"
+  },
+  "Mortal Shell": {
+    "title": "Mortal Shell",
+    "runner": "LilAggy",
+    "estimate": "0:37:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/mortalshell#Any"
+  },
+  "Wild Arms": {
+    "title": "Wild Arms",
+    "runner": "cha0sRTA",
+    "estimate": "1:40:00",
+    "category": "Any% No ACE — PS1",
+    "link": "https://www.speedrun.com/wa#Any_No_ACE"
+  },
+  "Ultima VI: The False Prophet": {
+    "title": "Ultima VI: The False Prophet",
+    "runner": "Gyre",
+    "estimate": "0:24:00",
+    "category": "Glitchless — PC",
+    "link": "https://www.speedrun.com/ultima6"
+  },
+  "Journey to the Savage Planet": {
+    "title": "Journey to the Savage Planet",
+    "runner": "dkPuls",
+    "estimate": "0:20:00",
+    "category": "any% Post OGM — PC",
+    "link": "https://www.speedrun.com/jttsp#Any"
+  },
+  "Revenge of the Bird King": {
+    "title": "Revenge of the Bird King",
+    "runner": "Fox of the Flame",
+    "estimate": "0:25:00",
+    "category": "All Treasures — Switch",
+    "link": "https://www.speedrun.com/rotbk#All_Treasures"
+  },
+  "Super Ledgehop: Double Laser": {
+    "title": "Super Ledgehop: Double Laser",
+    "runner": "ChairGTables",
+    "estimate": "0:07:00",
+    "category": "Good Ending — PC",
+    "link": "https://www.speedrun.com/superledgehop#Good_Ending"
+  },
+  "Nikita: The Mystery of the Hidden Treasure": {
+    "title": "Nikita: The Mystery of the Hidden Treasure",
+    "runner": "havrd",
+    "estimate": "0:20:00",
+    "category": "any% — PC",
+    "link": "https://www.speedrun.com/nikita_the_mystery_of_the_hidden_treasure#Any"
+  },
+  "Dracula II: Noroi no Fuuin": {
+    "title": "Dracula II: Noroi no Fuuin",
+    "runner": "Sathdresh",
+    "estimate": "0:50:00",
+    "category": "Any% All Mansions — NES",
+    "link": "https://www.speedrun.com/cv2sq#All_Mansions_No_Save_Corruption_FDS"
+  },
+  "Banana Prince": {
+    "title": "Banana Prince",
+    "runner": "swordsmankirby",
+    "estimate": "0:15:00",
+    "category": "any% — NES",
+    "link": "https://www.speedrun.com/banana_prince"
+  },
+  "Little Samson": {
+    "title": "Little Samson",
+    "runner": "rayeo",
+    "estimate": "0:15:00",
+    "category": "any% No Out of bounds — NES",
+    "link": "https://www.speedrun.com/little_samson#Any_Easy_No_Oob"
+  },
+  "The Cowlitz Gamers' 2nd Adventure/Lost Adventure": {
+    "title": "The Cowlitz Gamers' 2nd Adventure/Lost Adventure",
+    "runner": "Bitty_Kong",
+    "estimate": "0:20:00",
+    "category": "Any% Easy — NES",
+    "link": "https://www.speedrun.com/cg2a#Any__Easy"
+  },
+  "Fist of the North Star": {
+    "title": "Fist of the North Star",
+    "runner": "Starwin",
+    "estimate": "0:15:00",
+    "category": "Any% — NES",
+    "link": "https://www.speedrun.com/fist_of_the_north_star_nes"
+  },
+  "RollerGames": {
+    "title": "RollerGames",
+    "runner": "ViruseReturns",
+    "estimate": "0:17:00",
+    "category": "Any% — NES",
+    "link": "https://www.speedrun.com/roller_games"
+  },
+  "River City Girls": {
+    "title": "River City Girls",
+    "runner": "BahamutX_",
+    "estimate": "1:05:00",
+    "category": "New Game — PC",
+    "link": "https://www.speedrun.com/river_city_girls#New_game"
+  },
+  "River City Ransom": {
+    "title": "River City Ransom",
+    "runner": "yelsraek, willbobsled",
+    "estimate": "0:10:00",
+    "category": "Novice (Race) — NES",
+    "link": "https://www.speedrun.com/rivercityransom#Novice"
+  },
+  "Strider": {
+    "title": "Strider",
+    "runner": "baldnate",
+    "estimate": "0:22:00",
+    "category": "100% — NES",
+    "link": "https://www.speedrun.com/stridernes"
+  },
+  "Aladdin": {
+    "title": "Aladdin",
+    "runner": "ZeeGee",
+    "estimate": "0:17:00",
+    "category": "All Stages (Practice Mode) — Genesis",
+    "link": "https://www.speedrun.com/aladdin_genesis#All_Stages"
+  },
+  "Metroid": {
+    "title": "Metroid",
+    "runner": "Tecate, CHX42",
+    "estimate": "0:22:00",
+    "category": "All Bosses — NES",
+    "link": "https://www.speedrun.com/metroid_nes#All_Bosses"
+  },
+  "Mega Man": {
+    "title": "Mega Man",
+    "runner": "coolkid",
+    "estimate": "0:40:00",
+    "category": "Any% (One Hit KO/Buster Only) — NES",
+    "link": "http://megamanleaderboards.net/index.php?game=1&category=507"
+  },
+  "Mega Man 11": {
+    "title": "Mega Man 11",
+    "runner": "Amad",
+    "estimate": "0:37:00",
+    "category": "Any% No OoB (Normal) — PC",
+    "link": "http://megamanleaderboards.net/index.php?game=143"
+  },
+  "Mega Man X3": {
+    "title": "Mega Man X3",
+    "runner": "Luiz Miguel",
+    "estimate": "0:50:00",
+    "category": "Low% — SNES",
+    "link": "http://megamanleaderboards.net/index.php?game=14&category=350"
+  },
+  "Tony Hawk's Underground 2": {
+    "title": "Tony Hawk's Underground 2",
+    "runner": "Biglaw",
+    "estimate": "0:09:00",
+    "category": "Story Easy — PC",
+    "link": "https://www.speedrun.com/thug2#Story1"
+  },
+  "Tony Hawk's Pro Skater 1+2": {
+    "title": "Tony Hawk's Pro Skater 1+2",
+    "runner": "PARTY MAN X",
+    "estimate": "0:22:00",
+    "category": "All Goals & Golds All Tours — PC",
+    "link": "https://www.speedrun.com/thps12/full_game#All_Goals_and_Golds"
+  },
+  "Metroid Prime": {
+    "title": "Metroid Prime",
+    "runner": "edzan",
+    "estimate": "1:55:00",
+    "category": "100% — Gamecube",
+    "link": "https://www.speedrun.com/mp#100"
+  },
+  "Braid": {
+    "title": "Braid",
+    "runner": "KanBan85",
+    "estimate": "0:35:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/braid#Any"
+  },
+  "Shovel Knight: Specter of Torment": {
+    "title": "Shovel Knight: Specter of Torment",
+    "runner": "MooMooAkai",
+    "estimate": "0:40:00",
+    "category": "New Game Plus — PC",
+    "link": "https://www.speedrun.com/shovelknight#NG%2B"
+  },
+  "Cuphead": {
+    "title": "Cuphead",
+    "runner": "Jason2890",
+    "estimate": "0:35:00",
+    "category": "All Bosses (No Major Glitches) — PC",
+    "link": "https://www.speedrun.com/cuphead"
+  },
+  "Bonus Game 2 - Hades": {
+    "title": "Bonus Game 2 - Hades",
+    "runner": "Vorime",
+    "estimate": "1:05:00",
+    "category": "3 Weapons — PC",
+    "link": "https://www.speedrun.com/hades#3_Weapons"
+  },
+  "BPM: Bullets Per Minute": {
+    "title": "BPM: Bullets Per Minute",
+    "runner": "Bullets",
+    "estimate": "0:30:00",
+    "category": "Njord Easy — PC",
+    "link": "https://www.speedrun.com/bpm_bullets_per_minute"
+  },
+  "Daily Recap - Tuesday": {
+    "title": "Daily Recap - Tuesday",
+    "runner": "SpikeVegeta, Keizaron, Blechy, JHobz",
+    "estimate": "0:10:00",
+    "category": "Recap% —",
+    "link": "https://gamesdonequick.com"
+  },
+  "Left 4 Dead 2": {
+    "title": "Left 4 Dead 2",
+    "runner": "WaifuRuns",
+    "estimate": "1:10:00",
+    "category": "Main Campaigns Solo, Any Difficulty — PC",
+    "link": "https://www.speedrun.com/l4d2"
+  },
+  "F.E.A.R.": {
+    "title": "F.E.A.R.",
+    "runner": "Maxylobes",
+    "estimate": "0:55:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/fear#Any"
+  },
+  "Carrion": {
+    "title": "Carrion",
+    "runner": "teddyras",
+    "estimate": "0:25:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/carrion#Any"
+  },
+  "Axiom Verge": {
+    "title": "Axiom Verge",
+    "runner": "SaberaMesia",
+    "estimate": "0:37:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/axiomverge#Any"
+  },
+  "Haunting Ground": {
+    "title": "Haunting Ground",
+    "runner": "Ecdycis",
+    "estimate": "1:05:00",
+    "category": "A Ending NG+ — PS2",
+    "link": "https://www.speedrun.com/hauntingground#A_Ending"
+  },
+  "Resident Evil: Director's Cut": {
+    "title": "Resident Evil: Director's Cut",
+    "runner": "RetroBrando",
+    "estimate": "1:10:00",
+    "category": "Jill (Arrange) Any% NMG — PS1",
+    "link": "https://www.speedrun.com/residentevil"
+  },
+  "Silent Hill 3": {
+    "title": "Silent Hill 3",
+    "runner": "Punchy",
+    "estimate": "0:43:00",
+    "category": "Extra New Game — PC",
+    "link": "https://www.speedrun.com/sh3#Extra_New_Game"
+  },
+  "PIEN-ぴえん-": {
+    "title": "PIEN-ぴえん-",
+    "runner": "Swordfish4649",
+    "estimate": "0:10:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/pien"
+  },
+  "Michael Jordan: Chaos in the Windy City": {
+    "title": "Michael Jordan: Chaos in the Windy City",
+    "runner": "apathyduck",
+    "estimate": "0:27:00",
+    "category": "Any% — SNES",
+    "link": "https://www.speedrun.com/michael_jordan_chaos_in_the_windy_city#Any%25"
+  },
+  "Ice Age: Scrat's Nutty Adventure": {
+    "title": "Ice Age: Scrat's Nutty Adventure",
+    "runner": "yoshipro",
+    "estimate": "0:22:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/iasna"
+  },
+  "Into The Breach": {
+    "title": "Into The Breach",
+    "runner": "RooseSR",
+    "estimate": "0:15:00",
+    "category": "2-Island% - Frozen Titans — PC",
+    "link": "https://www.speedrun.com/itb"
+  },
+  "Mario Golf: Toadstool Tour": {
+    "title": "Mario Golf: Toadstool Tour",
+    "runner": "Bluekandy",
+    "estimate": "0:55:00",
+    "category": "Any% — Gamecube",
+    "link": "https://www.speedrun.com/mgtt"
+  },
+  "Golden Sun": {
+    "title": "Golden Sun",
+    "runner": "Plexa",
+    "estimate": "4:04:00",
+    "category": "Any% No Save & Quit — GBA",
+    "link": "https://www.speedrun.com/gsun"
+  },
+  "Minecraft Dungeons": {
+    "title": "Minecraft Dungeons",
+    "runner": "MiphaSR",
+    "estimate": "1:00:00",
+    "category": "Any% (Random Seed) — PC",
+    "link": "https://www.speedrun.com/mcd"
+  },
+  "Spider-Man: Shattered Dimensions": {
+    "title": "Spider-Man: Shattered Dimensions",
+    "runner": "Jaxler",
+    "estimate": "0:30:00",
+    "category": "Any% — DS",
+    "link": "https://www.speedrun.com/smsd"
+  },
+  "Spyro Reignited Trilogy: Spyro 3 Year of the Dragon": {
+    "title": "Spyro Reignited Trilogy: Spyro 3 Year of the Dragon",
+    "runner": "Zic3",
+    "estimate": "1:05:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/spyrortpc#Spyro_Year_of_the_Dragon"
+  },
+  "Crash Bandicoot: N. Sane Trilogy": {
+    "title": "Crash Bandicoot: N. Sane Trilogy",
+    "runner": "DepCow",
+    "estimate": "1:00:00",
+    "category": "Crash Bandicoot 1 Any% — PC",
+    "link": "https://www.speedrun.com/crashnst#Crash_Bandicoot"
+  },
+  "Ratchet & Clank: Going Commando": {
+    "title": "Ratchet & Clank: Going Commando",
+    "runner": "Xem, DylWingo",
+    "estimate": "1:20:00",
+    "category": "All Platinum Bolts — PS2",
+    "link": "https://www.speedrun.com/rac2#All_Platinum_Bolts"
+  },
+  "Devil May Cry 3: Special Edition": {
+    "title": "Devil May Cry 3: Special Edition",
+    "runner": "WaifuRuns",
+    "estimate": "1:05:00",
+    "category": "Vergil New Game — PC",
+    "link": "https://www.speedrun.com/dmc3se#Vergil_New_Game"
+  },
+  "Super Mario World 2: Yoshi's Island": {
+    "title": "Super Mario World 2: Yoshi's Island",
+    "runner": "Calco2",
+    "estimate": "2:42:00",
+    "category": "100% — SNES",
+    "link": "https://www.speedrun.com/yi#100"
+  },
+  "The Legend of Zelda: Skyward Sword": {
+    "title": "The Legend of Zelda: Skyward Sword",
+    "runner": "gymnast86",
+    "estimate": "1:40:00",
+    "category": "Any% — Wii",
+    "link": "https://www.speedrun.com/lozss#Any"
+  },
+  "Daily Recap - Wednesday": {
+    "title": "Daily Recap - Wednesday",
+    "runner": "SpikeVegeta, Keizaron, JHobz",
+    "estimate": "0:10:00",
+    "category": "Recap% —",
+    "link": "https://gamesdonequick.com"
+  },
+  "Bonus Game 3 - Zelda: The Wand of Gamelon": {
+    "title": "Bonus Game 3 - Zelda: The Wand of Gamelon",
+    "runner": "Grumpmeister",
+    "estimate": "1:00:00",
+    "category": "All Cutscenes — CD-I",
+    "link": "https://www.speedrun.com/wandofgamelon#All_Cutscenes"
+  },
+  "King's Quest VIII: Mask of Eternity": {
+    "title": "King's Quest VIII: Mask of Eternity",
+    "runner": "Chuck Grody",
+    "estimate": "0:45:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/kings_quest_mask_of_eternity"
+  },
+  "Pinobee: Wings of Adventure": {
+    "title": "Pinobee: Wings of Adventure",
+    "runner": "Mr_Shasta",
+    "estimate": "0:23:00",
+    "category": "Any% — GBA",
+    "link": "https://www.speedrun.com/pinobee_woa#Any"
+  },
+  "Epic Dumpster Bear 2: He Who Bears Wins": {
+    "title": "Epic Dumpster Bear 2: He Who Bears Wins",
+    "runner": "Linkums, KowalLazy",
+    "estimate": "0:29:00",
+    "category": "Any% race — PC",
+    "link": "https://www.speedrun.com/epic_dumpster_bear_2#any"
+  },
+  "Snow White in Happily Ever After": {
+    "title": "Snow White in Happily Ever After",
+    "runner": "GarbitheGlitcheress",
+    "estimate": "0:18:00",
+    "category": "Hard — SNES",
+    "link": "https://www.speedrun.com/snow_white_in_happily_ever_after#Hard1"
+  },
+  "Alcatraz: Prison Escape": {
+    "title": "Alcatraz: Prison Escape",
+    "runner": "tbcr",
+    "estimate": "0:20:00",
+    "category": "MAXIMUM SECURITY — PC",
+    "link": "https://www.speedrun.com/alcatraz_prison_escape"
+  },
+  "Mr. Bones": {
+    "title": "Mr. Bones",
+    "runner": "Lizstar",
+    "estimate": "1:20:00",
+    "category": "All Cutscenes — Saturn",
+    "link": "https://www.speedrun.com/mr._bones#Any"
+  },
+  "Shinobi Legions": {
+    "title": "Shinobi Legions",
+    "runner": "Faust4712",
+    "estimate": "0:50:00",
+    "category": "Cutscene% — Saturn",
+    "link": "https://www.speedrun.com/shinobi_legions#Any"
+  },
+  "Energy": {
+    "title": "Energy",
+    "runner": "GliitchWiitch",
+    "estimate": "0:30:00",
+    "category": "Any% Quality of Life Translation Patch — PCE",
+    "link": "https://www.speedrun.com/energy#Any_QoL_Translation_Patch"
+  },
+  "The Lawnmower Man": {
+    "title": "The Lawnmower Man",
+    "runner": "d4gr0n",
+    "estimate": "0:30:00",
+    "category": "Any% — SNES",
+    "link": "https://www.speedrun.com/the_lawnmower_man#Any"
+  },
+  "The Mummy": {
+    "title": "The Mummy",
+    "runner": "Ecdycis",
+    "estimate": "0:31:00",
+    "category": "Hub 1 — PS1",
+    "link": "https://www.speedrun.com/the_mummy#Hub_1"
+  },
+  "Vigilance": {
+    "title": "Vigilance",
+    "runner": "Fireman",
+    "estimate": "0:45:00",
+    "category": "Any% (Rookie - Hex) — PC",
+    "link": "https://www.speedrun.com/vigilance#Rookie"
+  },
+  "Sammy Suricate in Lion Land": {
+    "title": "Sammy Suricate in Lion Land",
+    "runner": "rythin",
+    "estimate": "0:15:00",
+    "category": "All Levels — PC",
+    "link": "https://www.speedrun.com/sammy#All_Levels"
+  },
+  "The Legend of Zelda: Link's Awakening DX": {
+    "title": "The Legend of Zelda: Link's Awakening DX",
+    "runner": "GlyphDX",
+    "estimate": "1:28:00",
+    "category": "100% (no WW/OoB) — GBC",
+    "link": "https://www.speedrun.com/ladx#100"
+  },
+  "Pokémon Platinum": {
+    "title": "Pokémon Platinum",
+    "runner": "Etchy",
+    "estimate": "4:15:00",
+    "category": "Any% Glitchless — DS",
+    "link": "https://www.speedrun.com/pkmnplat#Any_Glitchless"
+  },
+  "Deus Ex": {
+    "title": "Deus Ex",
+    "runner": "Heinki",
+    "estimate": "0:55:00",
+    "category": "Deus Ex vs Human Revolution vs Mankind Divided — PC",
+    "link": "https://www.speedrun.com/deus_ex"
+  },
+  "Halo 3: ODST": {
+    "title": "Halo 3: ODST",
+    "runner": "Heroic_Robb",
+    "estimate": "1:35:00",
+    "category": "New Game+ Legendary — Xbox One",
+    "link": "https://www.speedrun.com/halo_3_odst_category_extensions#Heoric_NG"
+  },
+  "Bonus Game 4 - Halo 3": {
+    "title": "Bonus Game 4 - Halo 3",
+    "runner": "SasquatchSensei",
+    "estimate": "1:20:00",
+    "category": "Easy — PC",
+    "link": "https://haloruns.com/records/h3/fullgame/solo"
+  },
+  "Daily Recap - Thursday": {
+    "title": "Daily Recap - Thursday",
+    "runner": "feasel, Keizaron, Blechy",
+    "estimate": "0:10:00",
+    "category": "Recap% —",
+    "link": "https://gamesdonequick.com"
+  },
+  "Half-Life": {
+    "title": "Half-Life",
+    "runner": "Muty",
+    "estimate": "0:32:00",
+    "category": "WON - Scriptless — PC",
+    "link": "https://www.speedrun.com/hl1#WON"
+  },
+  "Star Wars Jedi: Fallen Order": {
+    "title": "Star Wars Jedi: Fallen Order",
+    "runner": "Pnash",
+    "estimate": "2:00:00",
+    "category": "any% - No PBC — PC",
+    "link": "https://www.speedrun.com/jfo"
+  },
+  "Resident Evil 5": {
+    "title": "Resident Evil 5",
+    "runner": "DECosmic, AvuKamu",
+    "estimate": "1:45:00",
+    "category": "NG Co-Op Amateur — PC",
+    "link": "https://www.speedrun.com/re5"
+  },
+  "TimeSplitters 2": {
+    "title": "TimeSplitters 2",
+    "runner": "EmosewaMC",
+    "estimate": "1:00:00",
+    "category": "Hard Story — PS2",
+    "link": "https://www.speedrun.com/ts2"
+  },
+  "I Wanna Be The Fangame!": {
+    "title": "I Wanna Be The Fangame!",
+    "runner": "Wolsk",
+    "estimate": "0:27:00",
+    "category": "Any% (Medium) — PC",
+    "link": "https://www.speedrun.com/iwbtfangame"
+  },
+  "Slowdrive": {
+    "title": "Slowdrive",
+    "runner": "Bullets",
+    "estimate": "0:23:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/slowdrive"
+  },
+  "Alwa's Legacy": {
+    "title": "Alwa's Legacy",
+    "runner": "OldSchool_Richard",
+    "estimate": "0:15:00",
+    "category": "any% — PC",
+    "link": "https://www.speedrun.com/alwas_legacy"
+  },
+  "Sheepo": {
+    "title": "Sheepo",
+    "runner": "QueenSnopea",
+    "estimate": "0:25:00",
+    "category": "6 Real Eggs — PC",
+    "link": "https://www.speedrun.com/sheepo"
+  },
+  "RITE": {
+    "title": "RITE",
+    "runner": "Lincher",
+    "estimate": "0:30:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/rite"
+  },
+  "Whipseey and the Lost Atlas": {
+    "title": "Whipseey and the Lost Atlas",
+    "runner": "MoD366",
+    "estimate": "0:16:00",
+    "category": "Beat the Game — PC",
+    "link": "https://www.speedrun.com/whipseey_and_the_lost_atlas"
+  },
+  "Demolition Man": {
+    "title": "Demolition Man",
+    "runner": "Teleo1",
+    "estimate": "0:17:00",
+    "category": "Crazed% — SNES",
+    "link": "https://www.speedrun.com/demolition_man_snes"
+  },
+  "Night in the Woods: DemonTower": {
+    "title": "Night in the Woods: DemonTower",
+    "runner": "karlgerm",
+    "estimate": "0:22:00",
+    "category": "DemonTower Any% — PC",
+    "link": "https://www.speedrun.com/nitw"
+  },
+  "Inertial Drift": {
+    "title": "Inertial Drift",
+    "runner": "Sean_A",
+    "estimate": "0:40:00",
+    "category": "100% Viv — PC",
+    "link": "https://www.speedrun.com/inertial_drift"
+  },
+  "Metal Gear Solid: The Twin Snakes": {
+    "title": "Metal Gear Solid: The Twin Snakes",
+    "runner": "Tyler2022",
+    "estimate": "1:14:00",
+    "category": "All Dog Tags (Extreme) — Gamecube",
+    "link": "https://www.speedrun.com/mgstts"
+  },
+  "Nezumi Man": {
+    "title": "Nezumi Man",
+    "runner": "Nu",
+    "estimate": "0:26:00",
+    "category": "any% — PC",
+    "link": "https://www.speedrun.com/nezumi_man"
+  },
+  "Luigi's Mansion": {
+    "title": "Luigi's Mansion",
+    "runner": "HDlax",
+    "estimate": "0:20:00",
+    "category": "Any% — Wii",
+    "link": "https://www.speedrun.com/lm"
+  },
+  "Super Mario Land 2: 6 Golden Coins": {
+    "title": "Super Mario Land 2: 6 Golden Coins",
+    "runner": "AdamFerrari64, Oh_DeeR, EiP",
+    "estimate": "0:30:00",
+    "category": "Any% Glitchless — GB",
+    "link": "https://www.speedrun.com/sml2"
+  },
+  "Wario Land: Super Mario Land 3": {
+    "title": "Wario Land: Super Mario Land 3",
+    "runner": "vlacksr",
+    "estimate": "0:30:00",
+    "category": "Any% — GB",
+    "link": "https://www.speedrun.com/wl1"
+  },
+  "Wario Land 4": {
+    "title": "Wario Land 4",
+    "runner": "Mr_Shasta",
+    "estimate": "1:05:00",
+    "category": "Normal Any% Zipless — GBA",
+    "link": "https://www.speedrun.com/wl4"
+  },
+  "Donkey Kong Country 2 Unveiled": {
+    "title": "Donkey Kong Country 2 Unveiled",
+    "runner": "V0oid",
+    "estimate": "1:15:00",
+    "category": "Any% — SNES",
+    "link": "https://www.speedrun.com/dkc2unv"
+  },
+  "Warcraft III: Reign of Chaos": {
+    "title": "Warcraft III: Reign of Chaos",
+    "runner": "CovertMuffin",
+    "estimate": "1:25:00",
+    "category": "Night Elf — PC",
+    "link": "https://www.speedrun.com/wc3"
+  },
+  "Final Fantasy VII": {
+    "title": "Final Fantasy VII",
+    "runner": "Doumeis",
+    "estimate": "2:05:00",
+    "category": "Any% — PC",
+    "link": "https://www.speedrun.com/ff7#PC"
+  },
+  "The Legend of Zelda: Majora's Mask": {
+    "title": "The Legend of Zelda: Majora's Mask",
+    "runner": "ClaireLynnD",
+    "estimate": "0:30:00",
+    "category": "Any% — N64",
+    "link": "https://www.speedrun.com/mm"
+  },
+  "Bonus Game 5 - Super Mario 64": {
+    "title": "Bonus Game 5 - Super Mario 64",
+    "runner": "Bubzia",
+    "estimate": "0:55:00",
+    "category": "16 Star Blindfolded — N64",
+    "link": "https://www.speedrun.com/sm64"
+  },
+  "Super Mario Sunshine": {
+    "title": "Super Mario Sunshine",
+    "runner": "Nindiddeh",
+    "estimate": "1:22:00",
+    "category": "Any% — Gamecube",
+    "link": "https://www.speedrun.com/sms"
+  },
+  "Daily Recap - Friday": {
+    "title": "Daily Recap - Friday",
+    "runner": "SpikeVegeta, Keizaron, Blechy, Kungfufruitcup",
+    "estimate": "0:10:00",
+    "category": "Recap% —",
+    "link": "https://gamesdonequick.com"
+  },
+  "Yakuza 6: The Song of Life": {
+    "title": "Yakuza 6: The Song of Life",
+    "runner": "Froob",
+    "estimate": "2:30:00",
+    "category": "Any% — PS4",
+    "link": "https://www.speedrun.com/yakuza_6"
+  },
+  "Scooby-Doo! Night of 100 Frights": {
+    "title": "Scooby-Doo! Night of 100 Frights",
+    "runner": "Jaxler, SnowyMoogle",
+    "estimate": "0:30:00",
+    "category": "Any% No CE — Gamecube",
+    "link": "https://www.speedrun.com/n100f"
+  },
+  "MediEvil": {
+    "title": "MediEvil",
+    "runner": "Jacobo the Chocobo",
+    "estimate": "1:05:00",
+    "category": "Any% NO DGS — PS1",
+    "link": "https://www.speedrun.com/medievil"
+  },
+  "Muchi Muchi Pork! 1.01": {
+    "title": "Muchi Muchi Pork! 1.01",
+    "runner": "Aquas",
+    "estimate": "0:38:00",
+    "category": "Harahara — Xbox 360",
+    "link": ""
+  },
+  "Oddworld: Stranger's Wrath HD": {
+    "title": "Oddworld: Stranger's Wrath HD",
+    "runner": "HuhnerSpeed",
+    "estimate": "0:48:00",
+    "category": "any% No Ghost — PC",
+    "link": "https://www.speedrun.com/osw"
+  },
+  "Serious Sam: The First Encounter": {
+    "title": "Serious Sam: The First Encounter",
+    "runner": "mr.deagle, kykystas, Override, apple1417",
+    "estimate": "0:28:00",
+    "category": "any% co-op — PC",
+    "link": "https://www.speedrun.com/sstfe"
+  },
+  "Serious Sam: The Second Encounter": {
+    "title": "Serious Sam: The Second Encounter",
+    "runner": "mr.deagle, kykystas, Override, apple1417",
+    "estimate": "0:31:00",
+    "category": "any% co-op — PC",
+    "link": "https://www.speedrun.com/sstse"
+  },
+  "Thief II: The Metal Age": {
+    "title": "Thief II: The Metal Age",
+    "runner": "Psych0sis",
+    "estimate": "1:05:00",
+    "category": "any% Normal NewDark — PC",
+    "link": "https://www.speedrun.com/thief2"
+  },
+  "Comfort Zone": {
+    "title": "Comfort Zone",
+    "runner": "MrMightyMouse",
+    "estimate": "0:50:00",
+    "category": "All Exits 100% — SNES",
+    "link": "https://www.speedrun.com/comfort_zone"
+  },
+  "X-Men: The Arcade Game": {
+    "title": "X-Men: The Arcade Game",
+    "runner": "LRock617",
+    "estimate": "0:32:00",
+    "category": "1CC Console 4P JP Version — PS3",
+    "link": "https://www.speedrun.com/x-men_1992"
+  },
+  "Celeste": {
+    "title": "Celeste",
+    "runner": "PeekingBoo",
+    "estimate": "0:20:00",
+    "category": "All C-Sides with Dance Pads — PC",
+    "link": "https://www.speedrun.com/celeste#All_C-Sides"
+  },
+  "Castlevania III: Dracula's Curse": {
+    "title": "Castlevania III: Dracula's Curse",
+    "runner": "freeland",
+    "estimate": "0:35:00",
+    "category": "Trevor Only vs. Alucard Bid War — NES",
+    "link": "https://www.speedrun.com/cv3dc"
+  },
+  "Castlevania: Order of Ecclesia": {
+    "title": "Castlevania: Order of Ecclesia",
+    "runner": "Diagon",
+    "estimate": "0:35:00",
+    "category": "Albus any% — DS",
+    "link": "https://www.speedrun.com/ooe"
+  },
+  "Bloodstained: Curse of the Moon 2": {
+    "title": "Bloodstained: Curse of the Moon 2",
+    "runner": "The Blacktastic",
+    "estimate": "0:30:00",
+    "category": "Any% Ultimate Episode 1 — PC",
+    "link": "https://www.speedrun.com/bscotm2"
+  },
+  "Super Mario Bros. 2": {
+    "title": "Super Mario Bros. 2",
+    "runner": "coolkid",
+    "estimate": "0:12:00",
+    "category": "any% Single Character Bidwar — NES",
+    "link": "https://www.speedrun.com/smb2"
+  },
+  "Super Meat Boy": {
+    "title": "Super Meat Boy",
+    "runner": "shredberg",
+    "estimate": "1:32:00",
+    "category": "106% — PC",
+    "link": "https://www.speedrun.com/smb#106"
+  },
+  "The Messenger": {
+    "title": "The Messenger",
+    "runner": "vlacksr",
+    "estimate": "0:45:00",
+    "category": "Linear No OoB — PC",
+    "link": "https://www.speedrun.com/the_messenger#Linear"
+  },
+  "Beat Saber": {
+    "title": "Beat Saber",
+    "runner": "Kungfufruitcup",
+    "estimate": "1:15:00",
+    "category": "Expert+ Showcase — PC (VR)",
+    "link": ""
+  },
+  "TASbot plays Freedom Planet": {
+    "title": "TASbot plays Freedom Planet",
+    "runner": "TASBot, TiKevin83",
+    "estimate": "0:31:00",
+    "category": "any% Milla by Fladervy, Tris255, and Revolucoin — PC",
+    "link": "https://www.speedrun.com/fp"
+  },
+  "TASBot plays The Legend of Zelda: Link's Awakening DX": {
+    "title": "TASBot plays The Legend of Zelda: Link's Awakening DX",
+    "runner": "TASBot, TiKevin83",
+    "estimate": "0:30:00",
+    "category": "no wrong warp by TwistedTammer — GB",
+    "link": "https://www.speedrun.com/ladx"
+  },
+  "Sekiro: Shadows Die Twice": {
+    "title": "Sekiro: Shadows Die Twice",
+    "runner": "LilAggy, Mitchriz",
+    "estimate": "0:27:00",
+    "category": "Any% Race — PC",
+    "link": "https://www.speedrun.com/sekiro"
+  },
+  "The Legend of Zelda: A Link to the Past": {
+    "title": "The Legend of Zelda: A Link to the Past",
+    "runner": "Glan",
+    "estimate": "1:00:00",
+    "category": "All Dungeons — SNES",
+    "link": "https://www.speedrun.com/alttp"
+  },
+  "Super Mario Bros. 35": {
+    "title": "Super Mario Bros. 35",
+    "runner": "authorblues, Iateyourpie, Kosmic, adef",
+    "estimate": "1:30:00",
+    "category": "Battle Showcase — Switch",
+    "link": ""
+  },
+  "Super Orb Bros.": {
+    "title": "Super Orb Bros.",
+    "runner": "mitchflowerpower",
+    "estimate": "0:40:00",
+    "category": "100% — NES",
+    "link": "https://www.speedrun.com/super-orb-bros"
+  },
+  "Pokémon Blue": {
+    "title": "Pokémon Blue",
+    "runner": "eddaket",
+    "estimate": "1:55:00",
+    "category": "Catch 'em All — GB",
+    "link": "https://www.speedrun.com/pkmnredblue"
+  },
+  "Bonus Game 6 - The Legend of Zelda: Ocarina of Time": {
+    "title": "Bonus Game 6 - The Legend of Zelda: Ocarina of Time",
+    "runner": "CLG ZFG",
+    "estimate": "0:50:00",
+    "category": "All Dungeons — Wii VC",
+    "link": "https://www.speedrun.com/oot"
+  },
+  "Finale": {
+    "title": "Finale",
+    "runner": "Tech Crew",
+    "estimate": "0:10:00",
+    "category": "The End —",
+    "link": "https://gamesdonequick.com"
+  }
+}
