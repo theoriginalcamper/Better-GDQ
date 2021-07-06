@@ -21,7 +21,7 @@ $(document).ready(function() {
 
     var checkAccount = setInterval(function(){
     	if ($('[class*="usernameContainer"]').length > 0) {
-				var guildList = $('[class^="listItem-2P"]').filter(function( index ) {
+				var guildList = $('[class^="listItem-"]').filter(function( index ) {
 					var elementStyle = $('span', this).attr('style');
 					if (typeof elementStyle !== 'undefined') {
 						var styleList = elementStyle.split(';');
@@ -91,7 +91,7 @@ $(document).ready(function() {
 
     function addTwitchSwitch() {
 			$('[class*="usernameContainer"]').parent().parent().css('margin-bottom', '30px');
-			$('#gdq-header').after(`<div id="twitch-switch" style="position: fixed; width: ${$('div[class^="channels-"]').width()}px; height: 22px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth()}px; bottom: 0;"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>`);
+			$('#gdq-header').after(`<div id="twitch-switch" style="position: fixed; width: ${$('div[class^="channels-"]').width()}px; height: 22px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth()}px; bottom: 0; z-index: 2;"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>`);
 			$('#twitch-switch').append(`<input type="checkbox" data-size="mini" name="twitch-player-display">`);
 	    $('#twitch-switch').append(`<i class="fa fa-expand" id="player-size-icon" style="margin-left: 10px; display: none;"></i>`);
 
@@ -349,8 +349,8 @@ $(document).ready(function() {
 
 			console.log(guildList);
     	if ($('[class*="selected-"]').length > 0) { // Check if element has been found
-    		$(document).on('click', '[class^="listItem-2P"] > div', function() {
-					console.log($('[class^="listItem-2P"] > div').length);
+    		$(document).on('click', '[class^="listItem-"] > div', function() {
+					console.log($('[class^="listItem-"] > div').length);
     			if (twitchActive) {
     				if ($(this).has('div[href^="/channels/140605087511740416/"]').length > 0 || $(this).has('div[href^="/channels/85369684286767104"]').length > 0) {
     					$('#twitch-container').css('display', '');

@@ -1,0 +1,908 @@
+{
+  "Pre-Show": {
+    "title": "Pre-Show",
+    "runner": "Interview Crew",
+    "estimate": "0:30:00",
+    "category": "No Fun? — SGDQ"
+  },
+  "Dragon Age: Inquisition": {
+    "title": "Dragon Age: Inquisition",
+    "runner": "Lemuura",
+    "estimate": "0:39:02",
+    "category": "Any% — PC"
+  },
+  "F-Zero GX": {
+    "title": "F-Zero GX",
+    "runner": "1davidj",
+    "estimate": "1:06:43",
+    "category": "Snaking All Tracks — Gamecube"
+  },
+  "Psychonauts": {
+    "title": "Psychonauts",
+    "runner": "yoshipro",
+    "estimate": "0:36:17",
+    "category": "Any% — PC"
+  },
+  "Mega Man X": {
+    "title": "Mega Man X",
+    "runner": "darrenville, Tiki, Clipper, Luiz Miguel",
+    "estimate": "0:36:24",
+    "category": "100% Race — SNES"
+  },
+  "Spyro the Dragon (1998)": {
+    "title": "Spyro the Dragon (1998)",
+    "runner": "Dayoman",
+    "estimate": "0:45:03",
+    "category": "Any% — PS1"
+  },
+  "Kirby Super Star": {
+    "title": "Kirby Super Star",
+    "runner": "Nippo",
+    "estimate": "0:37:39",
+    "category": "any% — SNES"
+  },
+  "James Bond 007: Nightfire": {
+    "title": "James Bond 007: Nightfire",
+    "runner": "Callmeliam",
+    "estimate": "0:57:37",
+    "category": "All Tokens — GameCube"
+  },
+  "K-Shoot Mania": {
+    "title": "K-Shoot Mania",
+    "runner": "silentblackcat",
+    "estimate": "0:41:29",
+    "category": "Showcase — PC"
+  },
+  "Metal Wolf Chaos XD": {
+    "title": "Metal Wolf Chaos XD",
+    "runner": "BlueMetal",
+    "estimate": "0:50:00",
+    "category": "Any% — PC"
+  },
+  "Daily Recap - Sunday": {
+    "title": "Daily Recap - Sunday",
+    "runner": "Interview Crew",
+    "estimate": "0:15:00",
+    "category": "Recap% —"
+  },
+  "The Legend of Zelda: Oracle of Ages": {
+    "title": "The Legend of Zelda: Oracle of Ages",
+    "runner": "GlyphDX",
+    "estimate": "1:40:00",
+    "category": "any% — GBC"
+  },
+  "Metal Gear Solid: Portable Ops": {
+    "title": "Metal Gear Solid: Portable Ops",
+    "runner": "Pythonicus",
+    "estimate": "1:00:00",
+    "category": "New Game - Tsuchinoko — PSTV"
+  },
+  "Max Payne 2: The Fall of Max Payne": {
+    "title": "Max Payne 2: The Fall of Max Payne",
+    "runner": "Mattmatt",
+    "estimate": "0:40:00",
+    "category": "Any% (Dead on Arrival) — PC"
+  },
+  "Sundered": {
+    "title": "Sundered",
+    "runner": "JeviLevee",
+    "estimate": "1:28:00",
+    "category": "Resist% — PC"
+  },
+  "Pikmin 3 Deluxe": {
+    "title": "Pikmin 3 Deluxe",
+    "runner": "Claris",
+    "estimate": "0:45:00",
+    "category": "Any% Normal — Switch"
+  },
+  "Styx: Shards of Darkness": {
+    "title": "Styx: Shards of Darkness",
+    "runner": "Tohelot",
+    "estimate": "0:51:00",
+    "category": "Any% — PC"
+  },
+  "Nintendogs": {
+    "title": "Nintendogs",
+    "runner": "ZooKetra",
+    "estimate": "0:25:00",
+    "category": "All Beginner Contest Golds — DS"
+  },
+  "Zoda's Revenge: Startropics II": {
+    "title": "Zoda's Revenge: Startropics II",
+    "runner": "thetantalus",
+    "estimate": "1:05:00",
+    "category": "any% — NES"
+  },
+  "Tiny Toon Adventures": {
+    "title": "Tiny Toon Adventures",
+    "runner": "junkyard_dave",
+    "estimate": "0:15:00",
+    "category": "Any% — NES"
+  },
+  "Batman: The Video Game": {
+    "title": "Batman: The Video Game",
+    "runner": "tako",
+    "estimate": "0:18:00",
+    "category": "Normal — Genesis"
+  },
+  "Ninja Gaiden": {
+    "title": "Ninja Gaiden",
+    "runner": "Edo_87",
+    "estimate": "0:20:00",
+    "category": "pacifist — NES"
+  },
+  "Amagon": {
+    "title": "Amagon",
+    "runner": "stone_clive",
+    "estimate": "0:30:00",
+    "category": "any% — Famicom"
+  },
+  "Gimmick!": {
+    "title": "Gimmick!",
+    "runner": "Ryan Ford",
+    "estimate": "0:14:00",
+    "category": "Any% (Glitchless) — Famicom"
+  },
+  "Ghost 'N Goblins Resurrection": {
+    "title": "Ghost 'N Goblins Resurrection",
+    "runner": "TheMexicanRunner",
+    "estimate": "0:30:00",
+    "category": "1 Loop - Squire — Switch"
+  },
+  "Super Smash Bros. Brawl": {
+    "title": "Super Smash Bros. Brawl",
+    "runner": "Dragolina",
+    "estimate": "0:15:00",
+    "category": "All Star — Wii"
+  },
+  "LEGO Star Wars: The Complete Saga (DS)": {
+    "title": "LEGO Star Wars: The Complete Saga (DS)",
+    "runner": "LaserTrap_",
+    "estimate": "0:34:00",
+    "category": "Any% — DS"
+  },
+  "Record of Lodoss War: Deedlit in Wonder Labyrinth": {
+    "title": "Record of Lodoss War: Deedlit in Wonder Labyrinth",
+    "runner": "BOWIEtheHERO",
+    "estimate": "0:52:00",
+    "category": "any% No OoB — PC"
+  },
+  "Cave Story 3D": {
+    "title": "Cave Story 3D",
+    "runner": "Supreme Dirt",
+    "estimate": "1:22:00",
+    "category": "Reverse Boss Adventure — 3DS"
+  },
+  "Metroid Prime 2: Echoes": {
+    "title": "Metroid Prime 2: Echoes",
+    "runner": "MrMiguel",
+    "estimate": "1:25:00",
+    "category": "Any% — GameCube"
+  },
+  "Shadow of the Colossus": {
+    "title": "Shadow of the Colossus",
+    "runner": "TikTak",
+    "estimate": "2:00:00",
+    "category": "Any% Hard — PS4"
+  },
+  "Kirby: Nightmare in Dream Land": {
+    "title": "Kirby: Nightmare in Dream Land",
+    "runner": "Mr_Shasta, Rox",
+    "estimate": "0:40:00",
+    "category": "Meta Knightmare Race — GBA"
+  },
+  "Kirby's Dream Collection": {
+    "title": "Kirby's Dream Collection",
+    "runner": "Darksol188",
+    "estimate": "0:25:00",
+    "category": "All Challenges — Wii U"
+  },
+  "Super Mario Odyssey": {
+    "title": "Super Mario Odyssey",
+    "runner": "Dangers",
+    "estimate": "1:50:00",
+    "category": "Talkatoo% — Switch"
+  },
+  "Daily Recap - Monday": {
+    "title": "Daily Recap - Monday",
+    "runner": "Interview Crew",
+    "estimate": "0:15:00",
+    "category": "Recap% —"
+  },
+  "Bonus Game 1 - Paper Mario": {
+    "title": "Bonus Game 1 - Paper Mario",
+    "runner": "JCog",
+    "estimate": "0:50:00",
+    "category": "Stop 'n' Swop — N64"
+  },
+  "Devil May Cry 5: Special Edition": {
+    "title": "Devil May Cry 5: Special Edition",
+    "runner": "TheScruffington",
+    "estimate": "1:10:00",
+    "category": "New Game Vergil Human — PS5"
+  },
+  "Bayonetta": {
+    "title": "Bayonetta",
+    "runner": "Galasrinie",
+    "estimate": "1:55:00",
+    "category": "New Game Any% Normal No Infinite Flute Glitch — PC"
+  },
+  "Penumbra Trilogy": {
+    "title": "Penumbra Trilogy",
+    "runner": "bloodthunder",
+    "estimate": "1:05:00",
+    "category": "Any% (All 3 Games) — PC"
+  },
+  "FAITH": {
+    "title": "FAITH",
+    "runner": "Vynn",
+    "estimate": "0:10:00",
+    "category": "Any% — PC"
+  },
+  "Gone Golfing": {
+    "title": "Gone Golfing",
+    "runner": "teddyras",
+    "estimate": "0:20:00",
+    "category": "True Ending — PC"
+  },
+  "Teardown": {
+    "title": "Teardown",
+    "runner": "thewaffleman",
+    "estimate": "0:30:00",
+    "category": "any% — PC"
+  },
+  "Resogun": {
+    "title": "Resogun",
+    "runner": "Asuka424",
+    "estimate": "0:33:00",
+    "category": "Acis-Mefitis (Any%, Experienced) — PS5"
+  },
+  "Vectronom": {
+    "title": "Vectronom",
+    "runner": "badBlackShark",
+    "estimate": "0:20:00",
+    "category": "Any% — PC"
+  },
+  "Blast Corps": {
+    "title": "Blast Corps",
+    "runner": "niedle",
+    "estimate": "0:30:00",
+    "category": "Any%(NTSC-1.0) — N64"
+  },
+  "Chameleon Twist": {
+    "title": "Chameleon Twist",
+    "runner": "Kefka14",
+    "estimate": "0:15:00",
+    "category": "Any% — N64"
+  },
+  "Yoshi's Story": {
+    "title": "Yoshi's Story",
+    "runner": "LoveBot",
+    "estimate": "0:18:00",
+    "category": "Any% (JP, N64) — N64"
+  },
+  "Indiana Jones' Greatest Adventures": {
+    "title": "Indiana Jones' Greatest Adventures",
+    "runner": "janglestorm",
+    "estimate": "0:33:00",
+    "category": "Any% Easy — SNES"
+  },
+  "Bloodstained: Ritual of the Night": {
+    "title": "Bloodstained: Ritual of the Night",
+    "runner": "bane",
+    "estimate": "0:25:00",
+    "category": "Miriam Any%, MG — PC"
+  },
+  "Castlevania: Dawn of Sorrow": {
+    "title": "Castlevania: Dawn of Sorrow",
+    "runner": "Diagon",
+    "estimate": "0:46:00",
+    "category": "Soma All Bosses — DS"
+  },
+  "Castlevania 64": {
+    "title": "Castlevania 64",
+    "runner": "ty2358",
+    "estimate": "0:47:00",
+    "category": "Reinhardt vs. Carrie bidwar — N64"
+  },
+  "Castlevania: Bloodlines": {
+    "title": "Castlevania: Bloodlines",
+    "runner": "Mannix86",
+    "estimate": "0:35:00",
+    "category": "any% Eric Normal — Genesis"
+  },
+  "Castlevania: Rondo of Blood": {
+    "title": "Castlevania: Rondo of Blood",
+    "runner": "AgentWyvern",
+    "estimate": "0:25:00",
+    "category": "Any% — Wii VC"
+  },
+  "Castlevania": {
+    "title": "Castlevania",
+    "runner": "2snek, shockra_tease, freeland",
+    "estimate": "0:14:00",
+    "category": "Any% Race — NES"
+  },
+  "Battletoads": {
+    "title": "Battletoads",
+    "runner": "TheMexicanRunner",
+    "estimate": "0:36:00",
+    "category": "100% — NES"
+  },
+  "La-Mulana Remake": {
+    "title": "La-Mulana Remake",
+    "runner": "Timopy",
+    "estimate": "1:35:00",
+    "category": "Any% no Pointer Manipulation — PC"
+  },
+  "Dishonored": {
+    "title": "Dishonored",
+    "runner": "lurven",
+    "estimate": "0:40:00",
+    "category": "Any% (Yes) — PC"
+  },
+  "Horizon Zero Dawn": {
+    "title": "Horizon Zero Dawn",
+    "runner": "Elkjaer",
+    "estimate": "2:00:00",
+    "category": "NG+ Ultra Hard — PS4"
+  },
+  "Bonus Game 2 - Grand Theft Auto III": {
+    "title": "Bonus Game 2 - Grand Theft Auto III",
+    "runner": "KZ_FREW",
+    "estimate": "1:14:00",
+    "category": "Any% — PC"
+  },
+  "Metal Gear Solid 3: Snake Eater HD": {
+    "title": "Metal Gear Solid 3: Snake Eater HD",
+    "runner": "ApacheSmash",
+    "estimate": "1:18:00",
+    "category": "European Extreme — PS3"
+  },
+  "Daily Recap - Tuesday": {
+    "title": "Daily Recap - Tuesday",
+    "runner": "Interview Crew",
+    "estimate": "0:15:00",
+    "category": "Recap% —"
+  },
+  "Resident Evil 7 biohazard": {
+    "title": "Resident Evil 7 biohazard",
+    "runner": "KatLink, CaptainEzekiel",
+    "estimate": "1:37:00",
+    "category": "Any% New Game Easy Race — PC"
+  },
+  "Dead Space": {
+    "title": "Dead Space",
+    "runner": "LivingLooneyBin",
+    "estimate": "1:40:00",
+    "category": "any% — PC"
+  },
+  "Little Nightmares II": {
+    "title": "Little Nightmares II",
+    "runner": "Kenhie",
+    "estimate": "1:25:00",
+    "category": "Any% — PC"
+  },
+  "Star Wars: Republic Commando": {
+    "title": "Star Wars: Republic Commando",
+    "runner": "Utsu",
+    "estimate": "1:50:00",
+    "category": "Any% Easy — PC"
+  },
+  "Kororinpa: Marble Mania": {
+    "title": "Kororinpa: Marble Mania",
+    "runner": "callumbal",
+    "estimate": "0:32:00",
+    "category": "All Normal Levels NG+ — Wii"
+  },
+  "Coca Cola Kid": {
+    "title": "Coca Cola Kid",
+    "runner": "Grumpmeister, sharif",
+    "estimate": "0:15:00",
+    "category": "Any% Race — Game Gear"
+  },
+  "Twinkle Star Sprites": {
+    "title": "Twinkle Star Sprites",
+    "runner": "r_parenthesis",
+    "estimate": "0:15:00",
+    "category": "LEVEL8 GAME SPEED — Dreamcast"
+  },
+  "Mischief Makers": {
+    "title": "Mischief Makers",
+    "runner": "JoeyBaby69",
+    "estimate": "1:05:00",
+    "category": "Any% — N64"
+  },
+  "Earthworm Jim": {
+    "title": "Earthworm Jim",
+    "runner": "RIFT20XX",
+    "estimate": "0:30:00",
+    "category": "Any% Normal SNES — SNES"
+  },
+  "Golden Sun: The Lost Age": {
+    "title": "Golden Sun: The Lost Age",
+    "runner": "Plexa",
+    "estimate": "6:06:00",
+    "category": "Any% No Save & Quit — Wii U VC"
+  },
+  "GeoGuessr": {
+    "title": "GeoGuessr",
+    "runner": "havrd",
+    "estimate": "0:35:00",
+    "category": "Perfect Score — PC"
+  },
+  "Ratchet & Clank: Into the Nexus": {
+    "title": "Ratchet & Clank: Into the Nexus",
+    "runner": "mobius",
+    "estimate": "0:25:00",
+    "category": "NG+ — PS3"
+  },
+  "Crash Bandicoot 4: It's About Time": {
+    "title": "Crash Bandicoot 4: It's About Time",
+    "runner": "Jordy925",
+    "estimate": "1:35:00",
+    "category": "Any% — PC"
+  },
+  "Bonus Game 3 - Hitman 3": {
+    "title": "Bonus Game 3 - Hitman 3",
+    "runner": "Yannini",
+    "estimate": "1:00:00",
+    "category": "Trilogy Campaign SA/SO Professional — PC"
+  },
+  "Ghostrunner": {
+    "title": "Ghostrunner",
+    "runner": "Blaidan",
+    "estimate": "0:45:00",
+    "category": "Any% Inbounds — PC"
+  },
+  "Mass Effect 2": {
+    "title": "Mass Effect 2",
+    "runner": "MikeWave",
+    "estimate": "1:36:00",
+    "category": "NG+ w/ DLC — PC"
+  },
+  "Daily Recap - Wednesday": {
+    "title": "Daily Recap - Wednesday",
+    "runner": "Interview Crew",
+    "estimate": "0:15:00",
+    "category": "Recap% —"
+  },
+  "The Legend of Zelda: Majora's Mask": {
+    "title": "The Legend of Zelda: Majora's Mask",
+    "runner": "ClaireLynnD",
+    "estimate": "1:50:00",
+    "category": "100% No Source Requirement — N64"
+  },
+  "Untitled Goose Game": {
+    "title": "Untitled Goose Game",
+    "runner": "Thundar001, Tasselfoot",
+    "estimate": "0:32:00",
+    "category": "100% Co-op — PC"
+  },
+  "Fight Crab": {
+    "title": "Fight Crab",
+    "runner": "teddyras",
+    "estimate": "0:30:00",
+    "category": "All Main Stages — PC"
+  },
+  "I Am Fish": {
+    "title": "I Am Fish",
+    "runner": "Biglaw",
+    "estimate": "0:30:00",
+    "category": "Any% — PC"
+  },
+  "Link: The Faces of Evil": {
+    "title": "Link: The Faces of Evil",
+    "runner": "Grumpmeister",
+    "estimate": "1:00:00",
+    "category": "All Cutscenes — CD-i"
+  },
+  "Jazzpunk": {
+    "title": "Jazzpunk",
+    "runner": "KatLink",
+    "estimate": "0:45:00",
+    "category": "Special Agent — PC"
+  },
+  "Arabian Nights": {
+    "title": "Arabian Nights",
+    "runner": "Goost",
+    "estimate": "0:40:00",
+    "category": "any% with dialogue — PC"
+  },
+  "Jelly Drift": {
+    "title": "Jelly Drift",
+    "runner": "Konasumi",
+    "estimate": "0:08:00",
+    "category": "Any% — PC"
+  },
+  "Paris Chase": {
+    "title": "Paris Chase",
+    "runner": "Martinz",
+    "estimate": "0:25:00",
+    "category": "any% — PC"
+  },
+  "Racing Pitch": {
+    "title": "Racing Pitch",
+    "runner": "Chazoshtare",
+    "estimate": "0:17:00",
+    "category": "All Tracks — PC"
+  },
+  "Need For Speed: Porsche Unleashed": {
+    "title": "Need For Speed: Porsche Unleashed",
+    "runner": "CosmykTheDolfyn",
+    "estimate": "0:14:00",
+    "category": "All Tracks (Moby Dick) — GBA"
+  },
+  "Evolution Skateboarding": {
+    "title": "Evolution Skateboarding",
+    "runner": "PARTY MAN X",
+    "estimate": "0:23:00",
+    "category": "Arcade All Missions - Solid Snake — PS2"
+  },
+  "Wheels!": {
+    "title": "Wheels!",
+    "runner": "tbcr",
+    "estimate": "0:05:00",
+    "category": "Hard/Fast — PC"
+  },
+  "ALTF4": {
+    "title": "ALTF4",
+    "runner": "ChirpingMatt",
+    "estimate": "0:10:00",
+    "category": "Any% — PC"
+  },
+  "Time Gate: Knight's Chase": {
+    "title": "Time Gate: Knight's Chase",
+    "runner": "arnaud33200",
+    "estimate": "0:25:00",
+    "category": "any% — PC"
+  },
+  "Tomb Raider: Anniversary": {
+    "title": "Tomb Raider: Anniversary",
+    "runner": "Pursky",
+    "estimate": "0:30:00",
+    "category": "Any% No Bug Jump — PC"
+  },
+  "Ristar": {
+    "title": "Ristar",
+    "runner": "Haram_Scaram, Lizstar, ShimeGabriel, chronoon",
+    "estimate": "0:35:00",
+    "category": "Any% Race — Genesis"
+  },
+  "X-Men 2: Clone Wars": {
+    "title": "X-Men 2: Clone Wars",
+    "runner": "A-Frame",
+    "estimate": "0:32:00",
+    "category": "Any% — Genesis"
+  },
+  "Tempest of the Heavens and Earth": {
+    "title": "Tempest of the Heavens and Earth",
+    "runner": "Naro",
+    "estimate": "0:13:00",
+    "category": "Boss Attack — PC"
+  },
+  "Sonic Colors (DS)": {
+    "title": "Sonic Colors (DS)",
+    "runner": "speedbreaker55",
+    "estimate": "1:00:00",
+    "category": "All Red Rings — DS"
+  },
+  "Sonic 3D Blast": {
+    "title": "Sonic 3D Blast",
+    "runner": "AmberCyprian, TGH",
+    "estimate": "0:35:00",
+    "category": "Beat the Game 2 Players 1 Controller with TGH — Wii VC"
+  },
+  "Sonic the Hedgehog CD": {
+    "title": "Sonic the Hedgehog CD",
+    "runner": "JoeyBaby69",
+    "estimate": "0:25:00",
+    "category": "Beat The Game — Sega CD"
+  },
+  "Sonic Adventure 2: Battle": {
+    "title": "Sonic Adventure 2: Battle",
+    "runner": "Dage4",
+    "estimate": "0:40:00",
+    "category": "Hero Story vs Dark Story Bidwar — PC"
+  },
+  "Outer Wilds": {
+    "title": "Outer Wilds",
+    "runner": "thestrangepie",
+    "estimate": "1:00:00",
+    "category": "100% — PC"
+  },
+  "Destiny 2": {
+    "title": "Destiny 2",
+    "runner": "Scoobyfoo, Tokeegee, BystanderTim, Traderkirk, MunchaKoopas, Shockwve",
+    "estimate": "0:30:00",
+    "category": "Deep Stone Crypt — PC"
+  },
+  "Vanquish": {
+    "title": "Vanquish",
+    "runner": "DECosmic",
+    "estimate": "1:35:00",
+    "category": "Any% Casual w/ DLC — PC"
+  },
+  "Doom Eternal": {
+    "title": "Doom Eternal",
+    "runner": "BloodShot9001",
+    "estimate": "0:30:00",
+    "category": "Ancient Gods 2 No Major Glitches (Nightmare) — PC"
+  },
+  "Pokémon Black/White": {
+    "title": "Pokémon Black/White",
+    "runner": "Swiftalu, PulseEffects",
+    "estimate": "3:30:00",
+    "category": "Any% Black vs. White Race — DS"
+  },
+  "Daily Recap - Thursday": {
+    "title": "Daily Recap - Thursday",
+    "runner": "Interview Crew",
+    "estimate": "0:15:00",
+    "category": "Recap% —"
+  },
+  "Bonus Game 4 - Halo 2": {
+    "title": "Bonus Game 4 - Halo 2",
+    "runner": "Monopoli",
+    "estimate": "1:17:00",
+    "category": "any% — Xbox 360"
+  },
+  "Manifold Garden": {
+    "title": "Manifold Garden",
+    "runner": "Nerd_Squared",
+    "estimate": "0:30:00",
+    "category": "All God Cubes — PC"
+  },
+  "Return to Castle Wolfenstein": {
+    "title": "Return to Castle Wolfenstein",
+    "runner": "Heros5k",
+    "estimate": "0:50:00",
+    "category": "Full Game Any% - I am Death incarnate! — PC"
+  },
+  "Heads Run": {
+    "title": "Heads Run",
+    "runner": "killingpepsi",
+    "estimate": "0:17:00",
+    "category": "Normal 50 — PC"
+  },
+  "Charlie Murder": {
+    "title": "Charlie Murder",
+    "runner": "MortimerNova",
+    "estimate": "0:38:00",
+    "category": "100% — PC"
+  },
+  "Contrast": {
+    "title": "Contrast",
+    "runner": "NallyQ",
+    "estimate": "0:18:00",
+    "category": "Any% — PC"
+  },
+  "Mega Man II": {
+    "title": "Mega Man II",
+    "runner": "KLM1187, KaiserKrister",
+    "estimate": "0:22:00",
+    "category": "any% — Game Boy"
+  },
+  "Evergate": {
+    "title": "Evergate",
+    "runner": "Sunnymuffin",
+    "estimate": "0:40:00",
+    "category": "Any% Unrestricted — PC"
+  },
+  "I wanna be the Knight in Shining Armor": {
+    "title": "I wanna be the Knight in Shining Armor",
+    "runner": "Chazoshtare",
+    "estimate": "0:20:00",
+    "category": "any% — PC"
+  },
+  "Ponpu": {
+    "title": "Ponpu",
+    "runner": "Bullets",
+    "estimate": "0:30:00",
+    "category": "Story Mode (No Level Swap) — PC"
+  },
+  "Wizard of Legend": {
+    "title": "Wizard of Legend",
+    "runner": "spacebrojakob",
+    "estimate": "0:15:00",
+    "category": "Any% (Glitchless) — PC"
+  },
+  "Super Mario Bros. 2": {
+    "title": "Super Mario Bros. 2",
+    "runner": "coolkid",
+    "estimate": "0:25:00",
+    "category": "All Levels All-Stars — SNES"
+  },
+  "Streets of Rage 4": {
+    "title": "Streets of Rage 4",
+    "runner": "themightybill",
+    "estimate": "0:50:00",
+    "category": "Arcade Cherry Mania — PC"
+  },
+  "Astro's Playroom": {
+    "title": "Astro's Playroom",
+    "runner": "Xeilius",
+    "estimate": "0:26:00",
+    "category": "Any% — PS5"
+  },
+  "Timeline": {
+    "title": "Timeline",
+    "runner": "havrd",
+    "estimate": "0:30:00",
+    "category": "any% — PC"
+  },
+  "Factorio": {
+    "title": "Factorio",
+    "runner": "Franqly",
+    "estimate": "1:45:00",
+    "category": "Any% Set Seed — PC"
+  },
+  "Black Mesa": {
+    "title": "Black Mesa",
+    "runner": "JohannVonVorst",
+    "estimate": "2:04:00",
+    "category": "No Void — PC"
+  },
+  "Half-Life: Opposing Force": {
+    "title": "Half-Life: Opposing Force",
+    "runner": "Muty",
+    "estimate": "0:30:00",
+    "category": "WON - Scriptless — PC"
+  },
+  "Celeste Custom Maps": {
+    "title": "Celeste Custom Maps",
+    "runner": "frozenflygone",
+    "estimate": "0:45:00",
+    "category": "Glyph All A-Sides — PC"
+  },
+  "Sonic Heroes (TAS)": {
+    "title": "Sonic Heroes (TAS)",
+    "runner": "Tales98, Malleo",
+    "estimate": "0:40:00",
+    "category": "Team Sonic — GameCube"
+  },
+  "DANCERUSH STARDOM": {
+    "title": "DANCERUSH STARDOM",
+    "runner": "Eijiken",
+    "estimate": "1:00:00",
+    "category": "Dance Showcase — Arcade"
+  },
+  "The Legend of Zelda: Breath of the Wild": {
+    "title": "The Legend of Zelda: Breath of the Wild",
+    "runner": "Johnnyboomr",
+    "estimate": "2:00:00",
+    "category": "All Dungeons — Switch"
+  },
+  "Bonus Game 5 - maimai FiNALE": {
+    "title": "Bonus Game 5 - maimai FiNALE",
+    "runner": "Starrodkirby86",
+    "estimate": "1:18:00",
+    "category": "Exhibition — Arcade"
+  },
+  "Fire Emblem: Three Houses": {
+    "title": "Fire Emblem: Three Houses",
+    "runner": "Claris, Kirbymastah",
+    "estimate": "1:35:00",
+    "category": "House Bid War Race — Switch"
+  },
+  "Daily Recap - Friday": {
+    "title": "Daily Recap - Friday",
+    "runner": "Interview Crew",
+    "estimate": "0:15:00",
+    "category": "Recap% —"
+  },
+  "The * BishiBashi": {
+    "title": "The * BishiBashi",
+    "runner": "billyjr82",
+    "estimate": "0:25:00",
+    "category": "All Stages — Arcade"
+  },
+  "Spongebob's Truth or Square": {
+    "title": "Spongebob's Truth or Square",
+    "runner": "Jaxler, BubbleBass",
+    "estimate": "0:30:00",
+    "category": "Any% — Xbox 360"
+  },
+  "Storks and Apes and Crocodiles": {
+    "title": "Storks and Apes and Crocodiles",
+    "runner": "SuperBen",
+    "estimate": "0:50:00",
+    "category": "100% — SNES"
+  },
+  "Let's Give Up": {
+    "title": "Let's Give Up",
+    "runner": "MrMightyMouse",
+    "estimate": "0:35:00",
+    "category": "6 Exit — SNES"
+  },
+  "Mega Man X2": {
+    "title": "Mega Man X2",
+    "runner": "Luiz Miguel",
+    "estimate": "0:40:00",
+    "category": "100% — SNES"
+  },
+  "QuackShot: Starring Donald Duck": {
+    "title": "QuackShot: Starring Donald Duck",
+    "runner": "tako",
+    "estimate": "0:28:00",
+    "category": "Any% — Genesis"
+  },
+  "Rayman": {
+    "title": "Rayman",
+    "runner": "Thextera",
+    "estimate": "1:22:00",
+    "category": "Any% PS1 — PS1"
+  },
+  "Donkey Kong Country 3: Dixie Kong's Double Trouble!": {
+    "title": "Donkey Kong Country 3: Dixie Kong's Double Trouble!",
+    "runner": "Anankoz",
+    "estimate": "1:03:00",
+    "category": "Any% — SNES"
+  },
+  "Super Meat Boy Forever": {
+    "title": "Super Meat Boy Forever",
+    "runner": "Ins_sane, Arfinde",
+    "estimate": "0:28:00",
+    "category": "Random Seed Any% Race — PC"
+  },
+  "Pokémon Emerald": {
+    "title": "Pokémon Emerald",
+    "runner": "AmoebaUK",
+    "estimate": "2:55:00",
+    "category": "any% Glitchless — GBA"
+  },
+  "Bowser's Fury": {
+    "title": "Bowser's Fury",
+    "runner": "fir_",
+    "estimate": "0:38:00",
+    "category": "Any% (No Amiibo) — Switch"
+  },
+  "Mario Kart 64": {
+    "title": "Mario Kart 64",
+    "runner": "abney317",
+    "estimate": "0:35:00",
+    "category": "150cc All Cups (Skips) — N64"
+  },
+  "Super Metroid": {
+    "title": "Super Metroid",
+    "runner": "ShinyZeni, Oatsngoats, Behemoth87",
+    "estimate": "1:20:00",
+    "category": "100% Race — SNES"
+  },
+  "Super Mario 64": {
+    "title": "Super Mario 64",
+    "runner": "Bubzia",
+    "estimate": "2:15:00",
+    "category": "70 Star Blindfolded — Wii VC"
+  },
+  "Dark Souls 3": {
+    "title": "Dark Souls 3",
+    "runner": "MattApocaalypse",
+    "estimate": "1:05:00",
+    "category": "Any% glitchless — PC"
+  },
+  "Bonus Game 6 - Demon's Souls (Remake / 2020)": {
+    "title": "Bonus Game 6 - Demon's Souls (Remake / 2020)",
+    "runner": "BertoPlease",
+    "estimate": "1:00:00",
+    "category": "Any% Current Patch — PS5"
+  },
+  "Super Mario Bros. 3": {
+    "title": "Super Mario Bros. 3",
+    "runner": "mitchflowerpower, TheHaxor",
+    "estimate": "1:25:00",
+    "category": "Any% Warpless co-op — NES"
+  },
+  "Kingdom Hearts II Final Mix": {
+    "title": "Kingdom Hearts II Final Mix",
+    "runner": "ninten866",
+    "estimate": "3:15:00",
+    "category": "Critical Mode any% — PS4"
+  },
+  "Finale": {
+    "title": "Finale",
+    "runner": "GDQ Staff",
+    "estimate": "0:10:00",
+    "category": "The End — SGDQ"
+  }
+}

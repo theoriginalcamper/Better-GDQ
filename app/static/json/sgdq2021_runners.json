@@ -1,0 +1,650 @@
+{
+  "1davidj": {
+    "link": "https://twitch.tv/1davidj",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/1davidj-profile_image-cf2f56c6d386a46a-300x300.png"
+  },
+  "2snek": {
+    "link": "https://twitch.tv/2snek",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/61266b0a-e300-412f-b6a0-cb2442c8a4c4-profile_image-300x300.png"
+  },
+  "A-Frame": {
+    "link": "https://twitch.tv/a_frame",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/bf98904c-fa08-4d8e-aa28-2c7a52fecce6-profile_image-300x300.png"
+  },
+  "AgentWyvern": {
+    "link": "https://twitch.tv/agentwyvern",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/146003d4-b5bd-4f5e-8189-4f3a9b46e6a5-profile_image-300x300.png"
+  },
+  "AmberCyprian": {
+    "link": "https://twitch.tv/ambercyprian",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/9864b99c-c248-49e2-b8a4-081ecb94b2c5-profile_image-300x300.png"
+  },
+  "AmoebaUK": {
+    "link": "https://twitch.tv/amoebauk",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/amoebauk-profile_image-5540be9707f8a70c-300x300.png"
+  },
+  "Anankoz": {
+    "link": "https://twitch.tv/anankoz",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/21e11f34-1bbd-4baf-9c3f-633bf655d8c9-profile_image-300x300.png"
+  },
+  "ApacheSmash": {
+    "link": "https://twitch.tv/apachesmash",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/e2bb4c84-8e39-46a9-81b7-53303f83b0e5-profile_image-300x300.png"
+  },
+  "Arfinde": {
+    "link": "https://twitch.tv/arfinde",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/fc556a03-918b-4c76-a14c-020c7cb3fb77-profile_image-300x300.png"
+  },
+  "Asuka424": {
+    "link": "https://twitch.tv/asuka424",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/asuka424-profile_image-628da81a07e0af27-300x300.jpeg"
+  },
+  "BOWIEtheHERO": {
+    "link": "https://twitch.tv/bowiethehero",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/e2f13d486c226ca4-profile_image-300x300.png"
+  },
+  "Behemoth87": {
+    "link": "https://twitch.tv/behemoth87",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b46547e-5fdd-432e-965c-46a63eaa37df-profile_image-300x300.png"
+  },
+  "BertoPlease": {
+    "link": "https://twitch.tv/bertoplease",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/e8cbc9d7-a4c4-4d60-b8e6-efd56f6ddc2a-profile_image-300x300.png"
+  },
+  "Biglaw": {
+    "link": "https://twitch.tv/biglaw",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/79b8045d-01f1-4eef-80c4-5483a08742bd-profile_image-300x300.png"
+  },
+  "Blaidan": {
+    "link": "https://twitch.tv/Blaidan",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/080b7709-2c18-436a-9840-a39af3942cd0-profile_image-300x300.png"
+  },
+  "BloodShot9001": {
+    "link": "https://twitch.tv/bloodshot9001",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/cdc5bc20-f95d-4ef1-adb2-7211ad4568ec-profile_image-300x300.png"
+  },
+  "BlueMetal": {
+    "link": "https://twitch.tv/bluemetal",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/bluemetal-profile_image-1471baf1db92c8ba-300x300.jpeg"
+  },
+  "BubbleBass": {
+    "link": "https://twitch.tv/bubblebastard",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/ae8eb1c5-33d0-42b7-b69c-59d4ac952ec4-profile_image-300x300.png"
+  },
+  "Bubzia": {
+    "link": "https://twitch.tv/bubzia",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/24a0bf50-2944-43c6-8758-49460d8fb6ea-profile_image-300x300.png"
+  },
+  "Bullets": {
+    "link": "https://twitch.tv/isbullets",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/2d9e8fa5-5b90-4101-80da-521a35bea4a6-profile_image-300x300.png"
+  },
+  "BystanderTim": {
+    "link": "https://twitch.tv/bystandertim_",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/bystandertim_-profile_image-27cb0fbc5c9c0a06-300x300.jpeg"
+  },
+  "Callmeliam": {
+    "link": "https://twitch.tv/callmeliam",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/221134f1-760d-408d-8d7c-3bb7b274f4d7-profile_image-300x300.png"
+  },
+  "CaptainEzekiel": {
+    "link": "https://twitch.tv/captain_ezekiel",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/1f49ba16-68cf-49f7-ac4f-55587123503c-profile_image-300x300.png"
+  },
+  "Chazoshtare": {
+    "link": "https://twitch.tv/chazoshtare",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/139296f1-e833-4695-805d-8a64478cad33-profile_image-300x300.png"
+  },
+  "ChirpingMatt": {
+    "link": "https://twitch.tv/chirpingmatt",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/chirpingmatt-profile_image-e45f057d3b918b68-300x300.jpeg"
+  },
+  "ClaireLynnD": {
+    "link": "https://twitch.tv/clairelynnd",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/49d62381-8d84-4b87-89ba-8ab2471a9142-profile_image-300x300.jpg"
+  },
+  "Claris": {
+    "link": "https://twitch.tv/claris",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/a58d0cff-ff00-4754-b6e1-8c70e597f9d4-profile_image-300x300.png"
+  },
+  "Clipper": {
+    "link": "https://twitch.tv/clipper",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/5ef2a019-2aac-4391-b22d-601ed5cf8617-profile_image-300x300.png"
+  },
+  "CosmykTheDolfyn": {
+    "link": "https://twitch.tv/cosmykthedolfyn",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/cosmykthedolfyn-profile_image-74a7e9ca557865e8-300x300.jpeg"
+  },
+  "DECosmic": {
+    "link": "https://twitch.tv/decosmic",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/80417128-52d0-4d21-91a5-80fd98a06680-profile_image-300x300.png"
+  },
+  "Dage4": {
+    "link": "https://twitch.tv/dage4",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/dage4-profile_image-1842f1749c2c16b0-300x300.png"
+  },
+  "Dangers": {
+    "link": "https://twitch.tv/Dangers",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/c20b2a48-20cc-4b1a-8848-47d82a0decc5-profile_image-300x300.png"
+  },
+  "Darksol188": {
+    "link": "https://twitch.tv/darksol188",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/4c94a406-4e3e-4387-96aa-89d2e82ca678-profile_image-300x300.png"
+  },
+  "Dayoman": {
+    "link": "https://twitch.tv/dayoman",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/3cae2ed4-c9c1-49b7-b6b0-2364a0491baa-profile_image-300x300.png"
+  },
+  "Diagon": {
+    "link": "https://twitch.tv/diagongdx",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/4c094b95-c034-41b2-9fc7-dab07e302eff-profile_image-300x300.png"
+  },
+  "Dragolina": {
+    "link": "https://twitch.tv/dragolina",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/7952687d-0469-44d9-91b4-4b9f9ac80b01-profile_image-300x300.png"
+  },
+  "Edo_87": {
+    "link": "https://twitch.tv/edo_87",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/edo_87-profile_image-44891053d232038a-300x300.jpeg"
+  },
+  "Eijiken": {
+    "link": "https://twitch.tv/eijiken",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/3def299b-b3a9-452f-ae11-cfec52b16224-profile_image-300x300.png"
+  },
+  "Elkjaer": {
+    "link": "https://twitch.tv/elkjaertv",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/05c43a53-d078-493a-8cdc-a16f3f5fc3dd-profile_image-300x300.png"
+  },
+  "Franqly": {
+    "link": "https://twitch.tv/franqly",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/0fc5799f-dde0-4cad-b9c7-0eaa3f1b7830-profile_image-300x300.png"
+  },
+  "GDQ Staff": {
+    "link": "https://twitch.tv/gamesdonequick",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/b3fc1f16-0818-4121-8711-c31b9469bc21-profile_image-300x300.png"
+  },
+  "Galasrinie": {
+    "link": "https://twitch.tv/galasrinie",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/a58304a1-474f-473b-96f8-be739d11c62d-profile_image-300x300.png"
+  },
+  "GlyphDX": {
+    "link": "https://twitch.tv/glyphdx",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/c5e65ec7-d119-4b62-b58f-19ee6b3f9494-profile_image-300x300.png"
+  },
+  "Goost": {
+    "link": "https://twitch.tv/goost91",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/goost91-profile_image-ac5e9916bb28c909-300x300.png"
+  },
+  "Grumpmeister": {
+    "link": "https://twitch.tv/grumpmeister",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/d0b007b6-48d5-42fa-8ab3-fa0711991ddb-profile_image-300x300.png"
+  },
+  "Haram_Scaram": {
+    "link": "https://twitch.tv/haram_scaram",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/12a4dc7b-0553-4df8-9604-8b2bc3c2a683-profile_image-300x300.png"
+  },
+  "Heros5k": {
+    "link": "https://twitch.tv/heros5k",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/60866d4b-049e-4855-a683-9273dea00e25-profile_image-300x300.png"
+  },
+  "Ins_sane": {
+    "link": "https://twitch.tv/ins_sane",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/e6ebd62b-cd65-42d9-ba70-d8caba31c012-profile_image-300x300.png"
+  },
+  "Interview Crew": {
+    "link": null,
+    "logo": null
+  },
+  "JCog": {
+    "link": "https://twitch.tv/jcog",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/719451cc-9e1b-4d1e-baf1-6f880bb4614a-profile_image-300x300.png"
+  },
+  "Jaxler": {
+    "link": "https://twitch.tv/jaxler1",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/jaxler1-profile_image-87f8e2e4f70d6dd6-300x300.png"
+  },
+  "JeviLevee": {
+    "link": "https://twitch.tv/jevilevee",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/249cc0a1-fd65-4242-a206-b6da18d323e2-profile_image-300x300.png"
+  },
+  "JoeyBaby69": {
+    "link": "https://twitch.tv/joeybaby69",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/4ee7d844-1a5a-4a74-a2ea-768c57454514-profile_image-300x300.png"
+  },
+  "JohannVonVorst": {
+    "link": "https://twitch.tv/johannvonvorst",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/df1db823-a76e-4dda-a2bc-746a0c0674b5-profile_image-300x300.png"
+  },
+  "Johnnyboomr": {
+    "link": "https://twitch.tv/johnnyboomr",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/388c20fe-ec25-496b-b7b8-4e42deff7941-profile_image-300x300.png"
+  },
+  "Jordy925": {
+    "link": "https://www.youtube.com/channel/UCpIOGHurYTXHeUOd8HcB0Pg",
+    "logo": null
+  },
+  "KLM1187": {
+    "link": "https://twitch.tv/klm1187",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/93b3896b-de92-4ac3-bcb3-d5fdf205dcf0-profile_image-300x300.png"
+  },
+  "KZ_FREW": {
+    "link": "https://twitch.tv/kz_frew",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/15c503a23990fb89-profile_image-300x300.png"
+  },
+  "KaiserKrister": {
+    "link": "https://twitch.tv/kaiserkrister",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/98c16b4f-f26e-4911-90c9-a792c03c355e-profile_image-300x300.png"
+  },
+  "KatLink": {
+    "link": "https://twitch.tv/katlink",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/a3be24cb-0f80-4a6a-8d12-834401d27c70-profile_image-300x300.png"
+  },
+  "Kefka14": {
+    "link": "https://twitch.tv/kefka14",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/81e8b866-0511-4745-a248-5764082c863d-profile_image-300x300.png"
+  },
+  "Kenhie": {
+    "link": "https://twitch.tv/kenhie",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/094996bb-6a87-4b3e-bd6a-08aa023142dc-profile_image-300x300.png"
+  },
+  "Kirbymastah": {
+    "link": "https://twitch.tv/kirbymastah",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/kirbymastah-profile_image-7bef33616aa2eee6-300x300.png"
+  },
+  "Konasumi": {
+    "link": "https://twitch.tv/konasumi",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/f2407f7c-9435-4583-a8c9-904642687065-profile_image-300x300.png"
+  },
+  "LaserTrap_": {
+    "link": "https://twitch.tv/lasertrap_",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/lasertrap_-profile_image-a07971acf1128a4b-300x300.png"
+  },
+  "Lemuura": {
+    "link": "https://twitch.tv/lemuura",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/a8f41e44-e646-40b2-80d3-f030ac0084c7-profile_image-300x300.png"
+  },
+  "LivingLooneyBin": {
+    "link": "https://twitch.tv/livinglooneybin",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/95f2c4da-e15d-46b7-b9bb-d6c3cf829065-profile_image-300x300.png"
+  },
+  "Lizstar": {
+    "link": "https://twitch.tv/lizstar",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/9c220420-fd36-4c96-a9df-cfac357c8edb-profile_image-300x300.jpeg"
+  },
+  "LoveBot": {
+    "link": "https://twitch.tv/lovebot",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/cd65ff40-fb43-425b-af6c-19ab7f442880-profile_image-300x300.png"
+  },
+  "Luiz Miguel": {
+    "link": "https://twitch.tv/luizmiguel",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/ffb3157b1d772cb2-profile_image-300x300.png"
+  },
+  "Malleo": {
+    "link": "https://twitch.tv/tasmalleo",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/78f4c417-745d-48ee-8cad-e27e2bd48e4e-profile_image-300x300.png"
+  },
+  "Mannix86": {
+    "link": "https://twitch.tv/mannix86",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/d69c3b61-41da-47b2-958d-05740bad6294-profile_image-300x300.png"
+  },
+  "Martinz": {
+    "link": "https://twitch.tv/martinz",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/33e2e4b2-dd72-42b7-941e-d589a3e95bb4-profile_image-300x300.png"
+  },
+  "MattApocaalypse": {
+    "link": "https://twitch.tv/mattapocaalypse",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/a17243ec-5cbe-4cad-ae4e-f62a73f459a1-profile_image-300x300.png"
+  },
+  "Mattmatt": {
+    "link": "https://twitch.tv/mattmatt",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/dc77b5d4-b3d9-4938-8595-d47931d357b1-profile_image-300x300.png"
+  },
+  "MikeWave": {
+    "link": "https://twitch.tv/mike__wave",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/d4f40c98-4201-4cb0-99cb-96fb9c71b7b5-profile_image-300x300.png"
+  },
+  "Monopoli": {
+    "link": "https://twitch.tv/mistermonopoli",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/mistermonopoli-profile_image-318f0081b195f032-300x300.png"
+  },
+  "MortimerNova": {
+    "link": "https://twitch.tv/mortimernova",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/7858ef78-32a3-4350-a3fd-b7e537590c6d-profile_image-300x300.png"
+  },
+  "MrMightyMouse": {
+    "link": "https://twitch.tv/mrmightymouse_",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/7a80ccdc-6656-4e1d-82f4-3e2c87c03a3f-profile_image-300x300.png"
+  },
+  "MrMiguel": {
+    "link": "https://twitch.tv/MrMiguel211",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/b63ae397-8f1a-4a71-a165-27c0f5003970-profile_image-300x300.png"
+  },
+  "Mr_Shasta": {
+    "link": "https://twitch.tv/Mr_Shasta",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/cf28129c-5a31-4a92-917b-7c66ea75efa5-profile_image-300x300.png"
+  },
+  "MunchaKoopas": {
+    "link": "https://twitch.tv/munchakoopas",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/munchakoopas-profile_image-8f8e4e965f9b8192-300x300.jpeg"
+  },
+  "Muty": {
+    "link": "https://twitch.tv/muty71",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/bb51da84-9eec-4594-a550-f344ecde7748-profile_image-300x300.png"
+  },
+  "NallyQ": {
+    "link": "https://www.twitch.tv/nallyq",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/cf5c819c-a3d7-4142-8283-7ad5a147135a-profile_image-300x300.jpeg"
+  },
+  "Naro": {
+    "link": "https://twitch.tv/naro",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/naro-profile_image-fc3c3d96ba6a6bab-300x300.png"
+  },
+  "Nerd_Squared": {
+    "link": "https://twitch.tv/n3rd_squared",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/14691025-6e7b-47af-b40f-a878fae01edd-profile_image-300x300.png"
+  },
+  "Nippo": {
+    "link": "https://twitch.tv/nippo4512",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/bbf31d10-690c-4e37-b64e-baec33c6b131-profile_image-300x300.png"
+  },
+  "Oatsngoats": {
+    "link": "https://twitch.tv/oatsngoats",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/1dfdbb6ed73b8fcf-profile_image-300x300.jpeg"
+  },
+  "PARTY MAN X": {
+    "link": "https://twitch.tv/partyman_x",
+    "logo": "https://static-cdn.jtvnw.net/user-default-pictures-uv/ce57700a-def9-11e9-842d-784f43822e80-profile_image-300x300.png"
+  },
+  "Plexa": {
+    "link": "https://twitch.tv/tl_plexa",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/tl_plexa-profile_image-ef0100ec47da9a53-300x300.png"
+  },
+  "PulseEffects": {
+    "link": "https://twitch.tv/PulseEffects",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/587541ea-00f8-4633-b59e-24ef8ecd1444-profile_image-300x300.png"
+  },
+  "Pursky": {
+    "link": "https://twitch.tv/impursky",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/ec97e35f-cac7-46d8-89f3-1494bda37797-profile_image-300x300.png"
+  },
+  "Pythonicus": {
+    "link": "https://twitch.tv/pythonicus",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/95f0341e-c3f6-40dd-997d-ce74cfee039f-profile_image-300x300.png"
+  },
+  "RIFT20XX": {
+    "link": "https://twitch.tv/rift20xx",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/1b473439-57ff-4e11-84eb-388646a21d02-profile_image-300x300.png"
+  },
+  "Rox": {
+    "link": "https://twitch.tv/rox_",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/448b5f3e-71b3-46c2-847d-772b309cdf5c-profile_image-300x300.png"
+  },
+  "Ryan Ford": {
+    "link": "https://twitch.tv/ryan_ford522",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/ryan_ford522-profile_image-00255c771e5addde-300x300.jpeg"
+  },
+  "Scoobyfoo": {
+    "link": "https://www.twitch.tv/scoobyfoo",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/024b897e-2839-494a-98c5-3d8c84534ae4-profile_image-300x300.png"
+  },
+  "ShimeGabriel": {
+    "link": "https://twitch.tv/shimegabriel",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/8daf8bfb-783f-4cd8-9733-3bf57cabf142-profile_image-300x300.png"
+  },
+  "ShinyZeni": {
+    "link": "https://twitch.tv/shinyzeni",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/ea98cda9-121c-43e5-91a7-1db192302eb1-profile_image-300x300.png"
+  },
+  "Shockwve": {
+    "link": "https://twitch.tv/shockwve",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/0f7cc4bc-f0ec-4d8a-9cc5-8a0f72953dfc-profile_image-300x300.png"
+  },
+  "Starrodkirby86": {
+    "link": "https://twitch.tv/starrodkirby86",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/5b24d645-bf37-4679-adc3-71620bdbbe1a-profile_image-300x300.png"
+  },
+  "Sunnymuffin": {
+    "link": "https://twitch.tv/SunnymuffinSR",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/4255792d-a4e0-425a-840b-0506a458bb5c-profile_image-300x300.png"
+  },
+  "SuperBen": {
+    "link": "https://twitch.tv/superben1755",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/68d1207f-cb17-41e3-bc85-83fb5a84eb5f-profile_image-300x300.png"
+  },
+  "Supreme Dirt": {
+    "link": null,
+    "logo": null
+  },
+  "Swiftalu": {
+    "link": "https://twitch.tv/swiftalu",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/0616170a-c338-437d-8cdf-a8ed4bcdfec1-profile_image-300x300.png"
+  },
+  "TGH": {
+    "link": "https://twitch.tv/tgh_sr",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/b5eafba8-8e39-4ad4-b859-3ba406fe5559-profile_image-300x300.png"
+  },
+  "Tales98": {
+    "link": "https://www.youtube.com/user/THC98",
+    "logo": null
+  },
+  "Tasselfoot": {
+    "link": "https://twitch.tv/tasselfoot",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/7f93d37c-5de9-48e8-bbcd-8f94086b9d71-profile_image-300x300.png"
+  },
+  "TheHaxor": {
+    "link": "https://twitch.tv/thehaxor",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/3ce60c2c-0c14-4468-a30d-c14ea853c9be-profile_image-300x300.png"
+  },
+  "TheMexicanRunner": {
+    "link": "https://twitch.tv/themexicanrunner",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/themexicanrunner-profile_image-ddebad8299ab2d41-300x300.png"
+  },
+  "TheScruffington": {
+    "link": "https://twitch.tv/thescruffington",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/eca1c4cc-e00b-4ce5-8bfd-d158a678fb99-profile_image-300x300.png"
+  },
+  "Thextera": {
+    "link": "https://twitch.tv/thextera_",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/thextera_-profile_image-7808af939cdcb944-300x300.png"
+  },
+  "Thundar001": {
+    "link": "https://twitch.tv/thundar001",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/2ff34c5f-645a-4dd8-aca7-82422fded722-profile_image-300x300.png"
+  },
+  "TikTak": {
+    "link": "https://twitch.tv/tiktak12",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/a7bfa9f7-4ac3-4596-ba1f-7915431b7181-profile_image-300x300.png"
+  },
+  "Tiki": {
+    "link": "https://twitch.tv/tiki",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/tiki-profile_image-5d1eff83985b1cd5-300x300.jpeg"
+  },
+  "Timopy": {
+    "link": "https://twitch.tv/timopy",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/timopy-profile_image-b29f27021e3d9e79-300x300.png"
+  },
+  "Tohelot": {
+    "link": "https://twitch.tv/tohelot",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/e37f1aab-1c46-4d81-8b4c-7d27e5f6f439-profile_image-300x300.png"
+  },
+  "Tokeegee": {
+    "link": "https://twitch.tv/tokeegee",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/4f712759-f5a3-4e49-967a-e37f745d9c06-profile_image-300x300.png"
+  },
+  "Traderkirk": {
+    "link": "https://twitch.tv/traderkirk",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/df13bd25-1a8a-4e29-9fb9-b05ab2e06b79-profile_image-300x300.png"
+  },
+  "Utsu": {
+    "link": "https://twitch.tv/utsuwu",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/924bc997-6b17-49c4-a8c2-840a7ec732f5-profile_image-300x300.png"
+  },
+  "Vynn": {
+    "link": "https://twitch.tv/vynnada",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6094fa2d-3eea-4c27-8c72-c9cb032c2fbd-profile_image-300x300.png"
+  },
+  "Xeilius": {
+    "link": "https://twitch.tv/xeilius",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/67671f13-799e-49a5-9b64-300884a4dc5f-profile_image-300x300.png"
+  },
+  "Yannini": {
+    "link": "https://twitch.tv/yannini",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/2192d4b4-e297-4860-afab-cccfb006fab8-profile_image-300x300.png"
+  },
+  "ZooKetra": {
+    "link": "https://twitch.tv/zooketra",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/a9683621-d9f3-41de-a0d2-84afbf90f159-profile_image-300x300.png"
+  },
+  "abney317": {
+    "link": "https://twitch.tv/abney317",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/abney317-profile_image-f2974b109e9c90ac-300x300.png"
+  },
+  "arnaud33200": {
+    "link": "https://twitch.tv/arnaud33200",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/010b1450-715f-4f48-82d6-b8d3d713adf9-profile_image-300x300.png"
+  },
+  "badBlackShark": {
+    "link": "https://twitch.tv/badblackshark",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/3916fdee-dcf2-49cb-b934-3fac9b475cf3-profile_image-300x300.png"
+  },
+  "bane": {
+    "link": "https://twitch.tv/nibaneco",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/060c8f00-f291-4b40-8244-7f875dd5230a-profile_image-300x300.png"
+  },
+  "billyjr82": {
+    "link": "https://twitch.tv/billyjr82",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/1651366e-b5bd-4bc3-b0b1-6281d0601e22-profile_image-300x300.png"
+  },
+  "bloodthunder": {
+    "link": "https://twitch.tv/BloodThunder",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/5ea79bd0e4e6a1b7-profile_image-300x300.png"
+  },
+  "callumbal": {
+    "link": "https://twitch.tv/callumbal",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/callumbal-profile_image-6b268fa3d4451aa6-300x300.jpeg"
+  },
+  "chronoon": {
+    "link": "https://twitch.tv/chronoon",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/chronoon-profile_image-8a2a0b1f3351628f-300x300.jpeg"
+  },
+  "coolkid": {
+    "link": "https://twitch.tv/coolkid",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/296c6a7503936b97-profile_image-300x300.png"
+  },
+  "darrenville": {
+    "link": "https://twitch.tv/darrenville",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/6b519d2d-ba6f-48f4-8007-d6254d008bc5-profile_image-300x300.png"
+  },
+  "fir_": {
+    "link": "https://twitch.tv/fir_",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/65615dc9-8bb1-4e87-a962-0ed10e59605a-profile_image-300x300.png"
+  },
+  "freeland": {
+    "link": "https://twitch.tv/freeland1787",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/b5f69e53-c3d7-4ae3-a232-c899ee31d60c-profile_image-300x300.png"
+  },
+  "frozenflygone": {
+    "link": "https://twitch.tv/frozenflygone",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/fdce0c77-42ce-4314-b31e-d8074396c749-profile_image-300x300.png"
+  },
+  "havrd": {
+    "link": "https://www.twitch.tv/havrd",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/havrd-profile_image-eb622874f46bde5c-300x300.jpeg"
+  },
+  "janglestorm": {
+    "link": "https://twitch.tv/janglestorm",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/janglestorm-profile_image-2b3538c872d5bc59-300x300.png"
+  },
+  "junkyard_dave": {
+    "link": "https://twitch.tv/junkyard_dave",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/79ef2d3b-f91f-452a-a003-36db42060103-profile_image-300x300.png"
+  },
+  "killingpepsi": {
+    "link": "https://twitch.tv/killingpepsi",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/killingpepsi-profile_image-4d37bb5f28e3ba9e-300x300.jpeg"
+  },
+  "lurven": {
+    "link": "https://twitch.tv/lurven_",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/504c1509-d994-43f9-a1e2-7803f8a5a67d-profile_image-300x300.png"
+  },
+  "mitchflowerpower": {
+    "link": "https://twitch.tv/mitchflowerpower",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/48f28e43-413d-4fe3-889b-9863a4ef16a6-profile_image-300x300.png"
+  },
+  "mobius": {
+    "link": "https://twitch.tv/suibom",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/suibom-profile_image-abd3f5b56cd5c3d4-300x300.jpeg"
+  },
+  "niedle": {
+    "link": "https://twitch.tv/niedle",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/dec6aa4c-ddec-4296-a414-1ceb1207f89c-profile_image-300x300.jpg"
+  },
+  "ninten866": {
+    "link": "https://twitch.tv/ninten",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/a730057b-1341-40cd-a7d8-751d058e38b4-profile_image-300x300.png"
+  },
+  "r_parenthesis": {
+    "link": "https://twitch.tv/r_parenthesis",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/3d96b631-789e-4214-9aa4-0b799f30dce9-profile_image-300x300.png"
+  },
+  "sharif": {
+    "link": "https://twitch.tv/sharfers",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/47b9a9c9-9cd8-4a88-989d-995476dc20fe-profile_image-300x300.png"
+  },
+  "shockra_tease": {
+    "link": "https://twitch.tv/shockra_tease",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/c0c9194f-4f40-4a76-be19-a9a4672098d7-profile_image-300x300.png"
+  },
+  "silentblackcat": {
+    "link": "https://www.twitch.tv/silentblackcat",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/7756d97d-dae8-4edd-8b4c-ffc5823f78a3-profile_image-300x300.png"
+  },
+  "spacebrojakob": {
+    "link": "https://twitch.tv/spacebrojakob",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/23499840-7bf2-48c3-8cee-0c31481f9309-profile_image-300x300.png"
+  },
+  "speedbreaker55": {
+    "link": "https://twitch.tv/sb55",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/661b603b-f9dd-4403-97a4-6225056681da-profile_image-300x300.png"
+  },
+  "stone_clive": {
+    "link": "https://twitch.tv/stone_clive",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/270b8857-b74c-4a7a-866b-0f39fe1c4818-profile_image-300x300.png"
+  },
+  "tako": {
+    "link": "https://twitch.tv/tako_pi",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/089d27f7-8a16-436f-a395-318b9d4b2583-profile_image-300x300.png"
+  },
+  "tbcr": {
+    "link": "https://twitch.tv/tbcr_",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/e1b136d0-b198-4213-9368-5629dc5c16ac-profile_image-300x300.jpeg"
+  },
+  "teddyras": {
+    "link": "https://twitch.tv/teddyras",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/69e39c55-1628-4305-951d-6d2f4cdfd87d-profile_image-300x300.png"
+  },
+  "themightybill": {
+    "link": "https://twitch.tv/themightybill",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/10e9bf64-283a-48d1-85c8-a71044b7a252-profile_image-300x300.png"
+  },
+  "thestrangepie": {
+    "link": "https://twitch.tv/thestrangepie",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/thestrangepie-profile_image-46c4b2aa3f48f353-300x300.png"
+  },
+  "thetantalus": {
+    "link": "https://twitch.tv/tantnjess",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/38eff369-76e7-4d5c-bd20-8957da949ac1-profile_image-300x300.png"
+  },
+  "thewaffleman": {
+    "link": "https://twitch.tv/thewafflemansr",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/2f5e99fc-81c5-4785-93ed-3ef9ed28fe53-profile_image-300x300.png"
+  },
+  "ty2358": {
+    "link": "https://twitch.tv/ty2358",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/ty2358-profile_image-bb0b01737c497c93-300x300.png"
+  },
+  "yoshipro": {
+    "link": "https://twitch.tv/yp__",
+    "logo": "https://static-cdn.jtvnw.net/jtv_user_pictures/b04b7c6b-5ec5-4a63-a742-da76a7bb292d-profile_image-300x300.png"
+  }
+}
