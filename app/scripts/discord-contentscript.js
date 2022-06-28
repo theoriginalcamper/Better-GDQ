@@ -31,7 +31,7 @@ $(document).ready(function() {
 						}
 					}
 			  });
-    		if(guildList.has('div[href^="/channels/140605087511740416/"]').length > 0 || guildList.has('div[href^="/channels/85369684286767104/"]').length > 0) { // Check if element has been found
+    		if(guildList.has('div[data-dnd-name="GamesDoneQuick"]').length > 0) { // Check if element has been found
 		      	console.log('Add Switch to Links Panel');
 		      	addInformationBar();
 						addTwitchSwitch();

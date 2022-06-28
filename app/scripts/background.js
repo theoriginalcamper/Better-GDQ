@@ -30,10 +30,10 @@ window.checkForUpdatedScheduleJSON = null;
 
 window.portForMessage = null;
 
-$.getJSON('/json/sgdq2021_runners.json').done(function(resp) {
+$.getJSON('/json/sgdq2022_runners.json').done(function(resp) {
     gdqRunnerJSON = resp;
 });
-$.getJSON('/json/sgdq2021_schedule.json').done(function(resp) {
+$.getJSON('/json/sgdq2022_schedule.json').done(function(resp) {
     gdqScheduleJSON = resp;
     gdqFuzzySearchArray = _.keys(gdqScheduleJSON);
     gdqFuzzySet = FuzzySet(gdqFuzzySearchArray);
@@ -59,18 +59,18 @@ chrome.runtime.onConnect.addListener(function (port) {
             if (msg.message == "request") {
                 $.ajax({
                   datatype: "json",
-                  url: "https://api.twitch.tv/kraken/streams/22510310",
+                  url: "https://api.twitch.tv/helix/streams?user_id=22510310",
                   beforeSend: function(req) {
-                    req.setRequestHeader('Accept', 'application/vnd.twitchtv.v5+json')
-                    req.setRequestHeader('Client-ID', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w')
+                    req.setRequestHeader('Authorization', 'Bearer tym9yvzwo3hh517huhxz67t3anx0m8')
+                    req.setRequestHeader('Client-Id', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w')
                   },
                   success: function(resp) {
                     console.log("Completed request to Twitch");
+                    console.log(resp.data[0].game_name);
+                    if (current_game != resp.data[0].game_name) {
+                        console.log("The Current Game being run is: " + resp.data[0].game_name);
 
-                    if (current_game != resp.stream.game) {
-                        console.log("The Current Game being run is: " + resp.stream.game);
-
-                        current_game = resp.stream.game;
+                        current_game = resp.data[0].game_name;
                         getSpeedrunData(current_game, port);
                         console.log(current_link);
                     } else {
@@ -85,17 +85,17 @@ chrome.runtime.onConnect.addListener(function (port) {
             } else if (msg.message == "refresh") {
                 $.ajax({
                   datatype: "json",
-                  url: "https://api.twitch.tv/kraken/streams/22510310",
+                  url: "https://api.twitch.tv/helix/streams?user_id=22510310",
                   beforeSend: function(req) {
-                    req.setRequestHeader('Accept', 'application/vnd.twitchtv.v5+json')
+                    req.setRequestHeader('Authorization', 'Bearer tym9yvzwo3hh517huhxz67t3anx0m8')
                     req.setRequestHeader('Client-ID', 'b7r2pt8m5gawx9u2ur2d9rx26xo6h7w')
                   },
                   success: function(resp) {
                     console.log("Completed request to Twitch");
-                    if (current_game != resp.stream.game) {
-                        console.log("The Current Game being run is: " + resp.stream.game);
+                    if (current_game != resp.data[0].game_name) {
+                        console.log("The Current Game being run is: " + resp.data[0].game_name);
 
-                        current_game = resp.stream.game;
+                        current_game = resp.data[0].game_name;
                         getSpeedrunData(current_game, port);
                         console.log(current_link);
                     } else {
@@ -168,12 +168,12 @@ window.getSpeedrunData = (game, port) => {
     if (typeof gameData == 'undefined') {
         // Query for gist version of Schedule JSON
         if (port.name == 'gdq') {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/14b728ad6c9a8663f20f37c04548e04f/raw/sgdq2021_schedule.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/d296f1028fb9cb4940bd6d2427cce2a3/raw/sgdq2022_schedule.json").done(function (resp) {
                 console.log("Request for Schedule JSON sent")
                 if (_.difference(_.keys(resp), _.keys(scheduleJSON)) == []) {
                     console.log("JSON is not updated");
                     checkForUpdatedScheduleJSON = setInterval(function() {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/14b728ad6c9a8663f20f37c04548e04f/raw/sgdq2021_schedule.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/d296f1028fb9cb4940bd6d2427cce2a3/raw/sgdq2022_schedule.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(scheduleJSON)) != []) {
                                 gdqScheduleJSON = resp;
                                 scheduleJSON = gdqScheduleJSON;
@@ -310,10 +310,10 @@ function getRunnerData(runners) {
     var runnersObject = _.reduce(runnersArray, function (object, runner) {
         var runnerData = runnerJSON[runner];
         if (typeof runnerData == "undefined") {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/06384571c259543ebe1ed714a784aa73/raw/sgdq2021_runners.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/c20fb19f6d5f6ebbd90fb8da15de0dac/raw/sgdq2022_runners.json").done(function (resp) {
                 if (_.difference(_.keys(resp), _.keys(runnerJSON)) == []) {
                     checkForUpdatedRunnerJSON = setInterval(function() {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/06384571c259543ebe1ed714a784aa73/raw/sgdq2021_runners.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/c20fb19f6d5f6ebbd90fb8da15de0dac/raw/sgdq2022_runners.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(runnerJSON)) != []) {
                                 gdqRunnerJSON = resp;
                                 runnerJSON = gdqRunnerJSON;

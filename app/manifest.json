@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "3.5.0",
+  "version": "3.6.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -173,7 +173,7 @@
     "html/twitch-chat.html",
     "fonts/fontawesome-webfont.woff",
     "fonts/fontawesome-webfont.woff2",
-    "json/sgdq2021_runners.json",
+    "json/sgdq2022_runners.json",
     "json/esa_schedule.json"
   ]
 }
