@@ -100,7 +100,7 @@ $(document).ready(function() {
 
           if ($('input[name="theater-mode"]').bootstrapSwitch('state')) {
               $('#twitch').html('');
-              $.get(chrome.extension.getURL('/html/quakenet-theater-mode.html'), function (data) {
+              $.get(chrome.runtime.getURL('/html/quakenet-theater-mode.html'), function (data) {
                   console.log("Adding theater mode!")
                   console.log($.parseHTML(data));
                   $('footer').after($.parseHTML(data));

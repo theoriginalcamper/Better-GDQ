@@ -30,10 +30,10 @@ window.checkForUpdatedScheduleJSON = null;
 
 window.portForMessage = null;
 
-$.getJSON('/json/sgdq2022_runners.json').done(function(resp) {
+$.getJSON('/json/agdq2023_runners.json').done(function(resp) {
     gdqRunnerJSON = resp;
 });
-$.getJSON('/json/sgdq2022_schedule.json').done(function(resp) {
+$.getJSON('/json/agdq2023_schedule.json').done(function(resp) {
     gdqScheduleJSON = resp;
     gdqFuzzySearchArray = _.keys(gdqScheduleJSON);
     gdqFuzzySet = FuzzySet(gdqFuzzySearchArray);
@@ -168,12 +168,12 @@ window.getSpeedrunData = (game, port) => {
     if (typeof gameData == 'undefined') {
         // Query for gist version of Schedule JSON
         if (port.name == 'gdq') {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/d296f1028fb9cb4940bd6d2427cce2a3/raw/sgdq2022_schedule.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/8dd6260d95092add7ed3a01b2ea8426e/raw/agdq2023_schedule.json.json").done(function (resp) {
                 console.log("Request for Schedule JSON sent")
                 if (_.difference(_.keys(resp), _.keys(scheduleJSON)) == []) {
                     console.log("JSON is not updated");
                     checkForUpdatedScheduleJSON = setInterval(function() {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/d296f1028fb9cb4940bd6d2427cce2a3/raw/sgdq2022_schedule.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/8dd6260d95092add7ed3a01b2ea8426e/raw/agdq2023_schedule.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(scheduleJSON)) != []) {
                                 gdqScheduleJSON = resp;
                                 scheduleJSON = gdqScheduleJSON;
@@ -310,10 +310,10 @@ function getRunnerData(runners) {
     var runnersObject = _.reduce(runnersArray, function (object, runner) {
         var runnerData = runnerJSON[runner];
         if (typeof runnerData == "undefined") {
-            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/c20fb19f6d5f6ebbd90fb8da15de0dac/raw/sgdq2022_runners.json").done(function (resp) {
+            $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/edab0ae312451b94c8d4a01104f900c8/raw/agdq2023_runners.json").done(function (resp) {
                 if (_.difference(_.keys(resp), _.keys(runnerJSON)) == []) {
                     checkForUpdatedRunnerJSON = setInterval(function() {
-                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/c20fb19f6d5f6ebbd90fb8da15de0dac/raw/sgdq2022_runners.json").done(function (resp) {
+                        $.getJSON("https://gist.githubusercontent.com/theoriginalcamper/edab0ae312451b94c8d4a01104f900c8/raw/agdq2023_runners.json").done(function (resp) {
                             if (_.difference(_.keys(resp), _.keys(runnerJSON)) != []) {
                                 gdqRunnerJSON = resp;
                                 runnerJSON = gdqRunnerJSON;

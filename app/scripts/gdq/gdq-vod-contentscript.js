@@ -77,13 +77,13 @@ function addHighlights() {
 
 function addBidWars() {
 	console.log("Starting to add bid war indications");
-	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/SGDQ2022">Donation Incentives Bid War Tracker</a></h4>');
+	$('#star-highlight-notice').before('<h4 class="text-gdq-black well"><a href="https://gamesdonequick.com/tracker/bids/AGDQ2023">Donation Incentives Bid War Tracker</a></h4>');
 }
 
 function addRunnerLinks() {
 	console.log("Adding Runners");
 
-	$.getJSON('https://gist.githubusercontent.com/theoriginalcamper/c20fb19f6d5f6ebbd90fb8da15de0dac/raw/sgdq2022_runners.json').done(function (resp) {
+	$.getJSON('https://gist.githubusercontent.com/theoriginalcamper/edab0ae312451b94c8d4a01104f900c8/raw/5d0e45e1235e23bd2f01787f9c92b35040362e28/agdq2023_runners.json').done(function (resp) {
 	    console.log(resp);
 	    var runnerJSON = resp;
 
@@ -164,7 +164,7 @@ function addVodLinks() {
 	$(`td:contains(${"Super Mario World"}):first`).text('Super Mario World Race');
 	$(`td:contains(${"The Legend of Zelda: Ocarina of Time"})`).eq(1).text('The Legend of Zelda: Ocarina of Time Glitch Exhibition');
 
-	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/92e6bc3bd7080d1ff7d04a82102ca90d/raw/sgdq2022-vod.json").done(function(data) {
+	$.getJSON("https://gist.githubusercontent.com/theoriginalcamper/11d77c85b1397c46a3b993b3c1cba326/raw/agdq2023-vod.json").done(function(data) {
 		console.log(data);
 		var titles = _.keys(data);
 		console.log(titles);

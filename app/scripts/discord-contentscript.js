@@ -16,7 +16,7 @@ $(document).ready(function() {
 
 	var styleNode = document.createElement("style");
 	styleNode.type = "text/css";
-	styleNode.textContent = `@font-face { font-family: FontAwesome; src: url(${chrome.extension.getURL("/fonts/fontawesome-webfont.woff")});}`;
+	styleNode.textContent = `@font-face { font-family: FontAwesome; src: url(${chrome.runtime.getURL("/fonts/fontawesome-webfont.woff")});}`;
 	document.head.appendChild(styleNode);
 
     var checkAccount = setInterval(function(){
@@ -90,7 +90,7 @@ $(document).ready(function() {
     },1000);
 
     function addTwitchSwitch() {
-			$('[class*="usernameContainer"]').parent().parent().css('margin-bottom', '30px');
+			$('[class*="usernameContainer"]').parent().parent().parent().css('margin-bottom', '30px');
 			$('#gdq-header').after(`<div id="twitch-switch" style="position: fixed; width: ${$('div[class^="channels-"]').width()}px; height: 22px; left: ${$('[class^="unreadMentionsIndicatorTop-"]').outerWidth()}px; bottom: 0; z-index: 2;"><label for="twitch-player-display" id="twitch-player-display-label">Twitch Player Embed</label></div>`);
 			$('#twitch-switch').append(`<input type="checkbox" data-size="mini" name="twitch-player-display">`);
 	    $('#twitch-switch').append(`<i class="fa fa-expand" id="player-size-icon" style="margin-left: 10px; display: none;"></i>`);
@@ -372,7 +372,7 @@ $(document).ready(function() {
     			}
 
 					if($('#twitch-switch').length) {
-						$('[class*=usernameContainer]', $('[class^="channels"]')).parent().parent().css('margin-bottom', '30px');
+						$('[class*=usernameContainer]', $('[class^="channels"]')).parent().parent().parent().css('margin-bottom', '30px');
 					}
 
     			if ($(this).has('div[data-dnd-name="GamesDoneQuick"]').length > 0 || $(this).has('div[href^="/channels/85369684286767104"]').length > 0) {

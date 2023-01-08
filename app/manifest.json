@@ -1,6 +1,6 @@
 {
   "name": "__MSG_appName__",
-  "version": "3.6.0",
+  "version": "3.7.0",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -42,7 +42,6 @@
         "styles/bootstrap.3.3.6.min.css"
       ],
       "js": [
-        "vendor/jquery-2.2.0.min.js",
         "vendor/bootstrap.min.js"
       ],
       "run_at": "document_start",
@@ -58,10 +57,10 @@
         "https://gamesdonequick.com/schedule",
         "http://www.gamesdonequick.com/schedule",
         "https://www.gamesdonequick.com/schedule",
-        "http://gamesdonequick.com/schedule/35",
-        "https://gamesdonequick.com/schedule/35",
-        "http://www.gamesdonequick.com/schedule/35",
-        "https://www.gamesdonequick.com/schedule/35"
+        "http://gamesdonequick.com/schedule/41",
+        "https://gamesdonequick.com/schedule/41",
+        "http://www.gamesdonequick.com/schedule/41",
+        "https://www.gamesdonequick.com/schedule/41"
       ],
       "css": [
         "styles/fontawesome-min.css",
@@ -84,51 +83,16 @@
         "https://gamesdonequick.com/schedule",
         "http://www.gamesdonequick.com/schedule",
         "https://www.gamesdonequick.com/schedule",
-        "http://gamesdonequick.com/schedule/35",
-        "https://gamesdonequick.com/schedule/35",
-        "http://www.gamesdonequick.com/schedule/35",
-        "https://www.gamesdonequick.com/schedule/35"
+        "http://gamesdonequick.com/schedule/41",
+        "https://gamesdonequick.com/schedule/41",
+        "http://www.gamesdonequick.com/schedule/41",
+        "https://www.gamesdonequick.com/schedule/41"
       ],
       "js": [
         "scripts/gdq/gdq-vod-contentscript.js"
       ],
       "run_at": "document_end",
       "all_frames": false
-    },
-    {
-      "matches": [
-        "http://esamarathon.com/",
-        "https://esamarathon.com/",
-        "http://www.esamarathon.com/",
-        "https://www.esamarathon.com/",
-        "http://esamarathon.com/schedule",
-        "https://esamarathon.com/schedule",
-        "http://www.esamarathon.com/schedule",
-        "https://www.esamarathon.com/schedule"
-      ],
-      "css": [
-        "styles/fontawesome-min.css",
-        "styles/bootstrap-switch.min.css",
-        "styles/main.css"
-      ],
-      "js": [
-        "vendor/jquery-2.2.0.min.js",
-        "vendor/bootstrap-notify.min.js",
-        "vendor/bootstrap-switch.min.js",
-        "vendor/underscore-min.js",
-        "scripts/esa/esa-contentscript.js"
-      ]
-    },
-    {
-      "matches": [
-        "http://esamarathon.com/schedule",
-        "https://esamarathon.com/schedule",
-        "http://www.esamarathon.com/schedule",
-        "https://www.esamarathon.com/schedule"
-      ],
-      "js": [
-        "scripts/esa/esa-vod-contentscript.js"
-      ]
     },
     {
       "matches": [
@@ -165,15 +129,11 @@
   "web_accessible_resources": [
     "html/gdq-footer.html",
     "html/quakenet-chat.html",
-    "html/esa-quakenet-chat.html",
     "html/quakenet-theater-mode.html",
-    "html/esa-quakenet-theater-mode.html",
     "html/settings-menu.html",
-    "html/esa-settings-menu.html",
     "html/twitch-chat.html",
     "fonts/fontawesome-webfont.woff",
     "fonts/fontawesome-webfont.woff2",
-    "json/sgdq2022_runners.json",
-    "json/esa_schedule.json"
+    "json/agdq2023_runners.json"
   ]
 }
