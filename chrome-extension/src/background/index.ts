@@ -41,10 +41,10 @@ let activePorts = {};
 // A single source of truth for each event's configuration.
 const eventConfigs = {
   gdq: {
-    scheduleJsonUrl: chrome.runtime.getURL('/json/sgdq2025_schedule.json'),
-    runnersJsonUrl: chrome.runtime.getURL('/json/sgdq2025_runners.json'),
+    scheduleJsonUrl: chrome.runtime.getURL('/json/agdq2026_schedule.json'),
+    runnersJsonUrl: chrome.runtime.getURL('/json/agdq2026_runners.json'),
     gistScheduleUrl:
-      'https://gist.githubusercontent.com/theoriginalcamper/95026b76e7a200a5c37f3b661fbf5fae/raw/sgdq2025_schedule.json',
+      'https://gist.githubusercontent.com/theoriginalcamper/29ed47490fd525ea005b287a35369257/raw/agdq2026_schedule.json',
     storageKeys: {
       schedule: 'gdqSchedule',
       runners: 'gdqRunners',

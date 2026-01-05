@@ -1,6 +1,6 @@
 {
   "name": "@extension/ui",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "chrome extension - ui components",
   "type": "module",
   "private": true,

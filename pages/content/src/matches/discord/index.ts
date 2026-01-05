@@ -63,25 +63,25 @@ interface Calendar {
 
 const SELECTORS = {
   // A stable element to watch for to know the UI is loaded
-  uiReadyAnchor: 'section[class*="panels_"]',
+  uiReadyAnchor: 'section[class*="-panels"]',
   // The user avatar panel at the bottom-left
-  userPanel: 'section[class*="panels_"]',
+  userPanel: 'section[class*="-panels"]',
   // The main chat view container
-  chatContainer: 'div[class*="chat_"]',
+  chatContainer: 'div[class*="-chat"]',
   // The header bar above the chat
-  titleHeader: 'section[class*="title_"]',
+  titleHeader: 'section[class*="-title"]',
   // Title bar above the app
-  titleBar: 'div[class*="bar_"]',
+  titleBar: 'div[class*="-bar"]',
   // The leftmost server list
-  guildsWrapper: 'nav[class*="guilds_"]',
+  guildsWrapper: 'nav[class*="-guilds"]',
   // The channel list sidebar
-  sidebar: 'div[class*="sidebarList_"]',
+  sidebar: 'div[class*="-sidebarList"]',
   // The main container for chat messages
-  messagesWrapper: 'div[class*="messagesWrapper_"]',
+  messagesWrapper: 'div[class*="-messagesWrapper"]',
   // The button to toggle the server member list
   memberListButton: '[aria-label*="Member List"]',
   // Bar Icons Container
-  channelHeaderTrailingIcons: 'div[class*="trailing_"]',
+  channelHeaderTrailingIcons: 'div[class*="-trailing"]',
 };
 
 // --- Script State ---
@@ -100,7 +100,6 @@ let port;
 function main() {
   // setupMessageListener();
   observeDOMChanges();
-  connectToBackground();
 }
 
 /**
@@ -131,6 +130,7 @@ function observeDOMChanges(): void {
     if (userPanel && titleCheck) {
       console.log('%c[GDQ]%c Discord UI is ready. Initializing GDQ elements.', 'color: purple; font-weight: bold;', '');
       injectGdqUi();
+      connectToBackground();
       // Once we've found it and initialized, we don't need to observe anymore.
       obs.disconnect();
     }
@@ -152,7 +152,7 @@ function connectToBackground() {
 
   port.onMessage.addListener(function (msg) {
     if (msg.status === 'changed' || msg.status === 'reload') {
-      console.log('Message received from service worker:', msg);
+      console.log('%c[GDQ]%c Message received from service worker: %o', 'color: purple; font-weight: bold;', '', msg);
       updateGdqHeaderUI(msg);
       updateCalendarUI(msg.calendar);
       console.log('The Current Game is: ' + msg.game);
@@ -201,14 +201,14 @@ function injectCalendarToggleIcon(): void {
 
   // 3. Apply styles to make it look like a native Discord icon
   icon.style.cursor = 'pointer';
-  icon.style.color = 'var(--interactive-normal)'; // Use Discord's theme variable
+  icon.style.color = 'var(--text-muted)'; // Use Discord's theme variable
   icon.style.margin = '0 8px'; // Give it some space
   icon.style.fontSize = '20px'; // Adjust size as needed
   icon.ariaLabel = 'Toggle GDQ Schedule';
 
   // Add hover effect to match Discord's UI
-  icon.onmouseover = () => (icon.style.color = 'var(--interactive-hover)');
-  icon.onmouseout = () => (icon.style.color = 'var(--interactive-normal)');
+  icon.onmouseover = () => (icon.style.color = 'var(--text-link)');
+  icon.onmouseout = () => (icon.style.color = 'var(--text-muted)');
 
   // 4. Prepend it to the container so it appears first (leftmost)
   targetContainer.prepend(icon);
@@ -241,17 +241,17 @@ function injectGdqUi(): void {
 
   const headerHeight = (titleHeader as HTMLElement).offsetHeight ?? 48;
   const headerLeftOffset = guildsWrapper.offsetWidth + sidebar.offsetWidth;
-  const barHeight = document.querySelector('div[class^="bar_"]');
+  const barHeight = document.querySelector('div[class*="-bar"]');
   state.headerHeight = `${headerHeight}px`;
 
   const headerHTML = `
-    <header id="gdq-header" style="width: ${document.querySelector('div[class^="chat_"] > div[class^="subtitleContainer_"] > section > div > div[class^="children"]')?.clientWidth}px; height: ${headerHeight}px; min-height: ${headerHeight}px; position: fixed; top: ${barHeight?.clientHeight}px; left: ${headerLeftOffset}px; z-index: 101; overflow: hidden; background-color: var(--background-base-lower); color: var(--icon-tertiary); border-bottom: var(--border-subtle, hsla(229, 7%, 45%, .12)); border-top: var(--border-subtle, hsla(229, 7%, 45%, .12));">
+    <header id="gdq-header" style="width: ${document.querySelector('div[class*="-chat"] > div[class*="-subtitleContainer"] > section > div > div[class*="children"]')?.clientWidth}px; height: ${headerHeight}px; min-height: ${headerHeight}px; position: fixed; top: ${barHeight?.clientHeight}px; left: ${headerLeftOffset}px; z-index: 101; overflow: hidden; background-color: var(--background-base-lower); color: var(--text-muted); border-bottom: var(--border-subtle, hsla(229, 7%, 45%, .12)); border-top: var(--border-subtle, hsla(229, 7%, 45%, .12));">
       <div class="extension-container" style="padding: 0 16px;">
         <div id="gdq-options" style="float: right; display: flex; align-items: center; gap: 15px; font-size: 18px; height: 48px">
             <i class="fa fa-calendar" id="calendar-toggle" style="cursor: pointer;"></i>
             <i class="fa fa-refresh" id="refresh-button" style="cursor: pointer;"></i>
         </div>
-        <div class="game-information" style="height: 100%; padding-top: 4px;">
+        <div class="game-information" style="height: 100%; padding-top: 4px; color: white;">
             <div style="margin-bottom: 5px;"> <b>Current Game: </b>
                 <a id="gdq-speedrun-link" class="speedrun-link" target="_blank"></a>
             </div>
@@ -273,8 +273,8 @@ function injectGdqUi(): void {
   if (userPanel) {
     const switchHTML = `
       <div id="twitch-switch-container" style="padding: 10px; border-top: 1px solid var(--background-modifier-accent); display: flex; align-items: center; justify-content: space-between;">
-        <label for="twitch-player-display" style="font-weight: bold; color: var(--header-primary);">Twitch Player</label>
-        
+        <label for="twitch-player-display" style="font-weight: bold; color: var(--text-muted);">Twitch Player</label>
+
         <div id="twitch-switch">
           <label class="switch">
             <input type="checkbox" id="twitch-player-display">
@@ -376,7 +376,7 @@ function applyStylesAfterNavigation(): void {
           if (state.isTwitchPlayerActive) {
             state.twitchPlayerSize = 'large';
             const messagesWrapperParent =
-              document.querySelector<HTMLElement>('[class^="messagesWrapper"]')?.parentElement;
+              document.querySelector<HTMLElement>('[class*="-messagesWrapper"]')?.parentElement;
             if (messagesWrapperParent) {
               messagesWrapperParent.style.alignItems = 'flex-end';
             }
@@ -407,24 +407,22 @@ function applyStylesAfterNavigation(): void {
 
 const initGuildListeners = () => {
   // Check if element has been found
-  if (document.querySelectorAll('[class*="guilds_"]').length > 0) {
+  if (document.querySelectorAll('[class*="-guilds"]').length > 0) {
     const serverContainer = document.querySelector('div[aria-label*="Servers"]');
     if (serverContainer) {
       serverContainer.addEventListener('click', event => {
         const target = event.target as HTMLElement;
         console.log(target);
         // Check if the clicked element or its parent matches '[class^="listItem_"] > div'
-        const listItemDiv = target.closest('div[class^="blobContainer_"]');
+        const listItemDiv = target.closest('div[class*="-blobContainer"]');
         if (listItemDiv) {
           console.log(listItemDiv);
-          console.log(document.querySelectorAll('[class^="listItem_"] > div').length);
+          console.log(document.querySelectorAll('[class*="-listItem"] > div').length);
 
           if (state.isTwitchPlayerActive) {
-            const hasGamesDoneQuick =
-              listItemDiv.hasAttribute('data-dnd-name') &&
-              listItemDiv.getAttribute('data-dnd-name') == 'GamesDoneQuick';
-            console.log(hasGamesDoneQuick);
+            const hasGamesDoneQuick = listItemDiv.querySelector('div[data-dnd-name="GamesDoneQuick"]');
             if (hasGamesDoneQuick) {
+              console.log('%c[GDQ]%c Does this work 5', 'color: purple; font-weight: bold;', '');
               applyStylesAfterNavigation();
               const twitchContainer = document.getElementById('twitch-container');
               if (twitchContainer) {
@@ -542,9 +540,9 @@ function updateDiscordUI(msg: 'add' | 'remove'): void {
   // For type safety, consider defining its type if it's not already.
   console.log('TwitchActive: ' + state.isTwitchPlayerActive);
 
-  const messagesWrapperParent = document.querySelector<HTMLElement>('[class^="messagesWrapper"]')?.parentElement;
-  const messagesWrapper = document.querySelector<HTMLElement>('[class^="messagesWrapper"]');
-  const messagesForm = document.querySelector<HTMLElement>('[class^="messagesWrapper"]')
+  const messagesWrapperParent = document.querySelector<HTMLElement>('[class*="-messagesWrapper"]')?.parentElement;
+  const messagesWrapper = document.querySelector<HTMLElement>('[class*="-messagesWrapper"]');
+  const messagesForm = document.querySelector<HTMLElement>('[class*="-messagesWrapper"]')
     ?.nextElementSibling as HTMLElement | null;
   const playerSizeIcon = document.getElementById('player-size-icon');
 
@@ -583,10 +581,10 @@ function adjustTwitchPlayerSize(): void {
   // e.g., 'let twitchPlayerSizeState: 'large' | 'small';' elsewhere.
 
   const twitchContainer = document.getElementById('twitch-container');
-  var messagesWrapper = document.querySelector<HTMLElement>('[class^="messagesWrapper"]');
+  var messagesWrapper = document.querySelector<HTMLElement>('[class*="-messagesWrapper"]');
   // Using `as HTMLElement | null` because nextElementSibling returns `Element | null`
   const messagesForm = messagesWrapper?.nextElementSibling as HTMLElement | null;
-  const unreadMentionsIndicatorTop = document.querySelector<HTMLElement>('[class^="unreadMentionsIndicatorTop_"]');
+  const unreadMentionsIndicatorTop = document.querySelector<HTMLElement>('[class*="-unreadMentionsIndicatorTop"]');
 
   if (state.twitchPlayerSize === 'large') {
     console.log('[GDQ] Switching to large Twitch player display.', 'color: purple; font-weight: bold;', '');
@@ -606,7 +604,7 @@ function adjustTwitchPlayerSize(): void {
     // Original line commented out: $('#twitch-container').css('width', twitchPlayerInitialSize);
     // If twitchPlayerInitialSize is needed, ensure it's defined and accessible.
     // console.log(messagesWrapper)
-    messagesWrapper = document.querySelector<HTMLElement>('[class^="messagesWrapper"]');
+    messagesWrapper = document.querySelector<HTMLElement>('[class*="-messagesWrapper"]');
     if (messagesWrapper) {
       messagesWrapper.style.width = '48%';
     }
